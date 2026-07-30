@@ -1,0 +1,74 @@
+# 玄叠论开放验证 -- 预注册模板
+# 复制此文件到 submissions/ 目录，重命名为 prereg-你的名字-claim编号.yaml
+# 在实验运行前填写完毕，并计算 SHA-256 哈希填入提交 JSON
+
+submission_id: ""           # 唯一标识，格式：你的名字-claim编号-日期，如 alice-xd-p1-chem-001-20260801
+title: ""                   # 实验标题，一句话描述
+author:
+  name: ""                  # 你的名字或昵称
+  affiliation: ""           # 单位（可选）
+  contact: ""               # GitHub/Gitee 用户名或邮箱（可选）
+
+# 可选 claim_id（不要使用已降级的 XD-P1-SIM-001 或 XD-AI-TOY-001）：
+#   XD-P1-CHEM-001    -- 化学反应路径竞争
+#   XD-AI-ADAM-001    -- Adam 自适应优化动态
+#   XD-E-PARADIGM-001 -- E 维度范式转换
+claim_id: ""
+
+prediction_statement: ""    # 玄叠论预测什么？一句话。如："系统选择 S 更小的路径 B"
+
+# E 的测量范式 -- 实验前必须固定
+E_measurement:
+  definition: ""            # E_i 是什么？如："第 i 步的活化能 Ea_i"
+  unit: ""                  # 单位，如 "J/mol" 或 "J/step"
+  paradigm: ""              # 测量方式，如 "Arrhenius 方程参数" 或 "FLOPs 计数"
+
+# N 的计算方式 -- 实验前必须固定
+N_calculation:
+  definition: ""            # N 是什么？如："反应步数" 或 "训练 epoch 数"
+  step_rule: ""             # 如何界定一步？如 "一个 ODE 积分步" 或 "一个 epoch"
+
+# S 的计算方式 -- 实验前必须固定
+S_calculation:
+  formula: "S = sum(E_i * delta_N_i)"  # 公式
+  implementation_note: ""   # 实现说明，如 "对每步的 E_i 求和" 或 "loss 曲线的 AUC"
+
+# 统计阈值 -- 实验前必须固定
+statistical_threshold:
+  test: ""                  # 统计检验方法，如 "binomial test" 或 "t-test"
+  alpha: 0.01               # 显著性水平
+  one_sided: true           # 是否单侧检验
+
+falsification_condition: "" # 什么结果会证伪预测？如 "多数温度下系统选路径 A 而非 B"
+
+# 数据集（如适用）
+dataset:
+  name: ""
+  source: ""
+  hash: ""
+
+# 代码
+code:
+  repository: ""            # Git 仓库 URL（如适用）
+  commit: ""                # Git commit hash
+  hash: ""                  # 主脚本 SHA-256
+
+# 运行环境
+environment:
+  os: ""                    # 如 "Windows 11" 或 "Ubuntu 22.04"
+  python_version: ""        # 如 "3.11.4"
+  dependencies: ""          # 如 "python-stdlib-only" 或 "numpy==1.24, torch==2.0"
+
+# 随机种子策略
+seed_policy:
+  seeds: []                 # 使用的种子列表，如 [42, 123, 456]
+  fixed_before_run: true    # 种子是否在运行前固定
+
+# 结果政策
+result_policy:
+  negative_results_accepted: true   # 负面结果（challenge/falsification）是否接受
+  post_registration_changes_allowed: false  # 预注册后是否允许修改 E/N/S/阈值
+
+timestamp_utc: ""           # 提交时间，ISO 8601 格式
+license: "CC BY-SA 4.0 for text; MIT for code"
+notes: ""                   # 其他说明

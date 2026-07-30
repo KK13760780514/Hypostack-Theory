@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Xuandie Open Validation Submission",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "submission_id",
+    "claim_id",
+    "title",
+    "author",
+    "preregistration",
+    "implementation",
+    "result",
+    "classification",
+    "timestamp_utc"
+  ],
+  "properties": {
+    "submission_id": { "type": "string", "minLength": 1 },
+    "claim_id": {
+      "type": "string",
+      "enum": ["XD-P1-SIM-001", "XD-P1-CHEM-001", "XD-AI-TOY-001", "XD-AI-ADAM-001", "XD-E-PARADIGM-001"]
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "author": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "affiliation": { "type": "string" },
+        "contact": { "type": "string" }
+      }
+    },
+    "preregistration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hash", "timestamp_utc"],
+      "properties": {
+        "hash": { "type": "string", "minLength": 1 },
+        "timestamp_utc": { "type": "string", "format": "date-time" },
+        "uri": { "type": "string" }
+      }
+    },
+    "implementation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code_hash", "seed", "environment"],
+      "properties": {
+        "repository": { "type": "string" },
+        "commit": { "type": "string" },
+        "code_hash": { "type": "string", "minLength": 1 },
+        "data_hash": { "type": "string" },
+        "seed": {
+          "oneOf": [
+            { "type": "integer" },
+            {
+              "type": "array",
+              "items": { "type": "integer" },
+              "minItems": 1
+            }
+          ]
+        },
+        "environment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["os", "python_version"],
+          "properties": {
+            "os": { "type": "string" },
+            "python_version": { "type": "string" },
+            "dependencies": { "type": "string" }
+          }
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["S_A", "S_B", "preferred_path", "summary"],
+      "properties": {
+        "S_A": { "type": "number" },
+        "S_B": { "type": "number" },
+        "preferred_path": { "type": "string", "enum": ["A", "B", "tie"] },
+        "selected_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "A": { "type": "integer", "minimum": 0 },
+            "B": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "p_value": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "raw_output": { "type": "object" }
+      }
+    },
+    "classification": {
+      "type": "string",
+      "enum": ["support", "challenge", "falsification", "exploratory"]
+    },
+    "timestamp_utc": { "type": "string", "format": "date-time" }
+  }
+}

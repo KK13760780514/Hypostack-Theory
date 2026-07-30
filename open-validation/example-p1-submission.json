@@ -1,0 +1,52 @@
+{
+  "submission_id": "ref-xd-p1-sim-001-20260728",
+  "claim_id": "XD-P1-SIM-001",
+  "title": "Reference implementation for P1 enhanced simulation",
+  "author": {
+    "name": "reference-implementation",
+    "affiliation": "open-validation",
+    "contact": ""
+  },
+  "preregistration": {
+    "hash": "replace-with-preregistration-file-hash",
+    "timestamp_utc": "2026-07-30T00:26:02.549923+00:00",
+    "uri": ""
+  },
+  "implementation": {
+    "repository": "",
+    "commit": "",
+    "code_hash": "fe8bcbd1422c5f7327c2c6e6682b3eb969c847645d1b8f5f1ceb6c4ffc0aacff",
+    "data_hash": "",
+    "seed": 20260728,
+    "environment": {
+      "os": "Windows-10-10.0.19045-SP0",
+      "python_version": "3.13.5",
+      "dependencies": "python-stdlib-only"
+    }
+  },
+  "result": {
+    "S_A": 8.0,
+    "S_B": 9.0,
+    "preferred_path": "A",
+    "selected_counts": {
+      "A": 100,
+      "B": 0
+    },
+    "p_value": 7.888609052210118e-31,
+    "summary": "P(A)=0.993307; selected A 100/100; alpha=0.01",
+    "raw_output": {
+      "temperature": 0.2,
+      "runs": 100,
+      "path_A": {
+        "E_i": 1.0,
+        "steps": 8
+      },
+      "path_B": {
+        "E_i": 3.0,
+        "steps": 3
+      }
+    }
+  },
+  "classification": "support",
+  "timestamp_utc": "2026-07-30T00:26:02.727351+00:00"
+}
