@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-submissions:
+    name: 校验提交 / Validate Submissions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python / Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 校验所有已提交的实验结果 / Validate all submissions
+        run: |
+          set -e
+          for f in open-validation/submissions/*.json; do
+            echo "::group::Validating $f"
+            python open-validation/validate_submission.py "$f" --no-ledger
+            echo "::endgroup::"
+          done
+
+  run-reference-implementations:
+    name: 运行参考实现 / Run Reference Implementations
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python / Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 运行化学路径模拟 / Run chemical path simulation
+        run: python open-validation/reference-implementation/chemical_path.py
+
+      - name: 运行 Adam 动态模拟 / Run Adam dynamics simulation
+        run: python open-validation/reference-implementation/adam_dynamics.py
+
+      - name: 运行 E 维度范式映射 / Run E paradigm map
+        run: python open-validation/reference-implementation/e_paradigm_map.py
