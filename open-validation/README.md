@@ -1,4 +1,8 @@
-# 玄叠论开放验证 MVP
+# HypoStack 开放验证 MVP
+
+> 玄叠论（HypoStack Theory）的开放验证最小包。HypoStack = Hypothesis + Stack，意指差异叠加演化的理论假说。
+
+**English:** HypoStack is a falsifiable hypothesis about how differences drive the evolution of all systems. The core claim: systems tend to select paths that minimize the cumulative information action `S = Σ(Eᵢ × ΔNᵢ)`, where `E` is the difference intensity and `N` is the discrete step count. This package lets external researchers run, reproduce, challenge, or falsify specific predictions — without reading the full theory.
 
 目标：让外部研究者、工程师和数据科学家不需要先理解完整《玄叠论》，也能直接运行、复现、挑战或支持第一批可证伪预测。
 当前 MVP 覆盖五个方向：

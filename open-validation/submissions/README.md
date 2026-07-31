@@ -1,4 +1,4 @@
-# 提交目录说明
+# HypoStack 提交目录说明
 
 把符合 `../submission-schema.json` 的结果 JSON 放在本目录。
 
