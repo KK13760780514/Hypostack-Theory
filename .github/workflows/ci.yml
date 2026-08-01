@@ -55,3 +55,6 @@ jobs:
 
       - name: 运行 E 维度范式映射 V2 / Run E paradigm map V2
         run: python open-validation/reference-implementation/e_paradigm_map_v2.py
+
+      - name: 运行 E 维度范式映射 V3 / Run E paradigm map V3
+        run: python open-validation/reference-implementation/e_paradigm_map_v3.py

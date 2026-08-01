@@ -61,7 +61,7 @@ python .\open-validation\reference-implementation\e_paradigm_map.py
 |-------|------|---------|---------|------|
 | XD-P1-CHEM-001 | 化学反应路径竞争 | challenge | **support** (16/16, p=1.5e-5) | L4_candidate |
 | XD-AI-ADAM-001 | 自适应优化动态 | challenge | **support** (12/12, p=2.4e-4) | L4_candidate |
-| XD-E-PARADIGM-001 | E 维度范式转换 | - | challenge (3 标定点, η 跨度 2.5 级) | exploratory |
+| XD-E-PARADIGM-001 | E 维度范式转换 | - | challenge (5 标定点, η 跨度 2.3 级, 幂律 R²<0.64) | exploratory |
 
 ### 3. 提交你的第一个实验
 

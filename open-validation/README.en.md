@@ -36,7 +36,7 @@ All submitted experimental results are recorded in [evidence-ledger.csv](evidenc
 |---|---|---|---|---|---|---|
 | XD-AI-ADAM-001 | support | L4_candidate | 2.4e-4 | 188.5 (Adam) | 346.0 (best SGD) | V2: 12/12 seeds pass; expanded lr grid + no-baseline rule |
 | XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (path A) | 55000.0 (path B) | V2: effective activation energy; 16/16 temps consistent |
-| XD-E-PARADIGM-001 | challenge | exploratory | null | 1.04e-19 (physical) | 5.06e-20 (biological) | V2: 3 calibration points; eta span 2.5 orders; ratios inconsistent |
+| XD-E-PARADIGM-001 | challenge | exploratory | null | 1.04e-19 (physical) | 5.06e-20 (biological) | V3: 5 calibration points; eta span 2.3 orders; power-law R²<0.64 |
 
 ### Submit Your First Experiment (New Contributor Path)
 

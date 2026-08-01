@@ -1,0 +1,108 @@
+﻿{
+  "submission_id": "ref-xd-e-paradigm-001-v3-20260731",
+  "claim_id": "XD-E-PARADIGM-001",
+  "title": "E-dimension paradigm conversion V3: log-space power-law analysis",
+  "author": {
+    "name": "reference-implementation",
+    "affiliation": "open-validation",
+    "contact": ""
+  },
+  "preregistration": {
+    "hash": "in-script-preregistered-constants-v3",
+    "timestamp_utc": "2026-07-31T00:00:00+00:00",
+    "uri": "protocol-p1-ai.md#8-claim-xd-e-paradigm-001"
+  },
+  "implementation": {
+    "repository": "",
+    "commit": "",
+    "code_hash": "be730df752f8b31089137da372a81eda12b36435d4cf27b62a1cac556170b0f5",
+    "data_hash": "",
+    "seed": 0,
+    "environment": {
+      "os": "Windows-10-10.0.19045-SP0",
+      "python_version": "3.13.5",
+      "dependencies": "python-stdlib-only"
+    }
+  },
+  "result": {
+    "S_A": 1.0421786781800066e-19,
+    "S_B": 5.064762537363002e-20,
+    "preferred_path": "A",
+    "selected_counts": {
+      "A": 5,
+      "B": 0
+    },
+    "p_value": null,
+    "summary": "5 calibration points; eta span=2.3 orders; consistent pairs=[]; classification=challenge",
+    "raw_output": {
+      "landauer_limit_J_per_bit": 2.9666781812480147e-21,
+      "atp_energy_J": 5.064762537363002e-20,
+      "calibration_points": [
+        {
+          "process": "DNA base pair replication",
+          "E_physical_J": 1.0421786781800066e-19,
+          "E_biological_J": 5.064762537363002e-20,
+          "E_cognitive_J": 5.9333563624960294e-21,
+          "bits": 2.0
+        },
+        {
+          "process": "ATP hydrolysis",
+          "E_physical_J": 5.064762537363002e-20,
+          "E_biological_J": 4.8115244104948516e-20,
+          "E_cognitive_J": 2.9666781812480147e-21,
+          "bits": 1.0
+        },
+        {
+          "process": "Na+ ion transport",
+          "E_physical_J": 1.1214000000000001e-20,
+          "E_biological_J": 1.6882541791210006e-20,
+          "E_cognitive_J": 4.450017271872022e-21,
+          "bits": 1.5
+        },
+        {
+          "process": "Protein domain folding",
+          "E_physical_J": 6.947857854533377e-20,
+          "E_biological_J": 1.5194287612089005e-19,
+          "E_cognitive_J": 1.4833390906240072e-20,
+          "bits": 5.0
+        },
+        {
+          "process": "Photon absorption (photosynthesis)",
+          "E_physical_J": 2.923235294117647e-19,
+          "E_biological_J": 1.6882541791210006e-20,
+          "E_cognitive_J": 2.9666781812480147e-21,
+          "bits": 1.0
+        }
+      ],
+      "power_law_regressions": {
+        "physical->biological": {
+          "r_squared": 0.0073,
+          "max_rel_error": 1.6317,
+          "formula": "E_target = 7.4770e-19 * E_source^0.0662",
+          "consistent": false
+        },
+        "physical->cognitive": {
+          "r_squared": 0.0089,
+          "max_rel_error": 0.7422,
+          "formula": "E_target = 4.9661e-22 * E_source^-0.0527",
+          "consistent": false
+        },
+        "biological->cognitive": {
+          "r_squared": 0.6372,
+          "max_rel_error": 0.9062,
+          "formula": "E_target = 8.7296e-10 * E_source^0.5792",
+          "consistent": false
+        }
+      },
+      "falsification_analysis": {
+        "eta_span_orders": 2.333422754208953,
+        "eta_within_3_orders": true,
+        "any_non_identity": true,
+        "consistent_pairs": [],
+        "classification": "challenge"
+      }
+    }
+  },
+  "classification": "challenge",
+  "timestamp_utc": "2026-08-01T08:29:33.078146+00:00"
+}
