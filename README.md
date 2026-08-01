@@ -61,12 +61,12 @@ python .\open-validation\reference-implementation\phase_transition.py
 
 当前 4 个活跃 claim 均已有实验结果：3 个 **support**（L4_candidate）+ 1 个 challenge：
 
-| Claim | 方向 | V1 结果 | V2 结果 | 状态 |
-|-------|------|---------|---------|------|
-| XD-P1-CHEM-001 | 化学反应路径竞争 | challenge | **support** (16/16, p=1.5e-5) | L4_candidate |
-| XD-AI-ADAM-001 | 自适应优化动态 | challenge | **support** (12/12, p=2.4e-4) | L4_candidate |
-| XD-E-PARADIGM-001 | E 维度范式转换 | - | challenge (5 标定点, η 跨度 2.3 级, 幂律 R²<0.64) | exploratory |
-| XD-P1-PHASE-001 | 相变路径选择 | - | **support** (12/12, p=2.4e-4) | L4_candidate |
+| Claim | 方向 | 结果历史 | 状态 |
+|-------|------|---------|------|
+| XD-P1-CHEM-001 | 化学反应路径竞争 | V1 challenge → **V2 support** (16/16, p=1.5e-5) | L4_candidate |
+| XD-AI-ADAM-001 | 自适应优化动态 | V1 challenge → **V2 support** (12/12, p=2.4e-4) | L4_candidate |
+| XD-E-PARADIGM-001 | E 维度范式转换 | challenge（首次运行 3 标定点 → 扩展至 5 标定点，η 跨度 2.3 级，幂律 R²<0.64） | exploratory |
+| XD-P1-PHASE-001 | 相变路径选择 | 首次运行即 **support** (12/12, p=2.4e-4) | L4_candidate |
 
 ### 3. 提交你的第一个实验
 

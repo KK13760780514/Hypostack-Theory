@@ -36,6 +36,13 @@ python .\open-validation\reference-implementation\phase_transition.py
 
 所有已提交的实验结果记录在 [evidence-ledger.csv](evidence-ledger.csv)。当前 4 个活跃 claim 均已有实验结果：3 个产出 support 结果（L4_candidate），1 个为 challenge（exploratory）--这不是失败，而是验证包正在暴露口径问题。
 
+| claim_id | 分类 | 证据等级 | p 值 | S（选中路径） | S（对照路径） | 备注 |
+|---|---|---|---|---|---|---|
+| XD-AI-ADAM-001 | support | L4_candidate | 2.4e-4 | 188.5 (Adam) | 346.0 (最优 SGD) | V2: 12/12 种子通过；扩 lr 网格 + 无对照规则修订 |
+| XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (路径 A) | 55000.0 (路径 B) | V2: 有效活化能；16/16 温度一致 |
+| XD-E-PARADIGM-001 | challenge | exploratory | 无 | 1.04e-19 (物理) | 5.06e-20 (生物) | V3: 5 标定点；η 跨度 2.3 级；幂律 R²<0.64 |
+| XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (慢冷) | 237486 (淬火) | 12/12 种子通过；2D Ising 相变 |
+
 ### 提交你的第一个实验（新贡献者路径）
 
 1. **选任务**：推荐从 [TASK-005：化学反应路径竞争](tasks/TASK-005-chemical-path.md) 开始，它有完整的参考实现和明确的预测冲突。
@@ -82,7 +89,7 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 
 两个修正后的 claim 已在 V2 产出 support 结果（L4_candidate），确认口径修正有效。剩余开放问题：口径选择（如条件数调整、无对照规则修订）是否引入偏差——欢迎社区讨论。
 
-**V2 进展**：XD-P1-CHEM-001 与 XD-AI-ADAM-001 已产出 V2 support 结果（L4_candidate），等待独立复核。
+**最新进展**：XD-P1-CHEM-001 与 XD-AI-ADAM-001 的 V2 已修正为 support（L4_candidate），XD-P1-PHASE-001 首次运行即 support（L4_candidate），三者等待独立复核。
 
 ## 评审与 issue 模板
 

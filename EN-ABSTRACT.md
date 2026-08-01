@@ -10,7 +10,7 @@
 
 ### 1. Abstract
 
-HypoStack Theory (玄叠论) is a falsifiable hypothesis proposing that differences drive the evolution of all systems. Its core presupposition is that only information structures exist, and they persistently eliminate differences. Its signature formula is **S = ∫ E dN**, where S is the information action (cumulative consumption), E is the driving force (difference intensity), and N is the number of evolution steps. This is not the universe's objective function but its selection record—frugal paths persist, costly ones perish. Every prediction is independently testable; before experimental data arrives, the theory is neither confirmed nor refuted. Current empirical standing is **L4_candidate**, with three claims (CHEM-001, ADAM-001, and PHASE-001) revised from challenge to support after correcting E/S calibration, awaiting community replication.
+HypoStack Theory (玄叠论) is a falsifiable hypothesis proposing that differences drive the evolution of all systems. Its core presupposition is that only information structures exist, and they persistently eliminate differences. Its signature formula is **S = ∫ E dN**, where S is the information action (cumulative consumption), E is the driving force (difference intensity), and N is the number of evolution steps. This is not the universe's objective function but its selection record—frugal paths persist, costly ones perish. Every prediction is independently testable; before experimental data arrives, the theory is neither confirmed nor refuted. Current empirical standing is **L4_candidate**, with two claims (CHEM-001, ADAM-001) revised from challenge to support after correcting E/S calibration and a third (PHASE-001) verified as support in its first run, awaiting community replication.
 
 ### 2. Core Formula
 
@@ -94,7 +94,7 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 
 ### 1. 摘要
 
-玄叠论（HypoStack Theory）是一套可证伪的理论假说，主张差异驱动万物演化。其核心预设是：宇宙中只有信息结构在消除差异。标志性公式为 **S = ∫ E dN**，其中 S 是信息作用量（总消耗），E 是驱动力（差异强度），N 是演化步数。这不是宇宙的目标函数，而是宇宙的筛选记录——省力者留，费力者走。每一个推论都在等待独立的实验检验；在实验数据到位之前，理论既未被证实，也未被推翻。当前实证等级为 **L4_candidate**，三个 claim（CHEM-001、ADAM-001 和 PHASE-001）在修正 E/S 口径后从 challenge 修正为 support，等待社区独立复核。
+玄叠论（HypoStack Theory）是一套可证伪的理论假说，主张差异驱动万物演化。其核心预设是：宇宙中只有信息结构在消除差异。标志性公式为 **S = ∫ E dN**，其中 S 是信息作用量（总消耗），E 是驱动力（差异强度），N 是演化步数。这不是宇宙的目标函数，而是宇宙的筛选记录——省力者留，费力者走。每一个推论都在等待独立的实验检验；在实验数据到位之前，理论既未被证实，也未被推翻。当前实证等级为 **L4_candidate**，两个 claim（CHEM-001、ADAM-001）在修正 E/S 口径后从 challenge 修正为 support，第三个 claim（PHASE-001）在首次运行中即验证为 support，等待社区独立复核。
 
 ### 2. 核心公式
 

@@ -33,7 +33,7 @@
       "B": 0
     },
     "p_value": 1.5e-5,
-    "summary": "V2 (E_eff): 16/16 temps match across 2 configs; p=1.5e-5; classification=support (L4_candidate)",
+    "summary": "EXAMPLE FILE (format reference; content copied from ref-xd-p1-chem-001-v2-20260731): V2 (E_eff) 16/16 temps match; p=1.5e-5; support (L4_candidate)",
     "raw_output": {
       "E_definition": "effective activation energy (steady-state approximation)",
       "N_definition": "1 (one reaction event)",

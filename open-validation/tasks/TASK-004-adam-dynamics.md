@@ -9,13 +9,17 @@
 
 ISSUE-001 证明"比较两条人为路径"不成立（SGD 不选择路径，学习率是超参数）。修正 A 改为检验：**自适应优化动态（Adam）的总消耗 S 是否系统性低于最优固定学习率 SGD**。
 
-参考实现 [adam_dynamics.py](../reference-implementation/adam_dynamics.py) 的首次运行结果为 **challenge**：
+参考实现 [adam_dynamics.py](../reference-implementation/adam_dynamics.py) 的**首次运行结果（V1，2026-07-30）为 challenge**：
 
 - Adam 平均 S(AUC) = 78.78，低于最优 SGD 的 89.55（方向一致）
 - 但逐种子判据 `S_adam ≤ 1.1 × S_best_sgd` 只通过 8/12，未达阈值 11，p = 0.194
 - 结论：方向符合预期，但效应未达预注册严格判据
 
-## 操作定义（已预注册于参考实现）
+## V2 修正结果（2026-08-01）
+
+修正参数（条件数提升至 ~4e2、lr 网格 7 个点、MAX_STEPS=5000、无对照规则修订为"Adam 收敛+SGD 不收敛=Adam 胜"）后，**12/12 种子通过，p=2.4e-4，结论修正为 support（L4_candidate）**。Adam 平均 S=188.53，最优 SGD 平均 S=345.97（省力约 50%）。当前参考实现 [adam_dynamics.py](../reference-implementation/adam_dynamics.py) 已更新为 V2 参数。
+
+## 操作定义（V1 口径，已预注册于参考实现）
 
 - `E_i`：第 i 步结束时的 loss 水平（剩余差异，非差分，避免望远镜求和）
 - `ΔN_i = 1`，`S = Σ loss_i`（损失曲线下面积 AUC）
@@ -25,7 +29,7 @@ ISSUE-001 证明"比较两条人为路径"不成立（SGD 不选择路径，学�
 
 ## 可认领方向
 
-1. **复现**：不同种子集合下重跑，检查 challenge 结论是否稳定。
+1. **复现**：独立复现 V2 的 support 结论（12/12, p=2.4e-4），或用不同种子集合检验其稳健性。
 2. **判据挑战**：`1.1` 容差与 `≥11/12` 阈值是否过严？提出替代判据并预注册。
 3. **任务升级**：换病态更强的任务（条件数 1e3-1e4 + 更长 MAX_STEPS），检验 Adam 优势是否随病态程度增强。
 4. **优化器扩展**：加入 RMSProp、Adagrad、line-search SGD，检验结论是否对自适应方法普遍成立。

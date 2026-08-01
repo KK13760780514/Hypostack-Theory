@@ -8,7 +8,7 @@ labels: ["submission", "needs-form-check"]
 ## Claim
 
 - claim_id:
-- 相关任务：TASK-003 / TASK-004 / TASK-005 / 其他
+- 相关任务：TASK-003 / TASK-004 / TASK-005 / TASK-006 / 其他
 
 ## 预注册
 
