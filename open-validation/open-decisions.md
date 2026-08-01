@@ -119,7 +119,7 @@
 
 **默认建议**：A，并开启新任务 TASK-007（按过程类型分类标定 η）作为后续方向。
 
-**影响 claim**：XD-E-PARADIGM-001。**状态**：开放。
+**影响 claim**：XD-E-PARADIGM-001。**状态**：开放。**讨论链接**：[issue #3](https://github.com/KK13760780514/Hypostack-Theory/issues/3)。
 
 ## DEC-008：ECO 首次运行的判别力不足如何处理（来源：ISSUE-008）
 

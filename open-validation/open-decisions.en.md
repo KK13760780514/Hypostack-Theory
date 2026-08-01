@@ -121,7 +121,7 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Default recommendation**: A, and open TASK-007 (calibrate η by process type) as the follow-up direction.
 
-**Affected claim**: XD-E-PARADIGM-001. **Status**: open.
+**Affected claim**: XD-E-PARADIGM-001. **Status**: open. **Discussion**: [issue #3](https://github.com/KK13760780514/Hypostack-Theory/issues/3).
 
 ## DEC-008: How to handle the ECO first run's weak discriminative power (source: ISSUE-008)
 
