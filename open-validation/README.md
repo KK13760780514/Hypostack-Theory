@@ -62,6 +62,7 @@ python .\open-validation\reference-implementation\phase_transition.py
 - [TASK-004：复现与挑战 Adam 自适应动态验证](tasks/TASK-004-adam-dynamics.md)
 - [TASK-005：化学反应路径竞争验证](tasks/TASK-005-chemical-path.md)
 - [TASK-006：相变路径选择验证](tasks/TASK-006-phase-transition.md)
+- [TASK-007：按过程类型分类标定 η（E 维度范式转换）](tasks/TASK-007-e-paradigm-process-type.md)（由 ISSUE-007 结论立项）
 
 ## 贡献流程
 
@@ -81,6 +82,20 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 ```
 
 把输出粘贴到提交 JSON 的 `preregistration.hash` 字段。`validate_submission.py` 会对该字段做格式与时间顺序检查（非 64 位 hex 或占位符会输出 warnings），但哈希是否与预注册文件一致属于评审环节的人工核查项——请妥善保存预注册 YAML 文件以便复核。
+
+## 独立复核（复现现有结果）
+
+当前 3 个 support 结果（XD-P1-CHEM-001、XD-AI-ADAM-001、XD-P1-PHASE-001）均由提出者的参考实现产出，**尚未有任何外部独立复核**。独立复核是证据从 `L4_candidate` 升级为 `confirmed` 的必要条件。复核流程：
+
+1. 认领要复现的证据：在 [evidence-ledger.csv](evidence-ledger.csv) 中找到目标行，记录其 `evidence_id`（如 `EV-fe2c49158f63ef6a`）。
+2. 自行实现或运行参考实现脚本（`reference-implementation/` 下的 `chemical_path_v2.py`、`adam_dynamics.py`、`phase_transition.py`），尽量使用你自己的实现或独立环境，不要直接信任参考脚本的输出。
+3. 按 `submission-schema.json` 生成结果 JSON，与普通提交的区别：
+   - 顶层加 `"replication_of": "<目标 evidence_id>"`（可选但强烈建议，用于在账本中追踪复核链）；
+   - `author` 填写你自己的身份（不要用 `reference-implementation`）；
+   - `classification` 按你的复现结果填写（复现成功 = `support`，与原文不符 = `challenge` 或 `falsification`）。
+4. 运行 `validate_submission.py` 通过后入账。评审确认复核者与提出者非同一主体后，该行可升级为 `confirmed`。
+
+**重要**：独立复核同样受预注册规则约束（提交前固定 E/N/S 与统计阈值，见 [preregistration-template.yaml](preregistration-template.yaml)）。复核者与原提交使用同一 claim 的预注册口径，不得临时修改口径以影响结果。
 
 ## 已知问题
 

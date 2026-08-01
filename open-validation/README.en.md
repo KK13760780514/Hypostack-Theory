@@ -44,6 +44,8 @@ All submitted experimental results are recorded in [evidence-ledger.csv](evidenc
 | XD-E-PARADIGM-001 | challenge | exploratory | null | 1.04e-19 (physical) | 5.06e-20 (biological) | V3: 5 calibration points; eta span 2.3 orders; power-law R²<0.64 |
 | XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (slow cool) | 237486 (quench) | 12/12 seeds pass; 2D Ising model phase transition |
 
+Note: all results above were produced by the proposer's reference implementation (reference-implementation); no external independent replication exists yet.
+
 ### Submit Your First Experiment (New Contributor Path)
 
 1. **Pick a task**: Recommended starting point is [TASK-005: Chemical Reaction Path Competition](tasks/TASK-005-chemical-path.md), which has a complete reference implementation and a clear prediction conflict.
@@ -61,6 +63,7 @@ All submitted experimental results are recorded in [evidence-ledger.csv](evidenc
 - [TASK-004: Reproduce and Challenge Adam Adaptive Dynamics Validation](tasks/TASK-004-adam-dynamics.md) (V2 result: support, L4_candidate; open for independent replication and criterion challenges)
 - [TASK-005: Chemical Reaction Path Competition Validation](tasks/TASK-005-chemical-path.md) (V2 result: support, L4_candidate; open for independent replication and calibration challenges)
 - [TASK-006: Phase-Transition Path Selection Validation](tasks/TASK-006-phase-transition.md) (V1 result: support, L4_candidate; open for independent replication)
+- [TASK-007: Calibrate η by Process Type (E-Dimension Paradigm Conversion)](tasks/TASK-007-e-paradigm-process-type.en.md) (spawned from ISSUE-007 conclusion)
 
 ## Contribution Workflow
 
@@ -79,7 +82,21 @@ The `preregistration.hash` in your submission is the SHA-256 value of your prere
 python -c "import hashlib; print(hashlib.sha256(open('your-preregistration-file.yaml','rb').read()).hexdigest())"
 ```
 
-Paste the output into the `preregistration.hash` field of your submission JSON. This hash proves that the preregistration content was not modified after the experiment.
+Paste the output into the `preregistration.hash` field of your submission JSON. `validate_submission.py` performs format and time-order checks on this field (non-64-hex or placeholder values produce warnings), but whether the hash actually matches the preregistration file is a manual check during review — keep your preregistration YAML file for later verification.
+
+## Independent Replication (Reproducing Existing Results)
+
+The 3 support results (XD-P1-CHEM-001, XD-AI-ADAM-001, XD-P1-PHASE-001) were all produced by the proposer's reference implementation, and **no external independent replication exists yet**. Independent replication is a required condition for evidence to advance from `L4_candidate` to `confirmed`. Replication workflow:
+
+1. Choose the evidence to replicate: locate the target row in [evidence-ledger.csv](evidence-ledger.csv) and record its `evidence_id` (e.g., `EV-fe2c49158f63ef6a`).
+2. Implement it yourself or run the reference scripts (`chemical_path_v2.py`, `adam_dynamics.py`, `phase_transition.py` in `reference-implementation/`); prefer your own implementation or an independent environment — do not blindly trust the reference scripts' output.
+3. Generate the result JSON per `submission-schema.json`. Differences from a normal submission:
+   - Add `"replication_of": "<target evidence_id>"` at the top level (optional but strongly recommended, to trace the replication chain in the ledger);
+   - `author` should be your own identity (do not use `reference-implementation`);
+   - `classification` reflects your reproduction outcome (`support` if it reproduces, `challenge` or `falsification` if it does not).
+4. Run `validate_submission.py`; once it passes, the row is logged. After review confirms the replicator is not the same party as the proposer, the row may be upgraded to `confirmed`.
+
+**Important**: Independent replication is also subject to the preregistration rules (fix E/N/S and statistical thresholds before running, see [preregistration-template.yaml](preregistration-template.yaml)). Replicators must use the same claim's preregistered calibration — do not adjust the calibration to influence the outcome.
 
 ## Known Issues
 

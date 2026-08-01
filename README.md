@@ -80,6 +80,7 @@ python .\open-validation\reference-implementation\phase_transition.py
 | [TASK-004](open-validation/tasks/TASK-004-adam-dynamics.md) | Adam 自适应动态 | 复现与挑战首次 challenge 结果 |
 | [TASK-005](open-validation/tasks/TASK-005-chemical-path.md) | 化学路径竞争 | **推荐入门**，有完整参考实现 |
 | [TASK-006](open-validation/tasks/TASK-006-phase-transition.md) | 相变路径选择 | 2D Ising 模型验证，首次结果 support |
+| [TASK-007](open-validation/tasks/TASK-007-e-paradigm-process-type.md) | E 范式转换（过程类型） | 按过程类型分类标定 η，检验组内普适性 |
 
 ## 关键文档 / Key Documents
 
