@@ -108,7 +108,7 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Reopening path**: open an issue with rationale and impact.
 
-**Affected claims**: all. **Status**: defaults active; open for review.
+**Affected claims**: all. **Status**: defaults active; open for review. **Discussion**: [issue #9](https://github.com/KK13760780514/Hypostack-Theory/issues/9).
 
 ## DEC-007: How to handle the "no universal conversion function" conclusion of E-PARADIGM (source: V3 result)
 
