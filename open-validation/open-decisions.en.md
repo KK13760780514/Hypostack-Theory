@@ -112,6 +112,8 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Default recommendation**: A. Per ISSUE-006, a revised calibration must be re-preregistered and defaults to exploratory.
 
+**Development progress (2026-08-01)**: a V2 learning-trader run (Roth-Erev, 12 seeds, 80 rounds) per option A is complete: market convergence is fixed (static 0/12 → learning converges in all seeds), but the speed sub-prediction is NOT supported (conv_A<conv_B in only 5/12 seeds, p=0.774; direction consistent in only 2/6 robustness combos). Statistical outcome: challenge; entered as exploratory (EV-b3fd72635845c370). This questions the "E=commission" operationalization and suggests options B/C for discussion. See [ISSUE-008](known-issues.md).
+
 **Affected claim**: XD-P2-ECO-001. **Status**: open. **Discussion**: [issue #1](https://github.com/KK13760780514/Hypostack-Theory/issues/1) (ECO baseline submission in [issue #2](https://github.com/KK13760780514/Hypostack-Theory/issues/2)).
 
 ---

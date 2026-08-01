@@ -28,7 +28,7 @@ S = ∫ E dN
 | AI 优化动态（XD-AI-ADAM-001） | support | 12/12 种子通过，p=2.4e-4 | L4_candidate |
 | 相变路径选择（XD-P1-PHASE-001） | support | 12/12 种子通过，p=2.4e-4 | L4_candidate |
 | E 维度范式转换（XD-E-PARADIGM-001） | challenge | 5 个标定点，无普适转换函数 | exploratory |
-| 市场均衡路径选择（XD-P2-ECO-001） | challenge | 12/12 方向符合但判别力不足（ratio_dev=0.970） | exploratory |
+| 市场均衡路径选择（XD-P2-ECO-001） | challenge | V1 12/12 方向符合但判别力不足（ratio_dev=0.970）；V2 学习型交易者速度子预测 5/12（p=0.774） | exploratory |
 
 当前实证等级：**L4_candidate**——有 3 个 support 级 + 2 个 challenge 级实验结果，但还在等独立复核。
 
@@ -83,7 +83,7 @@ It is not philosophy. It is a falsifiable theory with explicit predictions, runn
 | AI adaptive dynamics (XD-AI-ADAM-001) | support | 12/12 seeds, p=2.4e-4 | L4_candidate |
 | Phase-transition path (XD-P1-PHASE-001) | support | 12/12 seeds, p=2.4e-4 | L4_candidate |
 | E-dimension paradigm map (XD-E-PARADIGM-001) | challenge | 5 calibration points, no universal transform | exploratory |
-| Market-equilibrium path (XD-P2-ECO-001) | challenge | 12/12 direction-consistent but insufficient discriminative power (ratio_dev=0.970) | exploratory |
+| Market-equilibrium path (XD-P2-ECO-001) | challenge | V1 12/12 direction-consistent but insufficient discriminative power (ratio_dev=0.970); V2 learning traders speed sub-prediction 5/12 (p=0.774) | exploratory |
 
 Empirical level: **L4_candidate** — three support-level + two challenge-level results, awaiting independent replication.
 

@@ -221,7 +221,7 @@ V1 challenge → 修正 E/N/S 口径 → V2 support 的两次修正（ISSUE-001/
 
 ## ISSUE-008：ECO 首次运行判别力不足（XD-P2-ECO-001）
 
-**状态**：已产生首次参考实现结果（challenge，exploratory，EV-22c7db69115c4ffc），修正方向待社区决策  
+**状态**：V1 已入账（challenge/exploratory，EV-22c7db69115c4ffc）；V2 学习型交易者开发运行已完成（challenge，exploratory，EV-b3fd72635845c370），修正方向仍待社区决策  
 **影响 claim**：`XD-P2-ECO-001`（11.4 经济学预言的首次计算验证）  
 **发现时间**：2026-08-01
 
@@ -248,3 +248,12 @@ V1 challenge → 修正 E/N/S 口径 → V2 support 的两次修正（ISSUE-001/
 - 首次结果已入账本（EV-22c7db69115c4ffc，challenge/exploratory），脚本内置判别力检查，避免"口径必然赢"。
 - 诚实声明：该结果**不支持也不证伪**经济学预言——它证明"比例佣金口径"判别力不足，并暴露无学习模型不收敛的建模问题。
 - 后续认领与决策见 [DEC-008](open-decisions.md)。
+
+### 进展：V2 学习型交易者开发运行（2026-08-01）
+
+- 按 DEC-008 修正 A 实现 [double_auction_learning.py](reference-implementation/double_auction_learning.py)（Roth-Erev 含遗忘，12 种子，80 轮；学习规则只按已实现利润强化所选价格动作，不含 S/佣金偏好项）。
+- **机制层面修复确认**：静态对照 0/12 收敛 → 学习型市场全部收敛，"更快到达均衡"子预测从不可检验变为可检验。
+- **预测层面未获支持**：conv_A<conv_B 仅 5/12 种子（p=0.774）；稳健性扫描（λ∈{1,2}×φ∈{0,0.05,0.1}）方向一致仅 2/6；λ=2 时两路均在 12-13 轮收敛且 B 略快。
+- S 次判据仍被佣金率因子主导（ratio_dev=0.981>0.85），与 V1 相同。
+- 统计结论 **challenge**，按 ISSUE-006 新口径入账 **exploratory**（EV-b3fd72635845c370）。
+- 科学含义：高佣金对称拉宽有效价差、未产生显著速度差异，"E=佣金"作为"路径成本"操作化受质疑；DEC-008 选项 B（固定额税）/ C（S 归一化）值得纳入讨论。

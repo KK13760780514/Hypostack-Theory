@@ -112,6 +112,8 @@
 
 **默认建议**：A。按 ISSUE-006 规则，修正后须重新预注册并默认降级 exploratory。
 
+**开发进展（2026-08-01）**：按方案 A 的学习型交易者 V2 开发运行已完成（Roth-Erev，12 种子，80 轮）：市场可收敛性修复（静态 0/12 → 学习型全部收敛），但速度子预测未获支持（conv_A<conv_B 仅 5/12，p=0.774；稳健性扫描 2/6 组方向一致）。统计结论 challenge，入账 exploratory（EV-b3fd72635845c370）。此结果提示"E=佣金"操作化受质疑，选项 B/C 值得纳入讨论。详见 [ISSUE-008](known-issues.md)。
+
 **影响 claim**：XD-P2-ECO-001。**状态**：开放。**讨论链接**：[issue #1](https://github.com/KK13760780514/Hypostack-Theory/issues/1)（ECO 基线提交见 [issue #2](https://github.com/KK13760780514/Hypostack-Theory/issues/2)）。
 
 ---

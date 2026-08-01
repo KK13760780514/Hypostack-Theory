@@ -1,0 +1,83 @@
+# HypoStack 开放验证 -- 预注册（XD-P2-ECO-001 V2，DEC-008 方案 A）
+# 文件：prereg-reference-xd-p2-eco-001-v2-learning-20260801.yaml
+# 说明：学习型交易者（Roth-Erev）口径。E/N/S/统计阈值与学习超参数在运行前已
+#       在 double_auction_learning.py 中固定（seed 在运行前固定）。
+
+submission_id: "reference-xd-p2-eco-001-v2-learning-20260801"
+title: "市场均衡路径选择 V2：学习型交易者（Roth-Erev）下低佣金路径是否更快收敛（DEC-008 方案 A）"
+author:
+  name: "reference-implementation"
+  affiliation: "open-validation"
+  contact: ""
+
+claim_id: "XD-P2-ECO-001"
+
+prediction_statement: "当市场存在两条达到同一均衡价格区间的路径时，交易成本更低的路径被优先选择：其更快收敛到均衡（主判据），且总消耗 S 更小（次判据）。"
+
+# E 的测量范式 -- 实验前必须固定
+E_measurement:
+  definition: "E_i = C × p_i（第 i 笔成交的佣金，p_i 为成交价）。与 V1 口径一致，用于 ISSUE-006 要求的 V1 口径对比报告"
+  unit: "佣金（无因次率 × 价格单位）"
+  paradigm: "成交佣金记账；佣金改变撮合（有效买价 = bid/(1+C)，有效卖价 = ask×(1+C)）"
+
+# N 的计算方式 -- 实验前必须固定
+N_calculation:
+  definition: "N = 成交笔数"
+  step_rule: "每笔成交计 1 步（ΔN_i = 1）"
+
+# S 的计算方式 -- 实验前必须固定
+S_calculation:
+  formula: "S = sum(E_i * delta_N_i)"
+  implementation_note: "对每笔成交累加 C×p。V2 主判据为收敛轮数，S 为次判据（保留 V1 口径对比）。"
+
+# 统计阈值 -- 实验前必须固定
+statistical_threshold:
+  test: "双侧二项检验（speed_A < speed_B 的种子数）"
+  alpha: 0.05
+  one_sided: false
+
+# V2 主判据与分类规则（预注册）
+primary_criterion: "收敛轮数：首个满足『最后 CONV_WINDOW(10) 轮成交均价标准差 ≤ PRICE_BAND(1.0) 且窗口内成交 ≥ MIN_FILLS(3)』的轮次；未达则记 ROUNDS(80)。speed_A < speed_B 即低佣金路径更早收敛。"
+support_condition: "speed_A < speed_B ≥ 10/12 种子（p<0.05），且活动性护栏成立（mean_fills_B ≥ 0.25 × mean_fills_A），且稳健性检查成立（λ∈{1,2}×φ∈{0,0.05,0.1} 共 6 组扫描中 ≥4 组方向一致）"
+falsification_condition: "speed_A < speed_B ≤ 4/12 种子"
+
+# 学习模型超参数（运行前固定）
+learning_hyperparameters:
+  model: "Roth-Erev 强化学习（含指数遗忘），动作集 = 整数价格网格 50..150"
+  choice_rule: "P(动作a) ∝ q(a)^lambda；q ← (1-phi)·q 后 q[选中动作] += 已实现利润（下限 0）"
+  lambda_ref: 1.0
+  phi_ref: 0.05
+  robustness_scan: "λ∈{1,2} × φ∈{0,0.05,0.1}（运行后全部报告，不挑参数）"
+  integrity_guard: "学习规则不含任何 S/佣金率/省力偏好项；节俭性只能从市场机制中涌现"
+
+# 数据集
+dataset:
+  name: "合成市场（自包含，无外部数据）"
+  source: "reference-implementation/double_auction_learning.py"
+  hash: ""
+
+# 代码
+code:
+  repository: "https://github.com/KK13760780514/Hypostack-Theory"
+  commit: ""
+  hash: ""
+
+# 运行环境
+environment:
+  os: ""
+  python_version: ""
+  dependencies: "python-stdlib-only"
+
+# 随机种子策略
+seed_policy:
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  fixed_before_run: true
+
+# 结果政策
+result_policy:
+  negative_results_accepted: true
+  post_registration_changes_allowed: false
+
+timestamp_utc: "2026-08-01T10:30:00+00:00"
+license: "CC BY-SA 4.0 for text; MIT for code"
+notes: "DEC-008 方案 A 开发运行。按 ISSUE-006 规则，本新口径提交默认 exploratory；DEC-008 issue #1 未达成共识前，正式入账与否由社区定夺（提出者开发证据）。"

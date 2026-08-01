@@ -31,6 +31,7 @@ python .\open-validation\reference-implementation\e_paradigm_map_v2.py
 python .\open-validation\reference-implementation\e_paradigm_map_v3.py
 python .\open-validation\reference-implementation\phase_transition.py
 python .\open-validation\reference-implementation\double_auction.py
+python .\open-validation\reference-implementation\double_auction_learning.py
 ```
 
 The reference implementation uses only the Python standard library (3.9+), no dependencies required.
@@ -45,7 +46,7 @@ All submitted experimental results are recorded in [evidence-ledger.csv](evidenc
 | XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (path A) | 55000.0 (path B) | V2: effective activation energy; 16/16 temps consistent |
 | XD-E-PARADIGM-001 | challenge | exploratory | null | 1.04e-19 (physical) | 5.06e-20 (biological) | V3: 5 calibration points; eta span 2.3 orders; power-law R²<0.64 |
 | XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (slow cool) | 237486 (quench) | 12/12 seeds pass; 2D Ising model phase transition |
-| XD-P2-ECO-001 | challenge | exploratory | 4.9e-4 | 13.4 (low commission) | 245.8 (high commission) | 12/12 direction-consistent but insufficient discriminative power (ratio_dev=0.970); see ISSUE-008 |
+| XD-P2-ECO-001 | challenge | exploratory | 4.9e-4 | 13.4 (low commission) | 245.8 (high commission) | V1 12/12 direction-consistent but insufficient discriminative power (ratio_dev=0.970); V2 learning traders speed sub-prediction 5/12 (p=0.774); see ISSUE-008 |
 
 Note: all results above were produced by the proposer's reference implementation (reference-implementation); no external independent replication exists yet.
 
