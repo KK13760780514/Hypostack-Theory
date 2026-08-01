@@ -92,7 +92,7 @@ Paste the output into the `preregistration.hash` field of your submission JSON. 
 
 The 3 support results (XD-P1-CHEM-001, XD-AI-ADAM-001, XD-P1-PHASE-001) were all produced by the proposer's reference implementation, and **no external independent replication exists yet**. Independent replication is a required condition for evidence to advance from `L4_candidate` to `confirmed`. Replication workflow:
 
-1. Choose the evidence to replicate: locate the target row in [evidence-ledger.csv](evidence-ledger.csv) and record its `evidence_id` (e.g., `EV-fe2c49158f63ef6a`).
+1. Choose the evidence to replicate: locate the target row in [evidence-ledger.csv](evidence-ledger.csv) and record its `evidence_id` (e.g., `EV-fadf8b4aca7d3ffd`).
 2. Implement it yourself or run the reference scripts (`chemical_path_v2.py`, `adam_dynamics.py`, `phase_transition.py` in `reference-implementation/`); prefer your own implementation or an independent environment — do not blindly trust the reference scripts' output.
 3. Generate the result JSON per `submission-schema.json`. Differences from a normal submission:
    - Add `"replication_of": "<target evidence_id>"` at the top level (optional but strongly recommended, to trace the replication chain in the ledger);

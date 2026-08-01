@@ -58,6 +58,7 @@ Whether your result is supportive or negative, as long as it passes form validat
 | [TASK-004](open-validation/tasks/TASK-004-adam-dynamics.md) | Adam 自适应动态 | 复现与挑战首次 challenge 结果 |
 | [TASK-005](open-validation/tasks/TASK-005-chemical-path.md) | 化学路径竞争 | **推荐入门**，有完整参考实现 |
 | [TASK-006](open-validation/tasks/TASK-006-phase-transition.md) | 相变路径选择 | 2D Ising 模型验证，首次结果 support |
+| [TASK-007](open-validation/tasks/TASK-007-e-paradigm-process-type.md) | E 范式转换（过程类型） | 按过程类型分类标定 η，检验组内普适性（由 ISSUE-007 立项，需预注册判据） |
 
 **新贡献者推荐从 [TASK-005](open-validation/tasks/TASK-005-chemical-path.md) 开始**：它有完整的参考实现（[chemical_path.py](open-validation/reference-implementation/chemical_path.py)）、明确的预测冲突（玄叠论预测路径 B，Arrhenius 预测路径 A），V1 结果为 challenge 而 V2 已修正为 support（L4_candidate），欢迎独立复现。
 
@@ -82,6 +83,7 @@ All validation tasks are listed in the [open-validation/tasks/](open-validation/
 | [TASK-004](open-validation/tasks/TASK-004-adam-dynamics.md) | Adam adaptive dynamics | Reproduce and challenge the first challenge result |
 | [TASK-005](open-validation/tasks/TASK-005-chemical-path.md) | Chemical path competition | **Recommended starter**, full reference implementation |
 | [TASK-006](open-validation/tasks/TASK-006-phase-transition.md) | Phase-transition path selection | 2D Ising model validation, first result support |
+| [TASK-007](open-validation/tasks/TASK-007-e-paradigm-process-type.en.md) | E-paradigm conversion (process type) | Calibrate η by process type, test within-type universality (spawned from ISSUE-007, preregistration required) |
 
 **New contributors should start with [TASK-005](open-validation/tasks/TASK-005-chemical-path.md)**: it has a complete reference implementation ([chemical_path.py](open-validation/reference-implementation/chemical_path.py)), a clear prediction conflict (XuanDie predicts path B, Arrhenius predicts path A), and its V1 was a challenge with V2 revised to support (L4_candidate), welcoming independent replication.
 

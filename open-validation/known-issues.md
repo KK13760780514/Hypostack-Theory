@@ -63,6 +63,36 @@
 2. 无对照规则修订（Adam 收敛但 SGD 不收敛计为 Adam 胜）是否会引入偏差？
 3. 是否需要增加更多种子（如 20 个）以提高统计效力？
 
+## ISSUE-002：预注册哈希生成门槛
+
+**状态**：已解决  
+**影响 claim**：所有
+
+### 问题描述
+
+外部贡献者可能不知道如何为预注册文件生成哈希值。
+
+### 解决方案
+
+已在 [README.md](README.md)「生成预注册哈希」一节补充命令与说明：
+
+```powershell
+python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml','rb').read()).hexdigest())"
+```
+
+## ISSUE-003：多种子提交的格式支持
+
+**状态**：已解决  
+**影响 claim**：所有
+
+### 问题描述
+
+原始 schema 只支持 `seed` 为单个整数，但多种子实验需要传入种子列表。
+
+### 解决方案
+
+已更新 [submission-schema.json](submission-schema.json)，`seed` 字段现在支持 `integer` 或 `array of integers`。
+
 ## ISSUE-004：P1 softmax 选择器存在定义性循环
 
 **状态**：已修正（XD-P1-CHEM-001 替代），V2 已修正为 support（L4_candidate），等待社区独立复核  
@@ -110,36 +140,6 @@
 - `p1_simulation.py` 降级为口径演示，不作为 L4 候选证据。
 - `XD-P1-SIM-001` 的账本记录保留但标记为历史。
 - 新 claim `XD-P1-CHEM-001` 的 challenge 结果已入账。
-
-## ISSUE-002：预注册哈希生成门槛
-
-**状态**：已解决  
-**影响 claim**：所有
-
-### 问题描述
-
-外部贡献者可能不知道如何为预注册文件生成哈希值。
-
-### 解决方案
-
-已在 [README.md](README.md)「生成预注册哈希」一节补充命令与说明：
-
-```powershell
-python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml','rb').read()).hexdigest())"
-```
-
-## ISSUE-003：多种子提交的格式支持
-
-**状态**：已解决  
-**影响 claim**：所有
-
-### 问题描述
-
-原始 schema 只支持 `seed` 为单个整数，但多种子实验需要传入种子列表。
-
-### 解决方案
-
-已更新 [submission-schema.json](submission-schema.json)，`seed` 字段现在支持 `integer` 或 `array of integers`。
 
 ## ISSUE-005：外部贡献者友好性不足
 

@@ -91,7 +91,7 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 
 当前 3 个 support 结果（XD-P1-CHEM-001、XD-AI-ADAM-001、XD-P1-PHASE-001）均由提出者的参考实现产出，**尚未有任何外部独立复核**。独立复核是证据从 `L4_candidate` 升级为 `confirmed` 的必要条件。复核流程：
 
-1. 认领要复现的证据：在 [evidence-ledger.csv](evidence-ledger.csv) 中找到目标行，记录其 `evidence_id`（如 `EV-fe2c49158f63ef6a`）。
+1. 认领要复现的证据：在 [evidence-ledger.csv](evidence-ledger.csv) 中找到目标行，记录其 `evidence_id`（如 `EV-fadf8b4aca7d3ffd`）。
 2. 自行实现或运行参考实现脚本（`reference-implementation/` 下的 `chemical_path_v2.py`、`adam_dynamics.py`、`phase_transition.py`），尽量使用你自己的实现或独立环境，不要直接信任参考脚本的输出。
 3. 按 `submission-schema.json` 生成结果 JSON，与普通提交的区别：
    - 顶层加 `"replication_of": "<目标 evidence_id>"`（可选但强烈建议，用于在账本中追踪复核链）；

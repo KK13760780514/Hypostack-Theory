@@ -31,7 +31,7 @@ S = ∫ E dN
 Hypostack-Theory/
 ├── 玄叠论.md                    # 完整理论规则书（v16.1.0）
 ├── open-validation/             # 开放验证 MVP
-│   ├── reference-implementation/  # 参考实现（10 个 Python 脚本，含 V2/V3）
+│   ├── reference-implementation/  # 参考实现（16 个 Python 脚本，含 V2/V3）
 │   ├── submissions/               # 已提交的实验结果
 │   ├── tasks/                     # 验证任务清单
 │   ├── evidence-ledger.csv        # 公开证据账本

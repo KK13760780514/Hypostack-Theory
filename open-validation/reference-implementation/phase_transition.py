@@ -198,7 +198,7 @@ def main() -> None:
         classification = "challenge"
 
     # S values for submission: path A as S_A, path C as S_B (12-seed means,
-    # matching the submitted JSON and evidence-ledger.csv EV-fe2c49158f63ef6a)
+    # matching the submitted JSON and evidence-ledger.csv EV-fadf8b4aca7d3ffd)
 
     output = {
         "submission_id": "ref-xd-p1-phase-001-20260731",
