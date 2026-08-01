@@ -30,12 +30,13 @@ The reference implementation uses only the Python standard library (3.9+), no de
 
 ### View Current Evidence
 
-All submitted experimental results are recorded in [evidence-ledger.csv](evidence-ledger.csv). Of the 3 active claims, 2 now have V2 results, both classified as **support** at the **L4_candidate** level — the calibration fixes (ISSUE-001 and ISSUE-004) have been validated and await independent replication:
+All submitted experimental results are recorded in [evidence-ledger.csv](evidence-ledger.csv). All 3 active claims now have V2 results: 2 classified as **support** at the **L4_candidate** level, and 1 as **challenge** (exploratory):
 
 | claim_id | Classification | Evidence Level | p-value | S (selected) | S (alternative) | Notes |
 |---|---|---|---|---|---|---|
-| XD-AI-ADAM-001 | support | L4_candidate | 2.4e-4 | 188.5 (Adam) | 346.0 (best SGD) | V2: 12/12 seeds pass; effective-activation-energy calibration |
-| XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (path A) | 55000.0 (path B) | V2: effective activation energy; 8/8 temperatures consistent |
+| XD-AI-ADAM-001 | support | L4_candidate | 2.4e-4 | 188.5 (Adam) | 346.0 (best SGD) | V2: 12/12 seeds pass; expanded lr grid + no-baseline rule |
+| XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (path A) | 55000.0 (path B) | V2: effective activation energy; 16/16 temps consistent |
+| XD-E-PARADIGM-001 | challenge | exploratory | null | 1.04e-19 (physical) | 5.06e-20 (biological) | V2: 3 calibration points; eta span 2.5 orders; ratios inconsistent |
 
 ### Submit Your First Experiment (New Contributor Path)
 

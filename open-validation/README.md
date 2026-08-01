@@ -31,7 +31,7 @@ python .\open-validation\reference-implementation\e_paradigm_map_v2.py
 
 ### 查看当前证据
 
-所有已提交的实验结果记录在 [evidence-ledger.csv](evidence-ledger.csv)。当前 3 个活跃 claim 中 2 个已有首次结果，2 个已产出 V2 support 结果（L4_candidate），1 个为 challenge--这不是失败，而是验证包正在暴露口径问题。
+所有已提交的实验结果记录在 [evidence-ledger.csv](evidence-ledger.csv)。当前 3 个活跃 claim 均已有实验结果：2 个产出 V2 support 结果（L4_candidate），1 个为 challenge（exploratory）--这不是失败，而是验证包正在暴露口径问题。
 
 ### 提交你的第一个实验（新贡献者路径）
 

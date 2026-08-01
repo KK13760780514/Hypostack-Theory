@@ -55,12 +55,13 @@ python .\open-validation\reference-implementation\e_paradigm_map.py
 
 所有实验结果记录在 [evidence-ledger.csv](open-validation/evidence-ledger.csv)。
 
-当前 3 个活跃 claim 中 2 个已有 V2 结果，均为 **support**（L4_candidate，等待独立复核）：
+当前 3 个活跃 claim 均已有 V2 实验结果：2 个 **support**（L4_candidate）+ 1 个 challenge：
 
 | Claim | 方向 | V1 结果 | V2 结果 | 状态 |
 |-------|------|---------|---------|------|
 | XD-P1-CHEM-001 | 化学反应路径竞争 | challenge | **support** (16/16, p=1.5e-5) | L4_candidate |
 | XD-AI-ADAM-001 | 自适应优化动态 | challenge | **support** (12/12, p=2.4e-4) | L4_candidate |
+| XD-E-PARADIGM-001 | E 维度范式转换 | - | challenge (3 标定点, η 跨度 2.5 级) | exploratory |
 
 ### 3. 提交你的第一个实验
 

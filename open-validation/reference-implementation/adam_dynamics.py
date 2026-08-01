@@ -181,7 +181,7 @@ def main() -> None:
     supported = successes >= threshold and p_value < ALPHA
 
     output = {
-        "submission_id": f"ref-{CLAIM_ID.lower()}-20260730",
+        "submission_id": f"ref-{CLAIM_ID.lower()}-v2-20260731",
         "claim_id": CLAIM_ID,
         "title": "Adaptive (Adam) vs fixed-lr SGD dynamics on ill-conditioned toy regression",
         "author": {"name": "reference-implementation", "affiliation": "open-validation", "contact": ""},

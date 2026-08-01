@@ -1,5 +1,5 @@
-﻿{
-  "submission_id": "ref-xd-ai-adam-001-20260730",
+{
+  "submission_id": "ref-xd-ai-adam-001-v2-20260731",
   "claim_id": "XD-AI-ADAM-001",
   "title": "Adaptive (Adam) vs fixed-lr SGD dynamics on ill-conditioned toy regression",
   "author": {
