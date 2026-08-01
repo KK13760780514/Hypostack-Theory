@@ -193,13 +193,6 @@ def append_ledger(submission: dict[str, Any], errors: list[str], ledger_path: Pa
     submission_id = submission.get("submission_id", "")
     notes = "schema_valid" if not errors else "; ".join(errors)
 
-    # Warn if submitting to a degraded claim
-    DEGRADED_CLAIMS = {"XD-P1-SIM-001", "XD-AI-TOY-001"}
-    claim_id = submission.get("claim_id", "")
-    if claim_id in DEGRADED_CLAIMS and not errors:
-        notes += f"; warning:claim_degraded:{claim_id}"
-        level = "degraded"
-
     # If this submission passed, mark prior failures as superseded.
     if not errors:
         count = mark_superseded(ledger_path, submission_id, evidence_id)

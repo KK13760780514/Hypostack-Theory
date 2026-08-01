@@ -27,12 +27,12 @@ python .\open-validation\reference-implementation\e_paradigm_map.py
 
 ### 查看当前证据
 
-所有已提交的实验结果记录在 [evidence-ledger.csv](evidence-ledger.csv)。当前 2 个活跃 claim（CHEM-001、ADAM-001）的首次结果都是 challenge--这不是失败，而是验证包正在暴露口径问题。
+所有已提交的实验结果记录在 [evidence-ledger.csv](evidence-ledger.csv)。当前 3 个活跃 claim 中 2 个已有首次结果，均为 challenge--这不是失败，而是验证包正在暴露口径问题。
 
 ### 提交你的第一个实验（新贡献者路径）
 
 1. **选任务**：推荐从 [TASK-005：化学反应路径竞争](tasks/TASK-005-chemical-path.md) 开始，它有完整的参考实现和明确的预测冲突。
-2. **看示例**：参考 [example-p1-submission.json](example-p1-submission.json) 了解提交 JSON 的格式（注意：该示例使用已降级的 XD-P1-SIM-001，仅作格式参考，不要对该 claim 提交新结果）。
+2. **看示例**：参考 [example-p1-submission.json](example-p1-submission.json) 了解提交 JSON 的格式。
 3. **填预注册**：复制 [preregistration-template.yaml](preregistration-template.yaml)，填入你的 E/N/S 定义和阈值。
 4. **运行实验**：修改参考实现的参数，或用你自己的代码。
 5. **生成提交 JSON**：按 [submission-schema.json](submission-schema.json) 格式生成结果文件，放入 `submissions/`。
@@ -77,11 +77,9 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 ## 评审与 issue 模板
 
 - [评审清单](review-checklist.md)
-- [提交结果 issue 模板](issue-templates/submission.md)
-- [挑战或证伪 issue 模板](issue-templates/challenge-falsification.md)
-- [新任务提案 issue 模板](issue-templates/task-proposal.md)
-
-如果后续初始化 Git 仓库，可以把 `issue-templates/` 迁移为 `.github/ISSUE_TEMPLATE/` 或 Gitee 对应模板目录。
+- [提交结果 issue 模板](https://github.com/KK13760780514/Hypostack-Theory/issues/new?template=submission.md)
+- [挑战或证伪 issue 模板](https://github.com/KK13760780514/Hypostack-Theory/issues/new?template=challenge-falsification.md)
+- [新任务提案 issue 模板](https://github.com/KK13760780514/Hypostack-Theory/issues/new?template=task-proposal.md)
 
 ## 评审原则
 

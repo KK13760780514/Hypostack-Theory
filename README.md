@@ -31,7 +31,7 @@ S = ∫ E dN
 Hypostack-Theory/
 ├── 玄叠论.md                    # 完整理论规则书（v16.1.0）
 ├── open-validation/             # 开放验证 MVP
-│   ├── reference-implementation/  # 参考实现（5 个 Python 脚本）
+│   ├── reference-implementation/  # 参考实现（6 个 Python 脚本）
 │   ├── submissions/               # 已提交的实验结果
 │   ├── tasks/                     # 验证任务清单
 │   ├── evidence-ledger.csv        # 公开证据账本
@@ -55,7 +55,7 @@ python .\open-validation\reference-implementation\e_paradigm_map.py
 
 所有实验结果记录在 [evidence-ledger.csv](open-validation/evidence-ledger.csv)。
 
-当前 2 个活跃 claim 的首次结果均为 **challenge**——这不是失败，而是验证包正在暴露口径问题，等待社区讨论：
+当前 3 个活跃 claim 中 2 个已有首次结果，均为 **challenge**--这不是失败，而是验证包正在暴露口径问题，等待社区讨论：
 
 | Claim | 方向 | 首次结果 | 状态 |
 |-------|------|----------|------|

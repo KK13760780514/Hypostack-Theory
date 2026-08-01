@@ -11,7 +11,7 @@ YYYY-MM-DD-<author>-<claim-id>.json
 示例：
 
 ```text
-2026-07-30-kimi-XD-P1-SIM-001.json
+2026-07-30-kimi-XD-P1-CHEM-001.json
 ```
 
 提交前必须完成：
