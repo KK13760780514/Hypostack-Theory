@@ -49,3 +49,9 @@ jobs:
 
       - name: 运行 E 维度范式映射 / Run E paradigm map
         run: python open-validation/reference-implementation/e_paradigm_map.py
+
+      - name: 运行化学路径 V2 模拟 / Run chemical path V2 simulation
+        run: python open-validation/reference-implementation/chemical_path_v2.py
+
+      - name: 运行 E 维度范式映射 V2 / Run E paradigm map V2
+        run: python open-validation/reference-implementation/e_paradigm_map_v2.py

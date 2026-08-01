@@ -31,7 +31,7 @@ S = ∫ E dN
 Hypostack-Theory/
 ├── 玄叠论.md                    # 完整理论规则书（v16.1.0）
 ├── open-validation/             # 开放验证 MVP
-│   ├── reference-implementation/  # 参考实现（6 个 Python 脚本）
+│   ├── reference-implementation/  # 参考实现（8 个 Python 脚本，含 V2）
 │   ├── submissions/               # 已提交的实验结果
 │   ├── tasks/                     # 验证任务清单
 │   ├── evidence-ledger.csv        # 公开证据账本
@@ -76,8 +76,9 @@ python .\open-validation\reference-implementation\e_paradigm_map.py
 
 ## 关键文档 / Key Documents
 
-- [玄叠论.md](玄叠论.md) — 完整理论规则书
-- [开放验证 README](open-validation/README.md) — 验证流程与贡献指南
+- [玄叠论.md](玄叠论.md) - 完整理论规则书
+- [EN-ABSTRACT.md](EN-ABSTRACT.md) - 理论英文摘要
+- [开放验证 README](open-validation/README.md) - 验证流程与贡献指南
 - [已知问题](open-validation/known-issues.md) — ISSUE-001 / ISSUE-004 等开放讨论
 - [证据账本](open-validation/evidence-ledger.csv) — 所有实验结果记录
 - [评审清单](open-validation/review-checklist.md) — 提交评审标准

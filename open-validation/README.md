@@ -1,5 +1,7 @@
 # HypoStack 开放验证 MVP
 
+> [English version](README.en.md) | 中文版本
+
 > 玄叠论（HypoStack Theory）的开放验证最小包。HypoStack = Hypothesis + Stack，意指差异叠加演化的理论假说。
 
 **English:** HypoStack is a falsifiable hypothesis about how differences drive the evolution of all systems. The core claim: systems tend to select paths that minimize the cumulative information action `S = Σ(Eᵢ × ΔNᵢ)`, where `E` is the difference intensity and `N` is the discrete step count. This package lets external researchers run, reproduce, challenge, or falsify specific predictions — without reading the full theory.
@@ -19,15 +21,17 @@
 
 ```powershell
 python .\open-validation\reference-implementation\chemical_path.py
+python .\open-validation\reference-implementation\chemical_path_v2.py
 python .\open-validation\reference-implementation\adam_dynamics.py
 python .\open-validation\reference-implementation\e_paradigm_map.py
+python .\open-validation\reference-implementation\e_paradigm_map_v2.py
 ```
 
 参考实现只使用 Python 标准库（3.9+），无需安装依赖。
 
 ### 查看当前证据
 
-所有已提交的实验结果记录在 [evidence-ledger.csv](evidence-ledger.csv)。当前 3 个活跃 claim 中 2 个已有首次结果，均为 challenge--这不是失败，而是验证包正在暴露口径问题。
+所有已提交的实验结果记录在 [evidence-ledger.csv](evidence-ledger.csv)。当前 3 个活跃 claim 中 2 个已有首次结果，2 个已产出 V2 support 结果（L4_candidate），1 个为 challenge--这不是失败，而是验证包正在暴露口径问题。
 
 ### 提交你的第一个实验（新贡献者路径）
 
@@ -73,6 +77,8 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 - **ISSUE-001**：AI 玩具路径 E 记账口径存在望远镜求和，已用 XD-AI-ADAM-001 替代（首次结果 challenge）。
 
 两个修正后的 claim 首次结果都是 challenge，说明 S 的口径定义需要社区讨论。欢迎认领分析。
+
+**V2 进展**：XD-P1-CHEM-001 与 XD-AI-ADAM-001 已产出 V2 support 结果（L4_candidate），等待独立复核。
 
 ## 评审与 issue 模板
 
