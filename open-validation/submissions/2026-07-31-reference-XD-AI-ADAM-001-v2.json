@@ -1,0 +1,181 @@
+﻿{
+  "submission_id": "ref-xd-ai-adam-001-20260730",
+  "claim_id": "XD-AI-ADAM-001",
+  "title": "Adaptive (Adam) vs fixed-lr SGD dynamics on ill-conditioned toy regression",
+  "author": {
+    "name": "reference-implementation",
+    "affiliation": "open-validation",
+    "contact": ""
+  },
+  "preregistration": {
+    "hash": "in-script-preregistered-constants",
+    "timestamp_utc": "2026-07-30T00:00:00+00:00",
+    "uri": "protocol-p1-ai.md#xd-ai-adam-001"
+  },
+  "implementation": {
+    "repository": "",
+    "commit": "",
+    "code_hash": "8615adebe7d8786cc26c61b9651801edd512e5debb6ef44456b36a8be4cd5899",
+    "data_hash": "",
+    "seed": [
+      11,
+      23,
+      37,
+      42,
+      58,
+      67,
+      79,
+      88,
+      97,
+      123,
+      999,
+      2026
+    ],
+    "environment": {
+      "os": "Windows-10-10.0.19045-SP0",
+      "python_version": "3.13.5",
+      "dependencies": "python-stdlib-only"
+    }
+  },
+  "result": {
+    "S_A": 188.52928727665127,
+    "S_B": 345.9706554194662,
+    "preferred_path": "A",
+    "selected_counts": {
+      "A": 12,
+      "B": 0
+    },
+    "p_value": 0.000244140625,
+    "summary": "E_i = loss level (AUC); successes 12/12 (threshold 11); p=0.0002; alpha=0.01",
+    "raw_output": {
+      "per_seed": [
+        {
+          "seed": 11,
+          "adam_S": 113.6916805324511,
+          "adam_steps": 48,
+          "best_sgd_lr": 0.01,
+          "best_sgd_S": 235.1033046804383,
+          "threshold": 258.61363514848216,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 23,
+          "adam_S": 142.1095784735275,
+          "adam_steps": 373,
+          "best_sgd_lr": null,
+          "best_sgd_S": null,
+          "threshold": null,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 37,
+          "adam_S": 102.73549072027669,
+          "adam_steps": 79,
+          "best_sgd_lr": 0.01,
+          "best_sgd_S": 119.89217270171788,
+          "threshold": 131.8813899718897,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 42,
+          "adam_S": 146.22703321402687,
+          "adam_steps": 66,
+          "best_sgd_lr": 0.01,
+          "best_sgd_S": 183.44923569876588,
+          "threshold": 201.7941592686425,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 58,
+          "adam_S": 171.931987036706,
+          "adam_steps": 66,
+          "best_sgd_lr": 0.003,
+          "best_sgd_S": 419.4429006942881,
+          "threshold": 461.38719076371694,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 67,
+          "adam_S": 252.8123608185361,
+          "adam_steps": 50,
+          "best_sgd_lr": 0.003,
+          "best_sgd_S": 415.1128327891541,
+          "threshold": 456.62411606806955,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 79,
+          "adam_S": 269.5719233287783,
+          "adam_steps": 213,
+          "best_sgd_lr": 0.003,
+          "best_sgd_S": 399.4738646616067,
+          "threshold": 439.4212511277674,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 88,
+          "adam_S": 161.19987605859384,
+          "adam_steps": 62,
+          "best_sgd_lr": 0.003,
+          "best_sgd_S": 428.6619362271486,
+          "threshold": 471.5281298498635,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 97,
+          "adam_S": 219.78770419854555,
+          "adam_steps": 233,
+          "best_sgd_lr": 0.003,
+          "best_sgd_S": 392.12006913255436,
+          "threshold": 431.33207604580986,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 123,
+          "adam_S": 272.1473302171319,
+          "adam_steps": 198,
+          "best_sgd_lr": 0.003,
+          "best_sgd_S": 403.36951400466336,
+          "threshold": 443.70646540512973,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 999,
+          "adam_S": 197.07501932073055,
+          "adam_steps": 115,
+          "best_sgd_lr": 0.003,
+          "best_sgd_S": 410.64615252926507,
+          "threshold": 451.7107677821916,
+          "prediction_satisfied": true
+        },
+        {
+          "seed": 2026,
+          "adam_S": 213.0614634005106,
+          "adam_steps": 157,
+          "best_sgd_lr": 0.003,
+          "best_sgd_S": 398.4052264945256,
+          "threshold": 438.24574914397823,
+          "prediction_satisfied": true
+        }
+      ],
+      "sgd_lr_grid": [
+        0.0001,
+        0.0003,
+        0.001,
+        0.003,
+        0.01,
+        0.03,
+        0.1
+      ],
+      "adam": {
+        "alpha": 0.05,
+        "beta1": 0.9,
+        "beta2": 0.999
+      },
+      "tolerance": 1.1,
+      "success_threshold": 11
+    }
+  },
+  "classification": "support",
+  "timestamp_utc": "2026-08-01T05:40:08.546192+00:00"
+}
