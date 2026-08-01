@@ -30,13 +30,14 @@ The reference implementation uses only the Python standard library (3.9+), no de
 
 ### View Current Evidence
 
-All submitted experimental results are recorded in [evidence-ledger.csv](evidence-ledger.csv). All 3 active claims now have V2 results: 2 classified as **support** at the **L4_candidate** level, and 1 as **challenge** (exploratory):
+All submitted experimental results are recorded in [evidence-ledger.csv](evidence-ledger.csv). All 4 active claims now have results: 3 classified as **support** at the **L4_candidate** level, and 1 as **challenge** (exploratory):
 
 | claim_id | Classification | Evidence Level | p-value | S (selected) | S (alternative) | Notes |
 |---|---|---|---|---|---|---|
 | XD-AI-ADAM-001 | support | L4_candidate | 2.4e-4 | 188.5 (Adam) | 346.0 (best SGD) | V2: 12/12 seeds pass; expanded lr grid + no-baseline rule |
 | XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (path A) | 55000.0 (path B) | V2: effective activation energy; 16/16 temps consistent |
 | XD-E-PARADIGM-001 | challenge | exploratory | null | 1.04e-19 (physical) | 5.06e-20 (biological) | V3: 5 calibration points; eta span 2.3 orders; power-law R²<0.64 |
+| XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (slow cool) | 237486 (quench) | 12/12 seeds pass; 2D Ising model phase transition |
 
 ### Submit Your First Experiment (New Contributor Path)
 

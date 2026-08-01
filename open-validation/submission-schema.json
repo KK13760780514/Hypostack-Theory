@@ -18,7 +18,7 @@
     "submission_id": { "type": "string", "minLength": 1 },
     "claim_id": {
       "type": "string",
-      "enum": ["XD-P1-CHEM-001", "XD-AI-ADAM-001", "XD-E-PARADIGM-001"]
+      "enum": ["XD-P1-CHEM-001", "XD-AI-ADAM-001", "XD-E-PARADIGM-001", "XD-P1-PHASE-001"]
     },
     "title": { "type": "string", "minLength": 1 },
     "author": {

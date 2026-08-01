@@ -1,0 +1,143 @@
+﻿{
+  "submission_id": "ref-xd-p1-phase-001-20260731",
+  "claim_id": "XD-P1-PHASE-001",
+  "title": "Phase transition path selection: S minimization in 2D Ising model",
+  "author": {
+    "name": "reference-implementation",
+    "affiliation": "open-validation",
+    "contact": ""
+  },
+  "preregistration": {
+    "hash": "in-script-preregistered-constants-v1",
+    "timestamp_utc": "2026-07-31T00:00:00+00:00",
+    "uri": "protocol-p1-ai.md#9-claim-xd-p1-phase-001"
+  },
+  "implementation": {
+    "repository": "",
+    "commit": "",
+    "code_hash": "291259fa4bd27f368a8a358f4348821c76d1ee3ab7e763bfa02395ecfd88aafc",
+    "data_hash": "",
+    "seed": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "environment": {
+      "os": "Windows-10-10.0.19045-SP0",
+      "python_version": "3.13.5",
+      "dependencies": "python-stdlib-only"
+    }
+  },
+  "result": {
+    "S_A": 48759.96658779615,
+    "S_B": 236544.33180812665,
+    "preferred_path": "A",
+    "selected_counts": {
+      "A": 12,
+      "B": 0
+    },
+    "p_value": 0.000244140625,
+    "summary": "12 seeds; S_A(slow)=48902.7, S_B(med)=69432.8, S_C(quench)=237486.1; ordering A<B<C holds 12/12; A<C holds 12/12 (p=0.0002); classification=support",
+    "raw_output": {
+      "T_c": 2.269185314213022,
+      "lattice_size": 20,
+      "protocols": {
+        "A_slow": {
+          "steps": 20,
+          "sweeps": 200
+        },
+        "B_medium": {
+          "steps": 5,
+          "sweeps": 800
+        },
+        "C_quench": {
+          "steps": 1,
+          "sweeps": 4000
+        }
+      },
+      "per_seed_results": {
+        "0": {
+          "S_A_slow": 48759.96658779615,
+          "S_B_medium": 69089.30998576642,
+          "S_C_quench": 236544.33180812665
+        },
+        "1": {
+          "S_A_slow": 49262.64715275629,
+          "S_B_medium": 68497.9174958078,
+          "S_C_quench": 238164.2955221891
+        },
+        "2": {
+          "S_A_slow": 48667.59027328892,
+          "S_B_medium": 69443.39888370314,
+          "S_C_quench": 236237.73032586274
+        },
+        "3": {
+          "S_A_slow": 48700.79401017561,
+          "S_B_medium": 69644.58987769723,
+          "S_C_quench": 237297.95309856525
+        },
+        "4": {
+          "S_A_slow": 48385.29879937246,
+          "S_B_medium": 69135.26224185318,
+          "S_C_quench": 238220.3340284012
+        },
+        "5": {
+          "S_A_slow": 49051.59427330495,
+          "S_B_medium": 69935.00410557452,
+          "S_C_quench": 236891.19083795673
+        },
+        "6": {
+          "S_A_slow": 49195.67574692586,
+          "S_B_medium": 70268.6710477913,
+          "S_C_quench": 238211.3163377464
+        },
+        "7": {
+          "S_A_slow": 48736.18507408158,
+          "S_B_medium": 69921.59301085873,
+          "S_C_quench": 239396.8205984748
+        },
+        "8": {
+          "S_A_slow": 48891.515949971305,
+          "S_B_medium": 68992.81983021738,
+          "S_C_quench": 237709.5462648817
+        },
+        "9": {
+          "S_A_slow": 49396.69573813922,
+          "S_B_medium": 69638.37215077443,
+          "S_C_quench": 236802.9462936917
+        },
+        "10": {
+          "S_A_slow": 49057.74631703204,
+          "S_B_medium": 68966.21049318674,
+          "S_C_quench": 236543.04356660452
+        },
+        "11": {
+          "S_A_slow": 48726.64559030507,
+          "S_B_medium": 69660.82016386626,
+          "S_C_quench": 237814.21588855374
+        }
+      },
+      "statistics": {
+        "mean_S_A": 48902.69629276245,
+        "mean_S_B": 69432.83077392475,
+        "mean_S_C": 237486.14371425452,
+        "ordering_holds": 12,
+        "AB_holds": 12,
+        "BC_holds": 12,
+        "AC_holds": 12,
+        "p_value": 0.000244140625
+      }
+    }
+  },
+  "classification": "support",
+  "timestamp_utc": "2026-08-01T08:41:18.471062+00:00"
+}

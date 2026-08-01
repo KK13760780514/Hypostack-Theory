@@ -31,7 +31,7 @@ S = ∫ E dN
 Hypostack-Theory/
 ├── 玄叠论.md                    # 完整理论规则书（v16.1.0）
 ├── open-validation/             # 开放验证 MVP
-│   ├── reference-implementation/  # 参考实现（8 个 Python 脚本，含 V2）
+│   ├── reference-implementation/  # 参考实现（9 个 Python 脚本，含 V2）
 │   ├── submissions/               # 已提交的实验结果
 │   ├── tasks/                     # 验证任务清单
 │   ├── evidence-ledger.csv        # 公开证据账本
@@ -55,13 +55,14 @@ python .\open-validation\reference-implementation\e_paradigm_map.py
 
 所有实验结果记录在 [evidence-ledger.csv](open-validation/evidence-ledger.csv)。
 
-当前 3 个活跃 claim 均已有 V2 实验结果：2 个 **support**（L4_candidate）+ 1 个 challenge：
+当前 4 个活跃 claim 均已有实验结果：3 个 **support**（L4_candidate）+ 1 个 challenge：
 
 | Claim | 方向 | V1 结果 | V2 结果 | 状态 |
 |-------|------|---------|---------|------|
 | XD-P1-CHEM-001 | 化学反应路径竞争 | challenge | **support** (16/16, p=1.5e-5) | L4_candidate |
 | XD-AI-ADAM-001 | 自适应优化动态 | challenge | **support** (12/12, p=2.4e-4) | L4_candidate |
 | XD-E-PARADIGM-001 | E 维度范式转换 | - | challenge (5 标定点, η 跨度 2.3 级, 幂律 R²<0.64) | exploratory |
+| XD-P1-PHASE-001 | 相变路径选择 | - | **support** (12/12, p=2.4e-4) | L4_candidate |
 
 ### 3. 提交你的第一个实验
 
