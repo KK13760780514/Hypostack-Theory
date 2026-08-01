@@ -70,6 +70,10 @@ In vitro pluripotent stem cells + directed differentiation factors (low/high con
 
 **Statistical criterion (example preregistration)**: ≥10/12 seeds satisfy "S_A < S_B and path A reaches the equilibrium neighborhood first" (binomial, p < 0.05).
 
+### Computation-layer first run (2026-08-01, challenge/exploratory)
+
+[double_auction.py](reference-implementation/double_auction.py) (ZI-C double auction) first run: S_A<S_B in 12/12 seeds (p=4.88e-4) matches the direction, but the discriminative-power check failed (`ratio_dev=0.970`; 97% of the S difference comes from the commission-rate factor), and the learning-free ZI-C market barely converges (the "converges faster" sub-prediction is untestable). See [ISSUE-008](known-issues.md) and [DEC-008](open-decisions.md). Fix directions: learning traders / fixed per-trade tax / S normalization. **This computation-layer design stays exploratory until a fix lands.**
+
 ### Empirical layer (fairly feasible, requires economics community review)
 
 Human-subject laboratory experiments (z-tree/oTree double auction), commission rate as the controlled variable. E/N definitions carry over from the computation layer. Items for review: equilibrium definition (price-band threshold), number of traders, round cap.

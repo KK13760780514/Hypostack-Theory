@@ -28,8 +28,9 @@ S = ∫ E dN
 | AI 优化动态（XD-AI-ADAM-001） | support | 12/12 种子通过，p=2.4e-4 | L4_candidate |
 | 相变路径选择（XD-P1-PHASE-001） | support | 12/12 种子通过，p=2.4e-4 | L4_candidate |
 | E 维度范式转换（XD-E-PARADIGM-001） | challenge | 5 个标定点，无普适转换函数 | exploratory |
+| 市场均衡路径选择（XD-P2-ECO-001） | challenge | 12/12 方向符合但判别力不足（ratio_dev=0.970） | exploratory |
 
-当前实证等级：**L4_candidate**——有 3 个 support 级实验结果，但还在等独立复核。
+当前实证等级：**L4_candidate**——有 3 个 support 级 + 2 个 challenge 级实验结果，但还在等独立复核。
 
 **一个必须说清楚的转折：**
 
@@ -82,8 +83,9 @@ It is not philosophy. It is a falsifiable theory with explicit predictions, runn
 | AI adaptive dynamics (XD-AI-ADAM-001) | support | 12/12 seeds, p=2.4e-4 | L4_candidate |
 | Phase-transition path (XD-P1-PHASE-001) | support | 12/12 seeds, p=2.4e-4 | L4_candidate |
 | E-dimension paradigm map (XD-E-PARADIGM-001) | challenge | 5 calibration points, no universal transform | exploratory |
+| Market-equilibrium path (XD-P2-ECO-001) | challenge | 12/12 direction-consistent but insufficient discriminative power (ratio_dev=0.970) | exploratory |
 
-Empirical level: **L4_candidate** — three support-level results, awaiting independent replication.
+Empirical level: **L4_candidate** — three support-level + two challenge-level results, awaiting independent replication.
 
 **The twist you should know about:**
 

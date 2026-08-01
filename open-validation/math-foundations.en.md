@@ -50,21 +50,23 @@ To establish a continuum definition `S = ∫ E dN`, one must answer:
 - **Candidate acceptance criterion**: For a given family of paths, there exists a sequence of mesh refinements under which `Σ(E_i ΔN_i)` converges; the limit is stable w.r.t. the path's "natural parameterization" (at least reproducible).
 - **Numerical check**: Refine the temperature steps of phase_transition.py from 20 to 200/2000 and observe whether `S_A` converges — this is the **lowest-cost validation currently executable**, needing no theory derivation.
 
-**Preliminary numerical evidence (2026-08-01, [phase_convergence.py](reference-implementation/phase_convergence.py))**: fixed total MC sweeps=4000, refined temperature steps n∈{2,5,10,20,50,100,200}, 3-seed means:
+**Preliminary numerical evidence (2026-08-01, [phase_convergence.py](reference-implementation/phase_convergence.py))**: fixed total MC sweeps=4000, refined temperature steps n∈{2,5,10,20,50,100,200,400}, 12-seed means (seeds 0–11, strengthened run 2026-08-01):
 
-| n_steps | mean S | ratio vs n=20 |
-|---|---|---|
-| 2 | 127204 | 2.60 |
-| 5 | 69010 | 1.41 |
-| 10 | 54906 | 1.12 |
-| 20 | 48897 | 1.00 |
-| 50 | 44820 | 0.917 |
-| 100 | 43540 | 0.890 |
-| 200 | 43159 | 0.883 |
+| n_steps | mean S | std | ratio vs n=20 |
+|---|---|---|---|
+| 2 | 126741 | 585 | 2.59 |
+| 5 | 69433 | 485 | 1.42 |
+| 10 | 55447 | 493 | 1.13 |
+| 20 | 48903 | 281 | 1.00 |
+| 50 | 45254 | 433 | 0.925 |
+| 100 | 43670 | 332 | 0.893 |
+| 200 | 43293 | 344 | 0.885 |
+| 400 | 43132 | 312 | 0.882 |
 
-- Under mesh refinement S decreases monotonically and stabilizes: the 100→200 relative change is only **-0.88%** (<1%), suggesting a continuum limit may exist.
-- The n=20 reproduction (48897) matches the ledger mean (48903, <0.1%), confirming script reliability.
-- **Honest reading**: S is still grid-dependent (n=20 vs n=200 differ by ~12%); "a continuum limit exists" is a numerical indication, not a proof. Whether the grid dependence affects the stability of path ordering (S_A<S_B<S_C), and the theoretical formalization of Q1/Q2, remain open. **External replicators with independent implementations and more seeds are welcome.**
+- Under mesh refinement S decreases monotonically and stabilizes: the 200→400 relative change is only **-0.37%** (<1%), and the step shrinks as the grid refines (100→200: -0.86%, 200→400: -0.37%), suggesting a continuum limit may exist.
+- Cross-seed std is <1.3% at every grid point (e.g. n=400: 43132±312), indicating good seed stability.
+- The n=20 reproduction (48903) matches the ledger mean (48903, <0.1%), confirming script reliability.
+- **Honest reading**: S is still grid-dependent (n=20 vs n=400 differ by ~12%); "a continuum limit exists" is a numerical indication, not a proof. Whether the grid dependence affects the stability of path ordering (S_A<S_B<S_C), and the theoretical formalization of Q1/Q2, remain open. **External replicators with independent implementations and more seeds are welcome.**
 
 ### Q4: Well-posedness of the minimization
 

@@ -1,0 +1,226 @@
+﻿{
+  "submission_id": "ref-xd-p2-eco-001-20260801",
+  "claim_id": "XD-P2-ECO-001",
+  "title": "Market equilibrium path selection: lower total commission path is preferred",
+  "author": {
+    "name": "reference-implementation",
+    "affiliation": "open-validation",
+    "contact": ""
+  },
+  "preregistration": {
+    "hash": "in-script-preregistered-constants-v1",
+    "timestamp_utc": "2026-08-01T00:00:00+00:00",
+    "uri": "protocol-p1-ai.md#10-claim-xd-p2-eco-001"
+  },
+  "implementation": {
+    "repository": "",
+    "commit": "",
+    "code_hash": "a36999a32b533bafb172e4c2bc4b7314ebfa4a86aa2630d479618952e8750c0c",
+    "data_hash": "",
+    "seed": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "environment": {
+      "os": "Windows-10-10.0.19045-SP0",
+      "python_version": "3.13.5",
+      "dependencies": "python-stdlib-only"
+    }
+  },
+  "result": {
+    "S_A": 13.447175646667723,
+    "S_B": 245.83999339368572,
+    "preferred_path": "A",
+    "selected_counts": {
+      "A": 12,
+      "B": 0
+    },
+    "p_value": 0.00048828125,
+    "summary": "12 seeds; S_A(low commission)=13.4, S_B(high commission)=245.8; S_A<S_B holds 12/12 (p=0.0005); discriminative_check: ratio_dev=0.970 (<=0.85 required), fills_ratio=0.914; converged markets: A=1/12, B=2/12; classification=challenge",
+    "raw_output": {
+      "model": "ZI-C double auction",
+      "buyers": 25,
+      "sellers": 25,
+      "rounds": 60,
+      "commission_A": 0.001,
+      "commission_B": 0.02,
+      "discriminative_power": {
+        "ratio_dev": 0.9700171880181628,
+        "mean_fills_A": 134.0,
+        "mean_fills_B": 122.5,
+        "fills_ratio": 0.914179104477612,
+        "note": "ratio_dev close to 1 means the S difference is dominated by the commission-rate factor (construction), not by trading behaviour"
+      },
+      "per_seed_results": [
+        {
+          "seed": 0,
+          "S_A": 14.743761474332883,
+          "S_B": 270.2999046272238,
+          "fills_A": 143,
+          "fills_B": 131,
+          "converged_A": false,
+          "converged_B": false,
+          "std_first_A": 1.5557464791634774,
+          "std_last_A": 1.127806274626792,
+          "std_first_B": 1.5557464791634774,
+          "std_last_B": 1.127806274626792
+        },
+        {
+          "seed": 1,
+          "S_A": 15.540049007673367,
+          "S_B": 273.49629873365313,
+          "fills_A": 154,
+          "fills_B": 136,
+          "converged_A": false,
+          "converged_B": false,
+          "std_first_A": 3.086657956219128,
+          "std_last_A": 3.667469430935621,
+          "std_first_B": 3.086657956219128,
+          "std_last_B": 4.487317089312889
+        },
+        {
+          "seed": 2,
+          "S_A": 12.691352798275405,
+          "S_B": 237.49791879774355,
+          "fills_A": 121,
+          "fills_B": 113,
+          "converged_A": false,
+          "converged_B": false,
+          "std_first_A": 0.14757936294954987,
+          "std_last_A": 3.0219977699599383,
+          "std_first_B": 0.0,
+          "std_last_B": 3.0219977699599383
+        },
+        {
+          "seed": 3,
+          "S_A": 10.354027854309516,
+          "S_B": 186.56104390988173,
+          "fills_A": 102,
+          "fills_B": 92,
+          "converged_A": false,
+          "converged_B": false,
+          "std_first_A": 3.277144465475452,
+          "std_last_A": 4.917842988473999,
+          "std_first_B": 3.277144465475452,
+          "std_last_B": 2.202244896184514
+        },
+        {
+          "seed": 4,
+          "S_A": 14.402598224999574,
+          "S_B": 269.4711290685382,
+          "fills_A": 142,
+          "fills_B": 133,
+          "converged_A": false,
+          "converged_B": false,
+          "std_first_A": 2.131373616531156,
+          "std_last_A": 4.961405659420289,
+          "std_first_B": 2.131373616531156,
+          "std_last_B": 4.961405659420289
+        },
+        {
+          "seed": 5,
+          "S_A": 16.93808468328816,
+          "S_B": 316.87121749694995,
+          "fills_A": 170,
+          "fills_B": 159,
+          "converged_A": false,
+          "converged_B": false,
+          "std_first_A": 2.6750532476788544,
+          "std_last_A": 5.467867672241056,
+          "std_first_B": 2.6750532476788544,
+          "std_last_B": 5.467867672241056
+        },
+        {
+          "seed": 6,
+          "S_A": 12.741688782645943,
+          "S_B": 231.6171773796687,
+          "fills_A": 128,
+          "fills_B": 117,
+          "converged_A": false,
+          "converged_B": true,
+          "std_first_A": 0.28304996618923894,
+          "std_last_A": 1.0218264148796976,
+          "std_first_B": 0.28304996618923894,
+          "std_last_B": 0.0
+        },
+        {
+          "seed": 7,
+          "S_A": 10.427668641363415,
+          "S_B": 188.41498712621203,
+          "fills_A": 108,
+          "fills_B": 97,
+          "converged_A": false,
+          "converged_B": false,
+          "std_first_A": 3.344731519468704,
+          "std_last_A": 6.258214196136464,
+          "std_first_B": 3.344731519468704,
+          "std_last_B": 6.258214196136464
+        },
+        {
+          "seed": 8,
+          "S_A": 11.087733489153553,
+          "S_B": 205.85036689150144,
+          "fills_A": 108,
+          "fills_B": 100,
+          "converged_A": false,
+          "converged_B": false,
+          "std_first_A": 6.095724708494124,
+          "std_last_A": 9.30161093155793,
+          "std_first_B": 6.095724708494124,
+          "std_last_B": 2.776949032636118
+        },
+        {
+          "seed": 9,
+          "S_A": 16.20990565475198,
+          "S_B": 297.76502762115666,
+          "fills_A": 172,
+          "fills_B": 158,
+          "converged_A": false,
+          "converged_B": false,
+          "std_first_A": 0.7481792107739281,
+          "std_last_A": 3.524125646939805,
+          "std_first_B": 0.7481792107739281,
+          "std_last_B": 3.524125646939805
+        },
+        {
+          "seed": 10,
+          "S_A": 16.18198961406408,
+          "S_B": 283.6894413950343,
+          "fills_A": 163,
+          "fills_B": 143,
+          "converged_A": true,
+          "converged_B": true,
+          "std_first_A": 3.6720158137840895,
+          "std_last_A": 0.0,
+          "std_first_B": 3.6720158137840895,
+          "std_last_B": 0.0
+        },
+        {
+          "seed": 11,
+          "S_A": 10.047247535154806,
+          "S_B": 188.545407676665,
+          "fills_A": 97,
+          "fills_B": 91,
+          "converged_A": false,
+          "converged_B": false,
+          "std_first_A": 0.0,
+          "std_last_A": 0.0,
+          "std_first_B": 0.0,
+          "std_last_B": 0.0
+        }
+      ]
+    }
+  },
+  "classification": "challenge",
+  "timestamp_utc": "2026-08-01T11:49:23.375888+00:00"
+}

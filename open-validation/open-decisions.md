@@ -5,8 +5,9 @@
 本文件汇总开放验证 MVP 中所有等待社区决策的事项。每一项都是贡献循环的一部分：**发布决策 → 社区讨论（issue）→ 投票/共识 → 落定**。任何研究者、工程师或对玄叠论持异议者都可以参与。
 
 - 决策提出：在 [known-issues.md](known-issues.md) 或新 issue 中记录背景
-- 决策讨论：在本仓库开 issue（可用 [task-proposal 模板](../.github/ISSUE_TEMPLATE/task-proposal.md)），注明决策编号
+- 决策讨论：在本仓库开 issue（可用 [task-proposal 模板](../.github/ISSUE_TEMPLATE/task-proposal.md) 或 [decision 模板](../.github/ISSUE_TEMPLATE/decision.md)），注明决策编号
 - 决策落定：维护者在 [known-issues.md](known-issues.md) 更新状态，改动同步协议与参考实现
+- 手动发布操作指南：见 [publishing-guide.md](publishing-guide.md)（含 DEC-001~008 议题草稿）
 
 ---
 
@@ -99,6 +100,20 @@
 
 **影响 claim**：XD-E-PARADIGM-001。**状态**：开放。
 
+## DEC-008：ECO 首次运行的判别力不足如何处理（来源：ISSUE-008）
+
+**背景**：`XD-P2-ECO-001` 首次运行 12/12 种子 S_A<S_B（p=4.88e-4），但 `ratio_dev=0.970>0.85`：S 差异约 97% 来自佣金率比例因子（构造），行为贡献仅约 9%；且 ZI-C 无学习导致市场不收敛，"更快到达均衡"子预测不可检验。详见 [protocol-p1-ai.md](protocol-p1-ai.md) 第 10 节与 [ISSUE-008](known-issues.md)。
+
+**候选选项**：
+- A. 交易者加学习规则（EWA/Roth-Erev），使市场真实收敛，以"收敛轮数差异"为主判据、"S 差异"为次判据（推荐）
+- B. E 改用固定额交易税（非比例佣金），消除比例因子主导
+- C. S 按单位成交额归一化（S/成交量），检验行为层面效率差异
+- D. 保留首次结果并接受"比例佣金口径不可检验"的负面结论，废弃该 claim
+
+**默认建议**：A。按 ISSUE-006 规则，修正后须重新预注册并默认降级 exploratory。
+
+**影响 claim**：XD-P2-ECO-001。**状态**：开放。
+
 ---
 
 ## 决策状态图
@@ -112,3 +127,4 @@
 | DEC-005 | E 的最佳定义 | 开放 | A |
 | DEC-006 | 冷却期/恢复门槛 | 默认值生效 | 14 天 / ≥2/3 |
 | DEC-007 | E-PARADIGM 非普适结论 | 开放 | A + TASK-007 |
+| DEC-008 | ECO 首次运行判别力不足 | 开放 | A（学习型交易者） |

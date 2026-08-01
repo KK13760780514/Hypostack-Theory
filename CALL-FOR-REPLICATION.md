@@ -22,13 +22,14 @@ Currently, **all** existing results were produced by the proposer's reference im
 | XD-AI-ADAM-001 | Adam vs best fixed-lr SGD, 12/12 seeds | 2.4e-4 | support, L4_candidate |
 | XD-P1-PHASE-001 | 2D Ising phase transition, 12/12 seeds | 2.4e-4 | support, L4_candidate |
 | XD-E-PARADIGM-001 | Cross-paradigm E conversion | — | challenge, exploratory |
+| XD-P2-ECO-001 | ZI-C double auction, 12/12 direction-consistent | 4.9e-4 | challenge, exploratory (ratio_dev=0.970) |
 
 （全部记录见 [evidence-ledger.csv](open-validation/evidence-ledger.csv)）
 
 ## What we need · 我们需要什么
 
 1. **Independent replication（独立复核）**：re-implement or independently run the three support experiments (`chemical_path_v2.py`, `adam_dynamics.py`, `phase_transition.py`), and report whether the result reproduces. Full workflow: [Independent Replication section](open-validation/README.en.md) / [独立复核章节](open-validation/README.md).
-2. **Open decisions（开放决策）**：7 unresolved governance/calibration decisions (e.g., whether the Adam task is unfairly constructed, whether CHEM's N=1 is sound). Pick one: [open-decisions.md](open-validation/open-decisions.en.md) / [open-decisions.md](open-validation/open-decisions.md).
+2. **Open decisions（开放决策）**：8 unresolved governance/calibration decisions (e.g., whether the Adam task is unfairly constructed, whether CHEM's N=1 is sound, how to handle ECO's insufficient discriminative power). Pick one: [open-decisions.md](open-validation/open-decisions.en.md) / [open-decisions.md](open-validation/open-decisions.md).
 3. **Tasks（任务认领）**：[TASK-001..007](open-validation/tasks/) — new experiments, refutations, and engineering infrastructure.
 4. **Math foundations（数学基础）**：the integral `S = ∫ E dN` lacks a measure-theoretic definition. Lowest-cost entry: numerical convergence checks ([math-foundations.md](open-validation/math-foundations.en.md) Q3).
 

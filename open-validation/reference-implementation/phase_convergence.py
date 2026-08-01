@@ -7,9 +7,10 @@ listed in math-foundations.md for the continuum-limit question.
 
 Method: fix total MC work per run at 4000 sweeps (same as Path A's
 20×200). Vary the number of temperature steps n_steps ∈ {2,5,10,20,50,
-100,200} with sweeps_per_step = 4000/n_steps. Reuse the E/N/S definitions
-and seed handling of phase_transition.py. Report S(n) and the ratio
-S(n)/S(20) to expose whether a continuum limit appears to exist.
+100,200,400} with sweeps_per_step = 4000/n_steps. Reuse the E/N/S
+definitions and seed handling of phase_transition.py. Report S(n) and
+the ratio S(n)/S(20) to expose whether a continuum limit appears to
+exist. 12 seeds are used so that mean/std give a sense of variance.
 
 This is a numerical exploration, NOT a claim submission. Classification
 column is advisory only.
@@ -26,8 +27,8 @@ T_HIGH = 3.0
 T_LOW = 1.0
 T_C = 2.0 / math.log(1.0 + math.sqrt(2.0))  # ≈ 2.269
 TOTAL_SWEEPS = 4000  # fixed total MC work, matching Path A (20×200)
-N_STEPS_GRID = [2, 5, 10, 20, 50, 100, 200]
-SEEDS = [0, 1, 2]  # reduced seed set for the exploration phase
+N_STEPS_GRID = [2, 5, 10, 20, 50, 100, 200, 400]
+SEEDS = list(range(12))  # 12 seeds (strengthened from the 3-seed exploration)
 
 
 def init_lattice(size: int, rng: random.Random) -> list[list[int]]:
@@ -84,6 +85,10 @@ def main() -> None:
             results[str(n)].append(compute_S(n, seed))
 
     means = {int(n): sum(v) / len(v) for n, v in results.items()}
+    stds = {
+        int(n): math.sqrt(sum((x - means[int(n)]) ** 2 for x in v) / len(v))
+        for n, v in results.items()
+    }
     s20 = means[20]
     ratios = {n: means[n] / s20 for n in means}
 
@@ -101,6 +106,7 @@ def main() -> None:
             "seeds": SEEDS,
         },
         "mean_S_per_n_steps": means,
+        "std_S_per_n_steps": stds,
         "ratio_vs_n_steps_20": ratios,
         "convergence_diagnostic": {
             "last_two_n_steps": last_two,

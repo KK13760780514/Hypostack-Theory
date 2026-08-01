@@ -8,7 +8,7 @@
 
 Goal: Enable external researchers, engineers, and data scientists to directly run, reproduce, challenge, or support the first batch of falsifiable predictions — without first understanding the complete HypoStack Theory.
 
-The current MVP covers six directions (including 2 degraded):
+The current MVP covers seven directions (including 2 degraded):
 
 1. XD-P1-SIM-001: P1 softmax simulation (degraded to a calibration demo, see [known-issues.md](known-issues.md) ISSUE-004).
 2. XD-P1-CHEM-001: Chemical reaction path competition — uses Arrhenius kinetics instead of the softmax loop; V2 result is support (L4_candidate).
@@ -16,6 +16,7 @@ The current MVP covers six directions (including 2 degraded):
 4. XD-AI-ADAM-001: Adaptive optimization dynamics — whether Adam's spontaneous training dynamics yield lower S than optimally tuned fixed-lr SGD (V2 result is support, L4_candidate).
 5. XD-E-PARADIGM-001: E-dimension paradigm mapping — propose computable conversion functions for physical, biological, or cognitive paradigms.
 6. XD-P1-PHASE-001: Phase-transition path selection — 2D Ising model slow-cool vs. quench path comparison (first result is support, L4_candidate).
+7. XD-P2-ECO-001: Market-equilibrium path selection — ZI-C zero-intelligence constrained trader double auction, commission-rate comparison (first result is challenge/exploratory, see [known-issues.md](known-issues.md) ISSUE-008).
 
 ## Quick Start
 
@@ -29,13 +30,14 @@ python .\open-validation\reference-implementation\e_paradigm_map.py
 python .\open-validation\reference-implementation\e_paradigm_map_v2.py
 python .\open-validation\reference-implementation\e_paradigm_map_v3.py
 python .\open-validation\reference-implementation\phase_transition.py
+python .\open-validation\reference-implementation\double_auction.py
 ```
 
 The reference implementation uses only the Python standard library (3.9+), no dependencies required.
 
 ### View Current Evidence
 
-All submitted experimental results are recorded in [evidence-ledger.csv](evidence-ledger.csv). All 4 active claims now have results: 3 classified as **support** at the **L4_candidate** level, and 1 as **challenge** (exploratory):
+All submitted experimental results are recorded in [evidence-ledger.csv](evidence-ledger.csv). All 5 active claims now have results: 3 classified as **support** at the **L4_candidate** level, and 2 as **challenge** (exploratory):
 
 | claim_id | Classification | Evidence Level | p-value | S (selected) | S (alternative) | Notes |
 |---|---|---|---|---|---|---|
@@ -43,6 +45,7 @@ All submitted experimental results are recorded in [evidence-ledger.csv](evidenc
 | XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (path A) | 55000.0 (path B) | V2: effective activation energy; 16/16 temps consistent |
 | XD-E-PARADIGM-001 | challenge | exploratory | null | 1.04e-19 (physical) | 5.06e-20 (biological) | V3: 5 calibration points; eta span 2.3 orders; power-law R²<0.64 |
 | XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (slow cool) | 237486 (quench) | 12/12 seeds pass; 2D Ising model phase transition |
+| XD-P2-ECO-001 | challenge | exploratory | 4.9e-4 | 13.4 (low commission) | 245.8 (high commission) | 12/12 direction-consistent but insufficient discriminative power (ratio_dev=0.970); see ISSUE-008 |
 
 Note: all results above were produced by the proposer's reference implementation (reference-implementation); no external independent replication exists yet.
 

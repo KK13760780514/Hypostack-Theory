@@ -7,6 +7,7 @@ This file summarizes all decisions awaiting community input in the open-validati
 - Propose a decision: record background in [known-issues.md](known-issues.md) or a new issue
 - Discuss: open an issue in this repository (the [task-proposal template](../.github/ISSUE_TEMPLATE/task-proposal.md) works), referencing the decision ID
 - Finalize: maintainers update [known-issues.md](known-issues.md), and the protocol and reference implementations are updated accordingly
+- Manual publishing guide (with DEC-001–008 issue drafts): see [publishing-guide.md](publishing-guide.md)
 
 ---
 
@@ -99,6 +100,20 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Affected claim**: XD-E-PARADIGM-001. **Status**: open.
 
+## DEC-008: How to handle the ECO first run's weak discriminative power (source: ISSUE-008)
+
+**Background**: `XD-P2-ECO-001`'s first run had S_A<S_B in 12/12 seeds (p=4.88e-4), but `ratio_dev=0.970>0.85`: ~97% of the S difference comes from the commission-rate factor (construction), with only ~9% behavioural contribution; and the learning-free ZI-C market barely converges, making the "converges faster" sub-prediction untestable. See [protocol-p1-ai.md](protocol-p1-ai.md) section 10 and [ISSUE-008](known-issues.md).
+
+**Options**:
+- A. Add learning traders (EWA/Roth-Erev) so the market actually converges; make "convergence-speed difference" the primary criterion and "S difference" secondary (recommended)
+- B. Change E to a fixed per-trade tax (not proportional commission), removing the rate-factor dominance
+- C. Normalize S per unit of traded value (S/volume) to test behavioural efficiency differences
+- D. Keep the first result, accept the negative conclusion "proportional-commission calibration is untestable", and abandon the claim
+
+**Default recommendation**: A. Per ISSUE-006, a revised calibration must be re-preregistered and defaults to exploratory.
+
+**Affected claim**: XD-P2-ECO-001. **Status**: open.
+
 ---
 
 ## Decision Status Table
@@ -112,3 +127,4 @@ This file summarizes all decisions awaiting community input in the open-validati
 | DEC-005 | Best definition of E | open | A |
 | DEC-006 | Cooldown / reinstatement threshold | defaults active | 14 days / ≥2/3 |
 | DEC-007 | E-PARADIGM non-universality | open | A + TASK-007 |
+| DEC-008 | ECO first-run weak discriminative power | open | A (learning traders) |

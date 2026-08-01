@@ -10,7 +10,7 @@
 
 ### 1. Abstract
 
-HypoStack Theory (玄叠论) is a falsifiable hypothesis proposing that differences drive the evolution of all systems. Its core presupposition is that only information structures exist, and they persistently eliminate differences. Its signature formula is **S = ∫ E dN**, where S is the information action (cumulative consumption), E is the driving force (difference intensity), and N is the number of evolution steps. This is not the universe's objective function but its selection record—frugal paths persist, costly ones perish. Every prediction is independently testable; before experimental data arrives, the theory is neither confirmed nor refuted. Current empirical standing is **L4_candidate**, with two claims (CHEM-001, ADAM-001) revised from challenge to support after correcting E/S calibration and a third (PHASE-001) verified as support in its first run, awaiting community replication.
+HypoStack Theory (玄叠论) is a falsifiable hypothesis proposing that differences drive the evolution of all systems. Its core presupposition is that only information structures exist, and they persistently eliminate differences. Its signature formula is **S = ∫ E dN**, where S is the information action (cumulative consumption), E is the driving force (difference intensity), and N is the number of evolution steps. This is not the universe's objective function but its selection record—frugal paths persist, costly ones perish. Every prediction is independently testable; before experimental data arrives, the theory is neither confirmed nor refuted. Current empirical standing is **L4_candidate**, with two claims (CHEM-001, ADAM-001) revised from challenge to support after correcting E/S calibration and a third (PHASE-001) verified as support in its first run, awaiting community replication. Two further claims (E-PARADIGM-001, ECO-001) currently yield challenge (exploratory) results.
 
 ### 2. Core Formula
 
@@ -40,7 +40,7 @@ The theory issues six cross-disciplinary predictions (Section 11 of the rulebook
 
 ### 4. Current Evidence
 
-Current empirical level: **L4_candidate** (3 support-level experimental results, awaiting independent replication). Highest argument strength: L2 (post-hoc translation, 3 entries).
+Current empirical level: **L4_candidate** (3 support-level + 2 challenge-level experimental results, awaiting independent replication). Highest argument strength: L2 (post-hoc translation, 3 entries).
 
 Two open-validation claims were revised from **challenge** to **support** after correcting the E/S calibration in validation round V2, and a third claim (PHASE-001) was verified as support in its first run:
 
@@ -48,17 +48,19 @@ Two open-validation claims were revised from **challenge** to **support** after 
 - **XD-P1-CHEM-001** — Chemical reaction-path competition. V1 (2026-07-30): challenge. V2 (2026-08-01): **support**—16/16 temperature matches, p = 1.5e-5. Preferred-path S = 31980.96 vs. alternative S = 55000.0.
 - **XD-P1-PHASE-001** — Phase-transition path selection. V1 (2026-08-01): **support**—12/12 seeds passed, p = 2.4e-4 (binomial). Slow-cool S ≈ 48,903 vs. quench S ≈ 237,486.
 - **XD-E-PARADIGM-001** — E-dimension paradigm transformation. V2 (2026-08-01): challenge (3 calibration points, η span 2.5 orders). V3 (2026-08-01): challenge (5 calibration points, η span 2.3 orders, power-law fits R² < 0.64; no universal conversion function). exploratory.
+- **XD-P2-ECO-001** — Market-equilibrium path selection. V1 (2026-08-01): challenge (exploratory)—12/12 seeds direction-consistent but insufficient discriminative power (ratio_dev = 0.970; commission-rate scale factor dominates); see [ISSUE-008](open-validation/known-issues.md).
 
-All results (3 support + 1 challenge) are logged in the public evidence ledger; all are reference-implementation self-validations and await community independent replication before advancing beyond L4_candidate.
+All results (3 support + 2 challenges) are logged in the public evidence ledger; all are reference-implementation self-validations and await community independent replication before advancing beyond L4_candidate.
 
 ### 5. How to Verify
 
-All validation artifacts live in the [`open-validation/`](open-validation/) directory. There are **4 active claims** open for independent verification:
+All validation artifacts live in the [`open-validation/`](open-validation/) directory. There are **5 active claims** open for independent verification:
 
 - **XD-P1-CHEM-001** — Chemical reaction-path competition ([TASK-005](open-validation/tasks/TASK-005-chemical-path.md))
 - **XD-AI-ADAM-001** — Adaptive optimization dynamics ([TASK-004](open-validation/tasks/TASK-004-adam-dynamics.md))
 - **XD-E-PARADIGM-001** — E-dimension paradigm transformation ([TASK-003](open-validation/tasks/TASK-003-e-dimension-paradigm-map.md))
 - **XD-P1-PHASE-001** — Phase-transition path selection ([TASK-006](open-validation/tasks/TASK-006-phase-transition.md))
+- **XD-P2-ECO-001** — Market-equilibrium path selection (see [protocol §10](open-validation/protocol-p1-ai.md))
 
 The reference implementations use **only the Python standard library (3.9+)**—no dependencies to install. To run them in five minutes:
 
@@ -95,7 +97,7 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 
 ### 1. 摘要
 
-玄叠论（HypoStack Theory）是一套可证伪的理论假说，主张差异驱动万物演化。其核心预设是：宇宙中只有信息结构在消除差异。标志性公式为 **S = ∫ E dN**，其中 S 是信息作用量（总消耗），E 是驱动力（差异强度），N 是演化步数。这不是宇宙的目标函数，而是宇宙的筛选记录——省力者留，费力者走。每一个推论都在等待独立的实验检验；在实验数据到位之前，理论既未被证实，也未被推翻。当前实证等级为 **L4_candidate**，两个 claim（CHEM-001、ADAM-001）在修正 E/S 口径后从 challenge 修正为 support，第三个 claim（PHASE-001）在首次运行中即验证为 support，等待社区独立复核。
+玄叠论（HypoStack Theory）是一套可证伪的理论假说，主张差异驱动万物演化。其核心预设是：宇宙中只有信息结构在消除差异。标志性公式为 **S = ∫ E dN**，其中 S 是信息作用量（总消耗），E 是驱动力（差异强度），N 是演化步数。这不是宇宙的目标函数，而是宇宙的筛选记录——省力者留，费力者走。每一个推论都在等待独立的实验检验；在实验数据到位之前，理论既未被证实，也未被推翻。当前实证等级为 **L4_candidate**，两个 claim（CHEM-001、ADAM-001）在修正 E/S 口径后从 challenge 修正为 support，第三个 claim（PHASE-001）在首次运行中即验证为 support，等待社区独立复核。另有 2 个 challenge 级 claim（E-PARADIGM-001、ECO-001，exploratory）。
 
 ### 2. 核心公式
 
@@ -125,7 +127,7 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 
 ### 4. 当前证据
 
-当前实证等级：**L4_candidate**（已有 3 个 support 级实验证据，等待独立复核）。最高论据强度：L2（事后翻译，共 3 条）。
+当前实证等级：**L4_candidate**（已有 3 个 support 级 + 2 个 challenge 级实验证据，等待独立复核）。最高论据强度：L2（事后翻译，共 3 条）。
 
 两个开放验证 claim 在 V2 轮次修正 E/S 口径后，从 **challenge** 修正为 **support**，第三个 claim（PHASE-001）在首次运行中即验证为 support：
 
@@ -133,17 +135,19 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 - **XD-P1-CHEM-001** —— 化学反应路径竞争。V1（2026-07-30）：challenge。V2（2026-08-01）：**support**——16/16 温度匹配，p = 1.5e-5。优选路径 S = 31980.96，对照路径 S = 55000.0。
 - **XD-P1-PHASE-001** —— 相变路径选择。V1（2026-08-01）：**support**——12/12 种子通过，p = 2.4e-4（二项检验）。慢冷 S ≈ 48,903，淬火 S ≈ 237,486。
 - **XD-E-PARADIGM-001** —— E 维度范式转换。V2（2026-08-01）：challenge（3 标定点，η 跨度 2.5 个数量级）。V3（2026-08-01）：challenge（5 标定点，η 跨度 2.3 个数量级，幂律拟合 R² < 0.64，无普适转换函数）。exploratory。
+- **XD-P2-ECO-001** —— 市场均衡路径选择。V1（2026-08-01）：challenge（exploratory）——12/12 种子方向符合但判别力不足（ratio_dev = 0.970，佣金率比例因子占主导）；见 [ISSUE-008](open-validation/known-issues.md)。
 
-所有结果（3 个 support + 1 个 challenge）均已录入公开证据账本；全部为参考实现自验证，等待社区独立复核后方可超越 L4_candidate 等级。
+所有结果（3 个 support + 2 个 challenge）均已录入公开证据账本；全部为参考实现自验证，等待社区独立复核后方可超越 L4_candidate 等级。
 
 ### 5. 如何验证
 
-所有验证产物位于 [`open-validation/`](open-validation/) 目录。当前有 **4 个活跃 claim** 等待独立验证：
+所有验证产物位于 [`open-validation/`](open-validation/) 目录。当前有 **5 个活跃 claim** 等待独立验证：
 
 - **XD-P1-CHEM-001** —— 化学反应路径竞争（[TASK-005](open-validation/tasks/TASK-005-chemical-path.md)）
 - **XD-AI-ADAM-001** —— 自适应优化动态（[TASK-004](open-validation/tasks/TASK-004-adam-dynamics.md)）
 - **XD-E-PARADIGM-001** —— E 维度范式转换（[TASK-003](open-validation/tasks/TASK-003-e-dimension-paradigm-map.md)）
 - **XD-P1-PHASE-001** —— 相变路径选择（[TASK-006](open-validation/tasks/TASK-006-phase-transition.md)）
+- **XD-P2-ECO-001** —— 市场均衡路径选择（见 [protocol 第 10 节](open-validation/protocol-p1-ai.md)）
 
 参考实现**仅使用 Python 标准库（3.9+）**，无需安装任何依赖。五分钟内即可运行：
 

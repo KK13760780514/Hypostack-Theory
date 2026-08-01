@@ -59,7 +59,7 @@ python .\open-validation\reference-implementation\phase_transition.py
 
 所有实验结果记录在 [evidence-ledger.csv](open-validation/evidence-ledger.csv)。
 
-当前 4 个活跃 claim 均已有实验结果：3 个 **support**（L4_candidate）+ 1 个 challenge：
+当前 5 个活跃 claim 均已有实验结果：3 个 **support**（L4_candidate）+ 2 个 challenge：
 
 | Claim | 方向 | 结果历史 | 状态 |
 |-------|------|---------|------|
@@ -67,6 +67,7 @@ python .\open-validation\reference-implementation\phase_transition.py
 | XD-AI-ADAM-001 | 自适应优化动态 | V1 challenge → **V2 support** (12/12, p=2.4e-4) | L4_candidate |
 | XD-E-PARADIGM-001 | E 维度范式转换 | challenge（首次运行 3 标定点 → 扩展至 5 标定点，η 跨度 2.3 级，幂律 R²<0.64） | exploratory |
 | XD-P1-PHASE-001 | 相变路径选择 | 首次运行即 **support** (12/12, p=2.4e-4) | L4_candidate |
+| XD-P2-ECO-001 | 市场均衡路径选择 | 首次运行 12/12 方向符合但判别力不足（ratio_dev=0.970） | exploratory |
 
 ### 3. 提交你的第一个实验
 

@@ -69,6 +69,10 @@
 
 **统计判据（预注册示例）**：≥10/12 种子满足"S_A < S_B 且 S_A 路径先到达均衡邻域"（二项检验 p < 0.05）。
 
+### 计算层首次运行结果（2026-08-01，challenge/exploratory）
+
+[double_auction.py](reference-implementation/double_auction.py)（ZI-C 双向拍卖）首次运行：S_A<S_B 12/12（p=4.88e-4）方向符合，但判别力检查失败（`ratio_dev=0.970`，S 差异 97% 来自佣金率比例因子），且 ZI-C 无学习导致市场基本不收敛（"更快到达均衡"子预测不可检验）。详见 [ISSUE-008](known-issues.md) 与 [DEC-008](open-decisions.md)。修正方向：学习型交易者 / 固定额税 / S 归一化。**在修正完成前，本计算层方案保持 exploratory 状态。**
+
 ### 实证层（较可行，需经济学社区评审）
 
 受试者实验室实验（z-tree/oTree 双向拍卖），佣金率为受控变量。E/N 定义可直接沿用计算层。待评审项：均衡定义（价格区间阈值）、交易者人数规模、轮数上限。

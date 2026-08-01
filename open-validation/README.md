@@ -7,7 +7,7 @@
 **English:** HypoStack is a falsifiable hypothesis about how differences drive the evolution of all systems. The core claim: systems tend to select paths that minimize the cumulative information action `S = Σ(Eᵢ × ΔNᵢ)`, where `E` is the difference intensity and `N` is the discrete step count. This package lets external researchers run, reproduce, challenge, or falsify specific predictions — without reading the full theory.
 
 目标：让外部研究者、工程师和数据科学家不需要先理解完整《玄叠论》，也能直接运行、复现、挑战或支持第一批可证伪预测。
-当前 MVP 覆盖六个方向（含 2 个已降级）：
+当前 MVP 覆盖七个方向（含 2 个已降级）：
 
 1. XD-P1-SIM-001：P1 softmax 模拟（已降级为口径演示，见 [known-issues.md](known-issues.md) ISSUE-004）。
 2. XD-P1-CHEM-001：化学反应路径竞争--用 Arrhenius 动力学替代 softmax 循环，V2 结果为 support（L4_candidate）。
@@ -15,6 +15,7 @@
 4. XD-AI-ADAM-001：自适应优化动态--Adam 自发训练动态的 S 是否低于最优固定学习率 SGD（V2 结果为 support，L4_candidate）。
 5. XD-E-PARADIGM-001：E 维度范式转换--为物理、生物或认知范式提出可计算的转换函数。
 6. XD-P1-PHASE-001：相变路径选择--2D Ising 模型慢冷 vs 淬火路径比较（首次结果为 support，L4_candidate）。
+7. XD-P2-ECO-001：市场均衡路径选择--ZI-C 零智能约束交易者双向拍卖，佣金率对比（首次结果为 challenge/exploratory，见 [known-issues.md](known-issues.md) ISSUE-008）。
 
 ## 快速开始
 
@@ -28,13 +29,14 @@ python .\open-validation\reference-implementation\e_paradigm_map.py
 python .\open-validation\reference-implementation\e_paradigm_map_v2.py
 python .\open-validation\reference-implementation\e_paradigm_map_v3.py
 python .\open-validation\reference-implementation\phase_transition.py
+python .\open-validation\reference-implementation\double_auction.py
 ```
 
 参考实现只使用 Python 标准库（3.9+），无需安装依赖。
 
 ### 查看当前证据
 
-所有已提交的实验结果记录在 [evidence-ledger.csv](evidence-ledger.csv)。当前 4 个活跃 claim 均已有实验结果：3 个产出 support 结果（L4_candidate），1 个为 challenge（exploratory）--这不是失败，而是验证包正在暴露口径问题。
+所有已提交的实验结果记录在 [evidence-ledger.csv](evidence-ledger.csv)。当前 5 个活跃 claim 均已有实验结果：3 个产出 support 结果（L4_candidate），2 个为 challenge（exploratory）--这不是失败，而是验证包正在暴露口径问题。
 
 | claim_id | 分类 | 证据等级 | p 值 | S（选中路径） | S（对照路径） | 备注 |
 |---|---|---|---|---|---|---|
@@ -42,6 +44,7 @@ python .\open-validation\reference-implementation\phase_transition.py
 | XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (路径 A) | 55000.0 (路径 B) | V2: 有效活化能；16/16 温度一致 |
 | XD-E-PARADIGM-001 | challenge | exploratory | 无 | 1.04e-19 (物理) | 5.06e-20 (生物) | V3: 5 标定点；η 跨度 2.3 级；幂律 R²<0.64 |
 | XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (慢冷) | 237486 (淬火) | 12/12 种子通过；2D Ising 相变 |
+| XD-P2-ECO-001 | challenge | exploratory | 4.9e-4 | 13.4 (低佣金) | 245.8 (高佣金) | 12/12 方向符合但判别力不足（ratio_dev=0.970）；见 ISSUE-008 |
 
 注意：以上结果全部由提出者的参考实现（reference-implementation）产出，尚无外部独立复核结果。
 
@@ -106,7 +109,7 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 
 两个修正后的 claim 已在 V2 产出 support 结果（L4_candidate），确认口径修正有效。剩余开放问题：口径选择（如条件数调整、无对照规则修订）是否引入偏差——欢迎社区讨论。
 
-**最新进展**：XD-P1-CHEM-001 与 XD-AI-ADAM-001 的 V2 已修正为 support（L4_candidate），XD-P1-PHASE-001 首次运行即 support（L4_candidate），三者等待独立复核。
+**最新进展**：XD-P1-CHEM-001 与 XD-AI-ADAM-001 的 V2 已修正为 support（L4_candidate），XD-P1-PHASE-001 首次运行即 support（L4_candidate），三者等待独立复核。同日新增经济学首个 claim XD-P2-ECO-001 首次运行（12/12 方向符合但判别力不足，challenge/exploratory，见 ISSUE-008）。
 
 ## 评审与 issue 模板
 

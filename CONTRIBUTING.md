@@ -1,8 +1,8 @@
 # 贡献指南 / Contributing Guidelines
 
-> HypoStack Theory（玄叠论）是一个关于差异如何驱动万物演化的可证伪理论假说。核心公式：`S = ∫ E dN`，其中 `E` 是每一步的差异强度，`N` 是离散步数，`S` 是累计信息作用量。本仓库提供开放验证 MVP，包含 4 个活跃 claim，欢迎外部研究者参与运行、复现、挑战或证伪。
+> HypoStack Theory（玄叠论）是一个关于差异如何驱动万物演化的可证伪理论假说。核心公式：`S = ∫ E dN`，其中 `E` 是每一步的差异强度，`N` 是离散步数，`S` 是累计信息作用量。本仓库提供开放验证 MVP，包含 5 个活跃 claim，欢迎外部研究者参与运行、复现、挑战或证伪。
 >
-> *HypoStack Theory is a falsifiable hypothesis about how differences drive the evolution of all systems. Core formula: `S = ∫ E dN`, where `E` is the difference intensity per step, `N` is the discrete step count, and `S` is the cumulative information action. This repository provides an open-validation MVP with 4 active claims. External researchers are welcome to run, reproduce, challenge, or falsify them.*
+> *HypoStack Theory is a falsifiable hypothesis about how differences drive the evolution of all systems. Core formula: `S = ∫ E dN`, where `E` is the difference intensity per step, `N` is the discrete step count, and `S` is the cumulative information action. This repository provides an open-validation MVP with 5 active claims. External researchers are welcome to run, reproduce, challenge, or falsify them.*
 
 当前活跃 claim / Active claims:
 
@@ -12,6 +12,7 @@
 | `XD-AI-ADAM-001` | Adam 自适应动态 / Adam adaptive dynamics |
 | `XD-E-PARADIGM-001` | E 维度范式转换 / E-dimension paradigm shift |
 | `XD-P1-PHASE-001` | 相变路径选择 / Phase transition path selection |
+| `XD-P2-ECO-001` | 市场均衡路径选择 / Market equilibrium path selection |
 
 ---
 

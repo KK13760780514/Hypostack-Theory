@@ -23,7 +23,7 @@ Three principles:
 | 0. Reading guide (term dual-track table) | §1 "About terminology" + Appendix K | keep, compress |
 | 1. Positioning and presuppositions | §1.0–1.1 | de-rhetoric; keep presuppositions 0–4 verbatim |
 | 2. Corollaries | §1.2 | keep |
-| 3. Testing standards and current evidence | §1.3, §7.2, §7.4, §7.5 | rewrite as pure status statements (L4_candidate, 3 support + 1 challenge, reference-implementation self-validation, no external replication) |
+| 3. Testing standards and current evidence | §1.3, §7.2, §7.4, §7.5 | rewrite as pure status statements (L4_candidate, 3 support + 2 challenges, reference-implementation self-validation, no external replication) |
 | 4. Honest boundaries | §1.4 | keep (already honest as is) |
 | 5. Description system: nine-dimensional coordinates | Part 2 | keep |
 | 6. Evolution flow: ten-layer chain | Part 3 | keep |
@@ -46,7 +46,7 @@ Three principles:
 
 > The testable part of the theory is supported by operational definitions: for each prediction, the definitions of E/N/S and the statistical threshold must be preregistered (see [open-validation/protocol-p1-ai.md](open-validation/protocol-p1-ai.md)). Current evidence status:
 >
-> - 4 active claims, of which 3 are support (L4_candidate: XD-P1-CHEM-001 16/16, p=1.5e-5; XD-AI-ADAM-001 12/12, p=2.4e-4; XD-P1-PHASE-001 12/12, p=2.4e-4) and 1 is challenge (XD-E-PARADIGM-001, exploratory).
+> - 5 active claims, of which 3 are support (L4_candidate: XD-P1-CHEM-001 16/16, p=1.5e-5; XD-AI-ADAM-001 12/12, p=2.4e-4; XD-P1-PHASE-001 12/12, p=2.4e-4) and 2 are challenges (XD-E-PARADIGM-001 and XD-P2-ECO-001, both exploratory).
 > - All results above were produced by the proposer's reference implementation; there is no external independent replication yet; no "confirmation" is claimed before replication completes.
 > - 2 claims (XD-P1-SIM-001, XD-AI-TOY-001) were degraded due to calibration defects.
 > - Falsifiable items: if any active claim's preregistered criterion is falsified, the corresponding prediction fails (which does not automatically equal failure of the whole theory).
