@@ -128,12 +128,13 @@ This file summarizes all decisions awaiting community input in the open-validati
 **Background**: `XD-P2-ECO-001`'s first run had S_A<S_B in 12/12 seeds (p=4.88e-4), but `ratio_dev=0.970>0.85`: ~97% of the S difference comes from the commission-rate factor (construction), with only ~9% behavioural contribution; and the learning-free ZI-C market barely converges, making the "converges faster" sub-prediction untestable. See [protocol-p1-ai.md](protocol-p1-ai.md) section 10 and [ISSUE-008](known-issues.md).
 
 **Options**:
-- A. Add learning traders (EWA/Roth-Erev) so the market actually converges; make "convergence-speed difference" the primary criterion and "S difference" secondary (recommended)
-- B. Change E to a fixed per-trade tax (not proportional commission), removing the rate-factor dominance
+- A. Add learning traders (EWA/Roth-Erev) so the market actually converges; make "convergence-speed difference" the primary criterion and "S difference" secondary (V2 executed, unsupported)
+- B. Change E to a fixed per-trade tax (not proportional commission), removing the rate-factor dominance (V3 executed, falsification)
 - C. Normalize S per unit of traded value (S/volume) to test behavioural efficiency differences
 - D. Keep the first result, accept the negative conclusion "proportional-commission calibration is untestable", and abandon the claim
+- E. **Switching experiment**: a policy intervention raises one path's cost mid-run; test whether the market "automatically switches" to the new lower-tax path (direct test of the theory's "choice/switching" assertion; preregistration draft in [predictions-operationalization.md](predictions-operationalization.md) P-ECO-002)
 
-**Default recommendation**: A. Per ISSUE-006, a revised calibration must be re-preregistered and defaults to exploratory.
+**Default recommendation**: lean toward D or C (options A/B reference evidence both failed); if the community judges the "automatic switching" prediction worth testing, evaluate option E first. Per ISSUE-006, any calibration change must be re-preregistered and defaults to exploratory.
 
 **Development progress (2026-08-01)**: a V2 learning-trader run (Roth-Erev, 12 seeds, 80 rounds) per option A is complete: market convergence is fixed (static 0/12 → learning converges in all seeds), but the speed sub-prediction is NOT supported (conv_A<conv_B in only 5/12 seeds, p=0.774; direction consistent in only 2/6 robustness combos). Statistical outcome: challenge; entered as exploratory (EV-b3fd72635845c370). This questions the "E=commission" operationalization and suggests options B/C for discussion. See [ISSUE-008](known-issues.md).
 
@@ -154,4 +155,4 @@ This file summarizes all decisions awaiting community input in the open-validati
 | DEC-005 | Best definition of E | reference evidence produced (E_eff and rate-determining-step Ea indistinguishable) | A (keep E_eff, note underdetermination) |
 | DEC-006 | Cooldown / reinstatement threshold | defaults active | 14 days / ≥2/3 |
 | DEC-007 | E-PARADIGM non-universality | open | A + TASK-007 |
-| DEC-008 | ECO first-run weak discriminative power | option A/B reference evidence produced (V2/V3 both unsupported) | favor D/C or larger cost magnitude |
+| DEC-008 | ECO first-run weak discriminative power | option A/B reference evidence produced (V2/V3 both unsupported) | lean D/C; or option E switching experiment (P-ECO-002) |

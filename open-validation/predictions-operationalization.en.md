@@ -85,6 +85,43 @@ Human-subject laboratory experiments (z-tree/oTree double auction), commission r
 
 ---
 
+## P-ECO-002: Market "automatic switching" experiment (§11.4 second sub-prediction, choice/switching test)
+
+### Motivation
+
+The §11.4 prediction has two sub-predictions: ① the low-transaction-cost path is preferred (ranking test; P-ECO-001 has run V1~V3); ② **"if a policy intervention raises the transaction cost of one path, the market automatically switches to another path with lower total consumption"** (switching/choice test). Sub-prediction ② is the most direct operationalization of the theory's "choice" assertion (the "choice/switching test" form in the operational-definition note of 玄叠论.md's general experimental template); no claim covers it yet.
+
+### Design (preregistration draft, pending community review)
+
+**Model**: Roth-Erev learning traders in a double auction (based on [double_auction_learning.py](reference-implementation/double_auction_learning.py); the learning rule contains no S/cost preference term — switching must emerge from trading behavior itself, not from construction).
+
+**Procedure**:
+
+1. Phase 1 (t=1..T1): market runs on low-tax path A (TAX_A); learning traders converge to equilibrium;
+2. Phase 2 (t=T1+1..T2): policy intervention — path A's tax rises to TAX_B (the former high-tax rate), path B's tax drops to TAX_A; traders keep learning;
+3. Observation: does the market switch to the new low-tax path (measured by share of fills, prices, and profit-retention direction)?
+
+**Operational definitions**:
+
+- `E_i` = transaction cost of the path actually traded in round i (TAX_A or TAX_B);
+- `ΔN_i` = number of fills in round i;
+- `S = Σ(E_i × ΔN_i)`;
+- **Switching indicator**: share of fills on the low-tax path in the last K rounds of phase 2, `p_low`, compared to the phase-1 baseline `p_low_base`.
+
+**Prediction**: if "the market automatically switches to the lower-S path" holds, `p_low` after the intervention should exceed the pre-intervention baseline (agents aggregate toward the new low-tax path).
+
+**Statistical criterion (example preregistration)**: ≥10/12 seeds satisfy `p_low(phase 2) > p_low_base + 0.15` (two-sided binomial p<0.05).
+
+**Falsification condition**: ≤4/12 seeds satisfy the criterion — the "automatic switching" prediction is unsupported/falsified in this framework.
+
+**Items for review**: intervention magnitude (TAX_A/TAX_B gap), phase lengths, switching-threshold choice, need for calibration on real data.
+
+### Relationship to DEC-008
+
+DEC-008 options D (accept the negative conclusion, narrow the claim) and C (normalize S per unit traded value) have been discussed. P-ECO-002 offers **option E (switching experiment)**: if ranking tests are untestable under both operationalizations (V1~V3), a switching test may provide direct evidence of "path choice at the behavior level", or falsify the prediction more thoroughly. This direction requires confirmation via the [DEC-008](open-decisions.md) community discussion before it is set up as a task.
+
+---
+
 ## P-SOC-001: Institutional-change path dependence (§11.5)
 
 ### Current state

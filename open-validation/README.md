@@ -68,6 +68,10 @@ python .\open-validation\reference-implementation\double_auction_learning.py
 - [TASK-006：相变路径选择验证](tasks/TASK-006-phase-transition.md)
 - [TASK-007：按过程类型分类标定 η（E 维度范式转换）](tasks/TASK-007-e-paradigm-process-type.md)（由 ISSUE-007 结论立项）
 
+## 实证评审委员会（招募中）
+
+[review-committee.md](review-committee.md) 定义委员会职责（口径恢复投票、升级评审、开放决策建议）、成员资格与 ≥2/3 投票规则。当前委员会未组建，评审由提出者执行——**欢迎提交过任意分类证据（support/challenge/falsification）或具备相关学科背景的开发者加入**，让防"口径购物"规则真正落地。
+
 ## 贡献流程
 
 1. 从 `tasks/` 中认领一个任务（当前推荐 TASK-005）。认领方式：在 Git 平台开 issue 标注任务编号，或直接提交结果。
