@@ -10,10 +10,11 @@
 当前 MVP 覆盖五个方向：
 
 1. XD-P1-SIM-001：P1 softmax 模拟（已降级为口径演示，见 [known-issues.md](known-issues.md) ISSUE-004）。
-2. XD-P1-CHEM-001：化学反应路径竞争--用 Arrhenius 动力学替代 softmax 循环，首次结果为 challenge。
+2. XD-P1-CHEM-001：化学反应路径竞争--用 Arrhenius 动力学替代 softmax 循环，V2 结果为 support（L4_candidate）。
 3. XD-AI-TOY-001：AI 玩具版训练路径（已降级为口径演示，见 [known-issues.md](known-issues.md) ISSUE-001）。
-4. XD-AI-ADAM-001：自适应优化动态--Adam 自发训练动态的 S 是否低于最优固定学习率 SGD（首次结果为 challenge）。
+4. XD-AI-ADAM-001：自适应优化动态--Adam 自发训练动态的 S 是否低于最优固定学习率 SGD（V2 结果为 support，L4_candidate）。
 5. XD-E-PARADIGM-001：E 维度范式转换--为物理、生物或认知范式提出可计算的转换函数。
+6. XD-P1-PHASE-001：相变路径选择--2D Ising 模型慢冷 vs 淬火路径比较（首次结果为 support，L4_candidate）。
 
 ## 快速开始
 
@@ -25,6 +26,8 @@ python .\open-validation\reference-implementation\chemical_path_v2.py
 python .\open-validation\reference-implementation\adam_dynamics.py
 python .\open-validation\reference-implementation\e_paradigm_map.py
 python .\open-validation\reference-implementation\e_paradigm_map_v2.py
+python .\open-validation\reference-implementation\e_paradigm_map_v3.py
+python .\open-validation\reference-implementation\phase_transition.py
 ```
 
 参考实现只使用 Python 标准库（3.9+），无需安装依赖。
@@ -49,6 +52,7 @@ python .\open-validation\reference-implementation\e_paradigm_map_v2.py
 - [TASK-003：提出 E 维度范式转换函数](tasks/TASK-003-e-dimension-paradigm-map.md)（参考实现 [e_paradigm_map.py](reference-implementation/e_paradigm_map.py)）
 - [TASK-004：复现与挑战 Adam 自适应动态验证](tasks/TASK-004-adam-dynamics.md)
 - [TASK-005：化学反应路径竞争验证](tasks/TASK-005-chemical-path.md)
+- [TASK-006：相变路径选择验证](tasks/TASK-006-phase-transition.md)
 
 ## 贡献流程
 
@@ -76,7 +80,7 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 - **ISSUE-004**：P1 softmax 选择器存在定义性循环，已用 XD-P1-CHEM-001 替代（首次结果 challenge）。
 - **ISSUE-001**：AI 玩具路径 E 记账口径存在望远镜求和，已用 XD-AI-ADAM-001 替代（首次结果 challenge）。
 
-两个修正后的 claim 首次结果都是 challenge，说明 S 的口径定义需要社区讨论。欢迎认领分析。
+两个修正后的 claim 已在 V2 产出 support 结果（L4_candidate），确认口径修正有效。剩余开放问题：口径选择（如条件数调整、无对照规则修订）是否引入偏差——欢迎社区讨论。
 
 **V2 进展**：XD-P1-CHEM-001 与 XD-AI-ADAM-001 已产出 V2 support 结果（L4_candidate），等待独立复核。
 

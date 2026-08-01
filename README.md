@@ -31,7 +31,7 @@ S = ∫ E dN
 Hypostack-Theory/
 ├── 玄叠论.md                    # 完整理论规则书（v16.1.0）
 ├── open-validation/             # 开放验证 MVP
-│   ├── reference-implementation/  # 参考实现（9 个 Python 脚本，含 V2）
+│   ├── reference-implementation/  # 参考实现（10 个 Python 脚本，含 V2/V3）
 │   ├── submissions/               # 已提交的实验结果
 │   ├── tasks/                     # 验证任务清单
 │   ├── evidence-ledger.csv        # 公开证据账本
@@ -75,6 +75,7 @@ python .\open-validation\reference-implementation\e_paradigm_map.py
 | [TASK-003](open-validation/tasks/TASK-003-e-dimension-paradigm-map.md) | E 维度范式转换 | 提出可计算的转换函数 |
 | [TASK-004](open-validation/tasks/TASK-004-adam-dynamics.md) | Adam 自适应动态 | 复现与挑战首次 challenge 结果 |
 | [TASK-005](open-validation/tasks/TASK-005-chemical-path.md) | 化学路径竞争 | **推荐入门**，有完整参考实现 |
+| [TASK-006](open-validation/tasks/TASK-006-phase-transition.md) | 相变路径选择 | 2D Ising 模型验证，首次结果 support |
 
 ## 关键文档 / Key Documents
 

@@ -10,7 +10,7 @@
 
 ### 1. Abstract
 
-HypoStack Theory (玄叠论) is a falsifiable hypothesis proposing that differences drive the evolution of all systems. Its core presupposition is that only information structures exist, and they persistently eliminate differences. Its signature formula is **S = ∫ E dN**, where S is the information action (cumulative consumption), E is the driving force (difference intensity), and N is the number of evolution steps. This is not the universe's objective function but its selection record—frugal paths persist, costly ones perish. Every prediction is independently testable; before experimental data arrives, the theory is neither confirmed nor refuted. Current empirical standing is **L4_candidate**, with two claims (CHEM-001 and ADAM-001) revised from challenge to support after correcting E/S calibration, awaiting community replication.
+HypoStack Theory (玄叠论) is a falsifiable hypothesis proposing that differences drive the evolution of all systems. Its core presupposition is that only information structures exist, and they persistently eliminate differences. Its signature formula is **S = ∫ E dN**, where S is the information action (cumulative consumption), E is the driving force (difference intensity), and N is the number of evolution steps. This is not the universe's objective function but its selection record—frugal paths persist, costly ones perish. Every prediction is independently testable; before experimental data arrives, the theory is neither confirmed nor refuted. Current empirical standing is **L4_candidate**, with three claims (CHEM-001, ADAM-001, and PHASE-001) revised from challenge to support after correcting E/S calibration, awaiting community replication.
 
 ### 2. Core Formula
 
@@ -40,22 +40,25 @@ The theory issues six cross-disciplinary predictions (Section 11 of the rulebook
 
 ### 4. Current Evidence
 
-Current empirical level: **L4_candidate** (2 support-level experimental results, awaiting independent replication). Highest argument strength: L2 (post-hoc translation, 3 entries).
+Current empirical level: **L4_candidate** (3 support-level experimental results, awaiting independent replication). Highest argument strength: L2 (post-hoc translation, 3 entries).
 
-Two open-validation claims were revised from **challenge** to **support** after correcting the E/S calibration in validation round V2:
+Two open-validation claims were revised from **challenge** to **support** after correcting the E/S calibration in validation round V2, and a third claim (PHASE-001) was verified as support in its first run:
 
 - **XD-AI-ADAM-001** — Adaptive optimization dynamics. V1 (2026-07-30): challenge, direction correct but effect below threshold (8/12 seeds, p = 0.194). V2 (2026-08-01): **support**—12/12 seeds passed, p = 0.0002 (binomial). Adam mean S = 188.53 vs. best-SGD mean S = 345.97.
 - **XD-P1-CHEM-001** — Chemical reaction-path competition. V1 (2026-07-30): challenge. V2 (2026-08-01): **support**—16/16 temperature matches, p = 0.0000152. Preferred-path S = 31980.96 vs. alternative S = 55000.0.
+
+- **XD-P1-PHASE-001** — Phase-transition path selection. V1 (2026-08-01): **support**—12/12 seeds passed, p = 0.00024 (binomial). Slow-cool S ≈ 48,903 vs. quench S ≈ 237,486.
 
 Both results are logged in the public evidence ledger and await community independent replication before advancing beyond L4_candidate.
 
 ### 5. How to Verify
 
-All validation artifacts live in the [`open-validation/`](open-validation/) directory. There are **3 active claims** open for independent verification:
+All validation artifacts live in the [`open-validation/`](open-validation/) directory. There are **4 active claims** open for independent verification:
 
 - **XD-P1-CHEM-001** — Chemical reaction-path competition ([TASK-005](open-validation/tasks/TASK-005-chemical-path.md))
 - **XD-AI-ADAM-001** — Adaptive optimization dynamics ([TASK-004](open-validation/tasks/TASK-004-adam-dynamics.md))
 - **XD-E-PARADIGM-001** — E-dimension paradigm transformation ([TASK-003](open-validation/tasks/TASK-003-e-dimension-paradigm-map.md))
+- **XD-P1-PHASE-001** — Phase-transition path selection ([TASK-006](open-validation/tasks/TASK-006-phase-transition.md))
 
 The reference implementations use **only the Python standard library (3.9+)**—no dependencies to install. To run them in five minutes:
 
@@ -63,6 +66,7 @@ The reference implementations use **only the Python standard library (3.9+)**—
 python .\open-validation\reference-implementation\chemical_path.py
 python .\open-validation\reference-implementation\adam_dynamics.py
 python .\open-validation\reference-implementation\e_paradigm_map.py
+python .\open-validation\reference-implementation\phase_transition.py
 ```
 
 Submission workflow: claim a task → fill the [preregistration template](open-validation/preregistration-template.yaml) → run the experiment → generate a submission JSON per [submission-schema.json](open-validation/submission-schema.json) → validate with `validate_submission.py` → results are appended to [evidence-ledger.csv](open-validation/evidence-ledger.csv). All submissions pass formal checks, pre-registration compliance, and independent review.
@@ -88,7 +92,7 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 
 ### 1. 摘要
 
-玄叠论（HypoStack Theory）是一套可证伪的理论假说，主张差异驱动万物演化。其核心预设是：宇宙中只有信息结构在消除差异。标志性公式为 **S = ∫ E dN**，其中 S 是信息作用量（总消耗），E 是驱动力（差异强度），N 是演化步数。这不是宇宙的目标函数，而是宇宙的筛选记录——省力者留，费力者走。每一个推论都在等待独立的实验检验；在实验数据到位之前，理论既未被证实，也未被推翻。当前实证等级为 **L4_candidate**，两个 claim（CHEM-001 和 ADAM-001）在修正 E/S 口径后从 challenge 修正为 support，等待社区独立复核。
+玄叠论（HypoStack Theory）是一套可证伪的理论假说，主张差异驱动万物演化。其核心预设是：宇宙中只有信息结构在消除差异。标志性公式为 **S = ∫ E dN**，其中 S 是信息作用量（总消耗），E 是驱动力（差异强度），N 是演化步数。这不是宇宙的目标函数，而是宇宙的筛选记录——省力者留，费力者走。每一个推论都在等待独立的实验检验；在实验数据到位之前，理论既未被证实，也未被推翻。当前实证等级为 **L4_candidate**，三个 claim（CHEM-001、ADAM-001 和 PHASE-001）在修正 E/S 口径后从 challenge 修正为 support，等待社区独立复核。
 
 ### 2. 核心公式
 
@@ -118,22 +122,25 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 
 ### 4. 当前证据
 
-当前实证等级：**L4_candidate**（已有 2 个 support 级实验证据，等待独立复核）。最高论据强度：L2（事后翻译，共 3 条）。
+当前实证等级：**L4_candidate**（已有 3 个 support 级实验证据，等待独立复核）。最高论据强度：L2（事后翻译，共 3 条）。
 
-两个开放验证 claim 在 V2 轮次修正 E/S 口径后，从 **challenge** 修正为 **support**：
+两个开放验证 claim 在 V2 轮次修正 E/S 口径后，从 **challenge** 修正为 **support**，第三个 claim（PHASE-001）在首次运行中即验证为 support：
 
 - **XD-AI-ADAM-001** —— 自适应优化动态。V1（2026-07-30）：challenge，方向正确但效应未达阈值（8/12 种子，p = 0.194）。V2（2026-08-01）：**support**——12/12 种子通过，p = 0.0002（二项检验）。Adam 平均 S = 188.53，最优 SGD 平均 S = 345.97。
 - **XD-P1-CHEM-001** —— 化学反应路径竞争。V1（2026-07-30）：challenge。V2（2026-08-01）：**support**——16/16 温度匹配，p = 0.0000152。优选路径 S = 31980.96，对照路径 S = 55000.0。
+
+- **XD-P1-PHASE-001** —— 相变路径选择。V1（2026-08-01）：**support**——12/12 种子通过，p = 0.00024（二项检验）。慢冷 S ≈ 48,903，淬火 S ≈ 237,486。
 
 两项结果均已录入公开证据账本，等待社区独立复核后方可超越 L4_candidate 等级。
 
 ### 5. 如何验证
 
-所有验证产物位于 [`open-validation/`](open-validation/) 目录。当前有 **3 个活跃 claim** 等待独立验证：
+所有验证产物位于 [`open-validation/`](open-validation/) 目录。当前有 **4 个活跃 claim** 等待独立验证：
 
 - **XD-P1-CHEM-001** —— 化学反应路径竞争（[TASK-005](open-validation/tasks/TASK-005-chemical-path.md)）
 - **XD-AI-ADAM-001** —— 自适应优化动态（[TASK-004](open-validation/tasks/TASK-004-adam-dynamics.md)）
 - **XD-E-PARADIGM-001** —— E 维度范式转换（[TASK-003](open-validation/tasks/TASK-003-e-dimension-paradigm-map.md)）
+- **XD-P1-PHASE-001** —— 相变路径选择（[TASK-006](open-validation/tasks/TASK-006-phase-transition.md)）
 
 参考实现**仅使用 Python 标准库（3.9+）**，无需安装任何依赖。五分钟内即可运行：
 
@@ -141,6 +148,7 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 python .\open-validation\reference-implementation\chemical_path.py
 python .\open-validation\reference-implementation\adam_dynamics.py
 python .\open-validation\reference-implementation\e_paradigm_map.py
+python .\open-validation\reference-implementation\phase_transition.py
 ```
 
 提交流程：认领任务 → 填写[预注册模板](open-validation/preregistration-template.yaml) → 运行实验 → 按 [submission-schema.json](open-validation/submission-schema.json) 生成提交 JSON → 运行 `validate_submission.py` 校验 → 结果自动追加到 [evidence-ledger.csv](open-validation/evidence-ledger.csv)。所有提交经过形式检查、预注册合规检查和独立评审。

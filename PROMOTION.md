@@ -26,9 +26,10 @@ S = ∫ E dN
 |------|------|---------|------|
 | 化学路径竞争（XD-P1-CHEM-001） | support | 16/16 温度匹配，p=1.5e-5 | L4_candidate |
 | AI 优化动态（XD-AI-ADAM-001） | support | 12/12 种子通过，p=2.4e-4 | L4_candidate |
+| 相变路径选择（XD-P1-PHASE-001） | support | 12/12 种子通过，p=2.4e-4 | L4_candidate |
 | E 维度范式转换（XD-E-PARADIGM-001） | challenge | 5 个标定点，无普适转换函数 | exploratory |
 
-当前实证等级：**L4_candidate**——有 2 个 support 级实验结果，但还在等独立复核。
+当前实证等级：**L4_candidate**——有 3 个 support 级实验结果，但还在等独立复核。
 
 **一个必须说清楚的转折：**
 
@@ -52,7 +53,7 @@ S = ∫ E dN
 **诚实声明：**
 
 - 这套理论可能是错的。单一预言被证伪 ≠ 理论整体被证伪，但多个独立证伪就很危险了。
-- 当前证据等级是 candidate，不是确认。两个 support 结果必须经过独立复核才能超越 L4_candidate。
+- 当前证据等级是 candidate，不是确认。三个 support 结果必须经过独立复核才能超越 L4_candidate。
 - 欢迎证伪。支持、挑战、证伪结果**均接收**——证伪也是贡献，账本里已经躺着 challenge 结果就是证明。
 
 仓库地址：**https://github.com/KK13760780514/Hypostack-Theory**
@@ -81,9 +82,10 @@ It is not philosophy. It is a falsifiable theory with explicit predictions, runn
 |------------|-----------|--------|-------|
 | Chemical path competition (XD-P1-CHEM-001) | support | 16/16 temperature matches, p=1.5e-5 | L4_candidate |
 | AI adaptive dynamics (XD-AI-ADAM-001) | support | 12/12 seeds, p=2.4e-4 | L4_candidate |
+| Phase-transition path (XD-P1-PHASE-001) | support | 12/12 seeds, p=2.4e-4 | L4_candidate |
 | E-dimension paradigm map (XD-E-PARADIGM-001) | challenge | 5 calibration points, no universal transform | exploratory |
 
-Empirical level: **L4_candidate** — two support-level results, awaiting independent replication.
+Empirical level: **L4_candidate** — three support-level results, awaiting independent replication.
 
 **The twist you should know about:**
 
@@ -105,7 +107,7 @@ This is not p-hacking. Every correction is logged in `known-issues.md` with root
 **Honest disclaimer:**
 
 - The theory may be wrong. A single falsified prediction ≠ the whole theory is dead, but multiple independent falsifications are dangerous.
-- The current level is *candidate*, not *confirmed*. Both support results need independent replication to advance beyond L4_candidate.
+- The current level is *candidate*, not *confirmed*. All three support results need independent replication to advance beyond L4_candidate.
 - Falsifications are welcome. Support, challenge, and falsification results are **all accepted** — the ledger already contains challenge results as proof.
 
 Repo: **https://github.com/KK13760780514/Hypostack-Theory**

@@ -56,6 +56,7 @@ Whether your result is supportive or negative, as long as it passes form validat
 | [TASK-003](open-validation/tasks/TASK-003-e-dimension-paradigm-map.md) | E 维度范式转换 | 提出可计算的转换函数 |
 | [TASK-004](open-validation/tasks/TASK-004-adam-dynamics.md) | Adam 自适应动态 | 复现与挑战首次 challenge 结果 |
 | [TASK-005](open-validation/tasks/TASK-005-chemical-path.md) | 化学路径竞争 | **推荐入门**，有完整参考实现 |
+| [TASK-006](open-validation/tasks/TASK-006-phase-transition.md) | 相变路径选择 | 2D Ising 模型验证，首次结果 support |
 
 **新贡献者推荐从 [TASK-005](open-validation/tasks/TASK-005-chemical-path.md) 开始**：它有完整的参考实现（[chemical_path.py](open-validation/reference-implementation/chemical_path.py)）、明确的预测冲突（玄叠论预测路径 B，Arrhenius 预测路径 A），且首次结果为 challenge，有充足的复现与挑战空间。
 
@@ -79,6 +80,7 @@ All validation tasks are listed in the [open-validation/tasks/](open-validation/
 | [TASK-003](open-validation/tasks/TASK-003-e-dimension-paradigm-map.md) | E-dimension paradigm shift | Propose a computable conversion function |
 | [TASK-004](open-validation/tasks/TASK-004-adam-dynamics.md) | Adam adaptive dynamics | Reproduce and challenge the first challenge result |
 | [TASK-005](open-validation/tasks/TASK-005-chemical-path.md) | Chemical path competition | **Recommended starter**, full reference implementation |
+| [TASK-006](open-validation/tasks/TASK-006-phase-transition.md) | Phase-transition path selection | 2D Ising model validation, first result support |
 
 **New contributors should start with [TASK-005](open-validation/tasks/TASK-005-chemical-path.md)**: it has a complete reference implementation ([chemical_path.py](open-validation/reference-implementation/chemical_path.py)), a clear prediction conflict (XuanDie predicts path B, Arrhenius predicts path A), and its first result was a challenge, leaving ample room for reproduction and falsification.
 

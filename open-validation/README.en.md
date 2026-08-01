@@ -11,10 +11,11 @@ Goal: Enable external researchers, engineers, and data scientists to directly ru
 The current MVP covers five directions:
 
 1. XD-P1-SIM-001: P1 softmax simulation (degraded to a calibration demo, see [known-issues.md](known-issues.md) ISSUE-004).
-2. XD-P1-CHEM-001: Chemical reaction path competition — uses Arrhenius kinetics instead of the softmax loop; V2 result is support.
+2. XD-P1-CHEM-001: Chemical reaction path competition — uses Arrhenius kinetics instead of the softmax loop; V2 result is support (L4_candidate).
 3. XD-AI-TOY-001: AI toy training path (degraded to a calibration demo, see [known-issues.md](known-issues.md) ISSUE-001).
-4. XD-AI-ADAM-001: Adaptive optimization dynamics — whether Adam's spontaneous training dynamics yield lower S than optimally tuned fixed-lr SGD (V2 result is support).
+4. XD-AI-ADAM-001: Adaptive optimization dynamics — whether Adam's spontaneous training dynamics yield lower S than optimally tuned fixed-lr SGD (V2 result is support, L4_candidate).
 5. XD-E-PARADIGM-001: E-dimension paradigm mapping — propose computable conversion functions for physical, biological, or cognitive paradigms.
+6. XD-P1-PHASE-001: Phase-transition path selection — 2D Ising model slow-cool vs. quench path comparison (first result is support, L4_candidate).
 
 ## Quick Start
 
@@ -22,8 +23,12 @@ The current MVP covers five directions:
 
 ```powershell
 python .\open-validation\reference-implementation\chemical_path.py
+python .\open-validation\reference-implementation\chemical_path_v2.py
 python .\open-validation\reference-implementation\adam_dynamics.py
 python .\open-validation\reference-implementation\e_paradigm_map.py
+python .\open-validation\reference-implementation\e_paradigm_map_v2.py
+python .\open-validation\reference-implementation\e_paradigm_map_v3.py
+python .\open-validation\reference-implementation\phase_transition.py
 ```
 
 The reference implementation uses only the Python standard library (3.9+), no dependencies required.
@@ -55,6 +60,7 @@ All submitted experimental results are recorded in [evidence-ledger.csv](evidenc
 - [TASK-003: Propose E-Dimension Paradigm Conversion Function](tasks/TASK-003-e-dimension-paradigm-map.md) (reference implementation [e_paradigm_map.py](reference-implementation/e_paradigm_map.py))
 - [TASK-004: Reproduce and Challenge Adam Adaptive Dynamics Validation](tasks/TASK-004-adam-dynamics.md) (V2 result: support, L4_candidate; open for independent replication and criterion challenges)
 - [TASK-005: Chemical Reaction Path Competition Validation](tasks/TASK-005-chemical-path.md) (V2 result: support, L4_candidate; open for independent replication and calibration challenges)
+- [TASK-006: Phase-Transition Path Selection Validation](tasks/TASK-006-phase-transition.md) (V1 result: support, L4_candidate; open for independent replication)
 
 ## Contribution Workflow
 
