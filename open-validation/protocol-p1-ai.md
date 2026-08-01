@@ -1,4 +1,4 @@
-# HypoStack 开放验证协议（v1.0）
+# HypoStack 开放验证协议（v0.1.0）
 
 版本：v0.1.0  
 状态：开放验证 MVP  
@@ -10,7 +10,9 @@
 
 它不等同于证明整套玄叠论，只用于产生第一批可被独立复核的 L4/L5 候选证据。
 
-## 2. Claim XD-P1-SIM-001：P1 增强版计算机模拟
+## 2. Claim XD-P1-SIM-001：P1 增强版计算机模拟（已降级）
+
+> **⚠ 已降级**：本 claim 存在定义性循环（softmax 必然偏好低 S），已被 [XD-P1-CHEM-001](#7-claim-xd-p1-chem-001化学反应路径竞争) 替代。详见 [known-issues.md](known-issues.md) ISSUE-004。以下规范保留作历史参考，不要对此 claim 提交新结果。
 
 ### 预测陈述
 
@@ -49,7 +51,9 @@
 - 路径 B 的选择频率显著高于路径 A；
 - 在复核中发现 `E`、`N`、`S` 的预注册定义被执行后修改。
 
-## 3. Claim XD-AI-TOY-001：AI 玩具版训练路径
+## 3. Claim XD-AI-TOY-001：AI 玩具版训练路径（已降级）
+
+> **⚠ 已降级**：本 claim 的 E 记账口径存在望远镜求和缺陷，且"SGD 不选择路径"的框架问题无法构成有效验证，已被 [XD-AI-ADAM-001](#6-claim-xd-ai-adam-001自适应优化动态issue-001-修正-a) 替代。详见 [known-issues.md](known-issues.md) ISSUE-001。以下规范保留作历史参考，不要对此 claim 提交新结果。
 
 ### 预测陈述
 

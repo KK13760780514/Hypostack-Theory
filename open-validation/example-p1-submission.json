@@ -1,23 +1,23 @@
 {
-  "submission_id": "ref-xd-p1-sim-001-20260728",
-  "claim_id": "XD-P1-SIM-001",
-  "title": "Reference implementation for P1 enhanced simulation",
+  "submission_id": "ref-xd-p1-chem-001-20260730",
+  "claim_id": "XD-P1-CHEM-001",
+  "title": "Chemical path competition: XuanDie S vs Arrhenius kinetics",
   "author": {
     "name": "reference-implementation",
     "affiliation": "open-validation",
     "contact": ""
   },
   "preregistration": {
-    "hash": "replace-with-preregistration-file-hash",
-    "timestamp_utc": "2026-07-30T00:26:02.549923+00:00",
-    "uri": ""
+    "hash": "in-script-preregistered-constants",
+    "timestamp_utc": "2026-07-30T00:00:00+00:00",
+    "uri": "protocol-p1-ai.md#xd-p1-chem-001"
   },
   "implementation": {
     "repository": "",
     "commit": "",
-    "code_hash": "fe8bcbd1422c5f7327c2c6e6682b3eb969c847645d1b8f5f1ceb6c4ffc0aacff",
+    "code_hash": "7380967db221c7b6713a21153b5236468da9085a1a7a44cc018bd2d63dd99a70",
     "data_hash": "",
-    "seed": 20260728,
+    "seed": 0,
     "environment": {
       "os": "Windows-10-10.0.19045-SP0",
       "python_version": "3.13.5",
@@ -25,28 +25,37 @@
     }
   },
   "result": {
-    "S_A": 8.0,
-    "S_B": 9.0,
-    "preferred_path": "A",
+    "S_A": 60000.0,
+    "S_B": 55000.0,
+    "preferred_path": "B",
     "selected_counts": {
-      "A": 100,
+      "A": 8,
       "B": 0
     },
-    "p_value": 7.888609052210118e-31,
-    "summary": "P(A)=0.993307; selected A 100/100; alpha=0.01",
+    "p_value": 1.0,
+    "summary": "XuanDie predicts B (S_B=55000 < S_A=60000); actual: 0/8 temps match; p=1.0000",
     "raw_output": {
-      "temperature": 0.2,
-      "runs": 100,
-      "path_A": {
-        "E_i": 1.0,
-        "steps": 8
+      "Ea": {
+        "Ea1": 30000.0,
+        "Ea2": 30000.0,
+        "Ea3": 55000.0
       },
-      "path_B": {
-        "E_i": 3.0,
-        "steps": 3
-      }
+      "S_A": 60000.0,
+      "S_B": 55000.0,
+      "xuandie_prediction": "B",
+      "temperatures": [280.0, 290.0, 300.0, 310.0, 320.0, 350.0, 400.0, 500.0],
+      "results": [
+        { "T": 280.0, "P_A": 0.999978, "P_B": 2.2e-05, "actual_path": "A", "ratio_A_over_B": 46129.16 },
+        { "T": 290.0, "P_A": 0.999969, "P_B": 3.1e-05, "actual_path": "A", "ratio_A_over_B": 31852.89 },
+        { "T": 300.0, "P_A": 0.999956, "P_B": 4.4e-05, "actual_path": "A", "ratio_A_over_B": 22544.67 },
+        { "T": 310.0, "P_A": 0.999939, "P_B": 6.1e-05, "actual_path": "A", "ratio_A_over_B": 16316.35 },
+        { "T": 320.0, "P_A": 0.999917, "P_B": 8.3e-05, "actual_path": "A", "ratio_A_over_B": 12049.77 },
+        { "T": 350.0, "P_A": 0.999814, "P_B": 0.000186, "actual_path": "A", "ratio_A_over_B": 5384.94 },
+        { "T": 400.0, "P_A": 0.999457, "P_B": 0.000543, "actual_path": "A", "ratio_A_over_B": 1839.85 },
+        { "T": 500.0, "P_A": 0.997562, "P_B": 0.002438, "actual_path": "A", "ratio_A_over_B": 409.1 }
+      ]
     }
   },
-  "classification": "support",
-  "timestamp_utc": "2026-07-30T00:26:02.727351+00:00"
+  "classification": "challenge",
+  "timestamp_utc": "2026-07-30T09:17:55.702046+00:00"
 }

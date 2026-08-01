@@ -126,6 +126,6 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 
 ### 仍需解决
 
-- 没有真正的 Git 远程仓库，外部人无法 fork 和 PR。
+- ~~没有真正的 Git 远程仓库，外部人无法 fork 和 PR。~~ **已解决（2026-07-31）：仓库已推送到 [GitHub](https://github.com/KK13760780514/Hypostack-Theory)。**
 - 没有 CONTRIBUTING.md（贡献指南独立文件）。
 - 没有中文/英文双语支持（当前全部中文）。
