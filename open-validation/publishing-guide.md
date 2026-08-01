@@ -125,6 +125,8 @@ DEC-001：ADAM 任务构造是否人为偏向 Adam（条件数是否应调整）
 
 C：不立即改判据，补充敏感性分析，让社区评估判别力与公平性的权衡。
 
+**决策支撑证据（2026-08-01，提出者开发，[dec001_cond_scan.py](reference-implementation/dec001_cond_scan.py)）**：8 档条件数扫描（X2_SCALE∈{5..40}，数值条件数 58->3349）。效应随条件数平滑单调增强（ratio 0.88->0.50），非突变；但 support 阈值仅在数值条件数 ≥841 达到，V1 在 214 的 challenge 真实存在。详见 [open-decisions.md](open-decisions.md) DEC-001。
+
 **对现有证据的影响**
 
 - [ ] 会改变口径
@@ -247,6 +249,8 @@ DEC-005：有效活化能是否为 E 的最佳定义
 **建议的默认值**
 
 A；社区可提交"相同实验、不同 E 定义"的对比结果作为 challenge。
+
+**决策支撑证据（2026-08-01，提出者开发，[dec005_ea_definitions.py](reference-implementation/dec005_ea_definitions.py)）**：3 配置 × 8 温度共 24 项。E_eff 24/24、决速步 Ea 24/24、ΣEa 0/24。稳态近似下 E_eff ≈ max(Ea_i)（差异 <0.2%），当前框架不可区分两者；区分需 ΔG‡ 实验。详见 [open-decisions.md](open-decisions.md) DEC-005。
 
 **对现有证据的影响**
 
