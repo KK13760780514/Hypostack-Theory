@@ -78,6 +78,7 @@ To establish a continuum definition `S = ∫ E dN`, one must answer:
 
 - **Problem**: The nine dimensions have different units; what is the meaning of summing `E × N` products across dimensions?
 - **Candidate route**: Solve jointly with Appendix E's nine-dimensional manifold metric (below). Until the metric exists, `∫ E dN` is strictly meaningful only within a single paradigm with unified units (e.g., J in the physical paradigm) — consistent with E-PARADIGM-001's finding (a common unit is meaningful, but cross-paradigm conversion functions are not universal).
+- **Dimensionality reduction**: the operationalized test plan for Presupposition 3 (F/Φ/N strong coupling, reducible) is in [p3-dimension-reduction.en.md](p3-dimension-reduction.en.md).
 
 ## 4. Appendix E: Nine-Dimensional Manifold Metric — Starter Framework (Bounty, Community)
 
