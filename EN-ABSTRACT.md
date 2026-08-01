@@ -1,6 +1,6 @@
 # 玄叠论（HypoStack Theory）英文理论摘要 / English Abstract with Chinese Translation
 
-> 协议版本：v16.1.0 · 论据等级：L4_candidate · 许可证：CC BY-SA 4.0（文本）/ MIT（代码）
+> 协议版本：v16.1.0 · 实证等级：L4_candidate · 许可证：CC BY-SA 4.0（文本）/ MIT（代码）
 >
 > 本文件基于 [玄叠论.md](玄叠论.md) 第 1.0–1.4 节与第 11 部分撰写，是理论的简明摘要，不是完整规则书。
 
@@ -24,13 +24,13 @@ This formula is the theory's signature—much as E = mc² is to relativity. It r
 
 ### 3. Key Predictions
 
-The theory issues six cross-disciplinary predictions (Section 11 of the rulebook), each with a pre-registered falsification protocol:
+The theory issues six cross-disciplinary predictions (Section 11 of the rulebook), each with a designed falsification path; pre-registered falsification protocols exist for those with reference implementations (11.1 physics, 11.6 AI), while the others remain qualitative case frameworks awaiting operationalization:
 
 1. **Physics — Phase-transition path selection.** When a system transitions between phases, it selects the path minimizing S. In supersaturated-solution crystallization, the path with lower total consumption is preferred. This is a specific application of the least-action principle; if verified, S = ∫ E dN is an equivalent expression of it.
 
 2. **Biology — Cell-differentiation path competition.** A stem cell facing multiple differentiation fates selects the path minimizing S. Lower-concentration, gradual differentiation (lower per-step E) is preferred over high-concentration forced differentiation. This recasts cell-fate choice as a microscopic natural selection where S quantifies the selection criterion.
 
-3. **Neuroscience — High-R cognitive welding: information-energy non-conservation.** When a structure's self-reference depth R exceeds a threshold, cognitive welding produces new information relations without proportional energy increase. The ratio ΔE_phys / ΔS_xuan is predicted to deviate significantly below the Landauer limit (kT ln 2 ≈ 2.85×10⁻²¹ J/bit) for high-R tasks versus low-R tasks. This is a unique incremental prediction not made by systems theory, dissipative-structure theory, or structural realism.
+3. **Neuroscience — High-R cognitive welding: information-energy non-conservation.** When a structure's self-reference depth R exceeds a threshold, cognitive welding produces new information relations without proportional energy increase. The ratio ΔE_phys / ΔS_xuan is predicted to deviate significantly below the Landauer limit (kT ln 2 ≈ 2.97×10⁻²¹ J/bit at body temperature 310 K) for high-R tasks versus low-R tasks. This is a unique incremental prediction not made by systems theory, dissipative-structure theory, or structural realism.
 
 4. **Economics — Market-equilibrium path selection.** When two paths to equilibrium exist, the lower-transaction-cost path is preferred. If policy raises the cost of one path, the market redirects to the lower-S alternative. Market equilibrium can be understood as the process of S = ∫ E dN approaching its minimum.
 
@@ -47,8 +47,9 @@ Two open-validation claims were revised from **challenge** to **support** after 
 - **XD-AI-ADAM-001** — Adaptive optimization dynamics. V1 (2026-07-30): challenge, direction correct but effect below threshold (8/12 seeds, p = 0.194). V2 (2026-08-01): **support**—12/12 seeds passed, p = 2.4e-4 (binomial). Adam mean S = 188.53 vs. best-SGD mean S = 345.97.
 - **XD-P1-CHEM-001** — Chemical reaction-path competition. V1 (2026-07-30): challenge. V2 (2026-08-01): **support**—16/16 temperature matches, p = 1.5e-5. Preferred-path S = 31980.96 vs. alternative S = 55000.0.
 - **XD-P1-PHASE-001** — Phase-transition path selection. V1 (2026-08-01): **support**—12/12 seeds passed, p = 2.4e-4 (binomial). Slow-cool S ≈ 48,903 vs. quench S ≈ 237,486.
+- **XD-E-PARADIGM-001** — E-dimension paradigm transformation. V2 (2026-08-01): challenge (3 calibration points, η span 2.5 orders). V3 (2026-08-01): challenge (5 calibration points, η span 2.3 orders, power-law fits R² < 0.64; no universal conversion function). exploratory.
 
-All three results are logged in the public evidence ledger and await community independent replication before advancing beyond L4_candidate.
+All results (3 support + 1 challenge) are logged in the public evidence ledger; all are reference-implementation self-validations and await community independent replication before advancing beyond L4_candidate.
 
 ### 5. How to Verify
 
@@ -108,13 +109,13 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 
 ### 3. 关键预言
 
-理论发布了六个跨学科预言（规则书第 11 部分），每个都附带预注册的证伪协议：
+理论发布了六个跨学科预言（规则书第 11 部分），每个预言都设计了证伪路径；其中已有参考实现的预言（11.1 物理学、11.6 AI）附带预注册的证伪协议，其余仍为待操作化的定性案例框架：
 
 1. **物理学——相变路径选择。** 物质系统相变时，会选择总消耗 S 最小的路径。在过饱和溶液结晶实验中，系统优先选择总消耗更低的路径。这是最小作用量原理的具体应用；若被验证，则 S = ∫ E dN 是该原理的等价表达。
 
 2. **生物学——细胞分化路径竞争。** 干细胞面临多种分化方向时，会选择总消耗 S 最小的路径。低浓度逐步分化（每步 E 较低）优于高浓度强制分化。这将细胞命运选择重述为一场微观自然选择，S 量化了筛选标准。
 
-3. **神经科学——高 R 认知焊接的信息-能量非守恒。** 当结构的自视深度 R 超过阈值时，认知焊接可在不消耗等比例物理能量的情况下产生新信息关系。预测高 R 任务的 ΔE_phys / ΔS_xuan 比值显著低于兰道尔极限（kT ln 2 ≈ 2.85×10⁻²¹ J/bit）。这是系统论、耗散结构论、结构实在论均不会做出的独有增量预测。
+3. **神经科学——高 R 认知焊接的信息-能量非守恒。** 当结构的自视深度 R 超过阈值时，认知焊接可在不消耗等比例物理能量的情况下产生新信息关系。预测高 R 任务的 ΔE_phys / ΔS_xuan 比值显著低于兰道尔极限（kT ln 2 ≈ 2.97×10⁻²¹ J/bit，体温 310K）。这是系统论、耗散结构论、结构实在论均不会做出的独有增量预测。
 
 4. **经济学——市场均衡路径选择。** 当两条达到均衡的路径并存时，交易成本更低的那条被优先选择。若政策提高了某条路径的成本，市场会转向总消耗更小的替代路径。市场均衡可理解为 S = ∫ E dN 趋近最小值的过程。
 
@@ -131,8 +132,9 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 - **XD-AI-ADAM-001** —— 自适应优化动态。V1（2026-07-30）：challenge，方向正确但效应未达阈值（8/12 种子，p = 0.194）。V2（2026-08-01）：**support**——12/12 种子通过，p = 2.4e-4（二项检验）。Adam 平均 S = 188.53，最优 SGD 平均 S = 345.97。
 - **XD-P1-CHEM-001** —— 化学反应路径竞争。V1（2026-07-30）：challenge。V2（2026-08-01）：**support**——16/16 温度匹配，p = 1.5e-5。优选路径 S = 31980.96，对照路径 S = 55000.0。
 - **XD-P1-PHASE-001** —— 相变路径选择。V1（2026-08-01）：**support**——12/12 种子通过，p = 2.4e-4（二项检验）。慢冷 S ≈ 48,903，淬火 S ≈ 237,486。
+- **XD-E-PARADIGM-001** —— E 维度范式转换。V2（2026-08-01）：challenge（3 标定点，η 跨度 2.5 个数量级）。V3（2026-08-01）：challenge（5 标定点，η 跨度 2.3 个数量级，幂律拟合 R² < 0.64，无普适转换函数）。exploratory。
 
-所有结果均已录入公开证据账本，等待社区独立复核后方可超越 L4_candidate 等级。
+所有结果（3 个 support + 1 个 challenge）均已录入公开证据账本；全部为参考实现自验证，等待社区独立复核后方可超越 L4_candidate 等级。
 
 ### 5. 如何验证
 

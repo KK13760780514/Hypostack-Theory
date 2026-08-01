@@ -243,4 +243,4 @@
 
 ### 首次运行结果（2026-08-01）
 
-12/12 种子全部通过（p=2.4e-4）。平均 S_A=48903, S_B=69433, S_C=237486。慢冷 S 约为淬火的 1/5。结论 **support**（L4_candidate）。参考实现见 [phase_transition.py](reference-implementation/phase_transition.py)。
+12/12 种子全部通过（p=2.4e-4）。平均 S_A=48903, S_B=69433, S_C=237486。慢冷 S 约为淬火的 1/5。结论 **support**（L4_candidate）。参考实现见 [phase_transition.py](reference-implementation/phase_transition.py)。注：证据账本与提交 JSON 的 S_B 列存的是淬火路径 C（237486），中冷路径 B（69433）见提交 raw_output 的 mean_S_B。

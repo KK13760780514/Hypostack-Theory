@@ -21,7 +21,12 @@ DEFAULT_SCHEMA = Path(__file__).with_name("submission-schema.json")
 DEFAULT_LEDGER = Path(__file__).with_name("evidence-ledger.csv")
 
 HEX64_RE = re.compile(r"^[0-9a-fA-F]{64}$")
-PLACEHOLDER_HASHES = {"in-script-preregistered-constants", "in-script-preregistered-constants-v2"}
+PLACEHOLDER_HASHES = {
+    "in-script-preregistered-constants",
+    "in-script-preregistered-constants-v1",
+    "in-script-preregistered-constants-v2",
+    "in-script-preregistered-constants-v3",
+}
 
 LEDGER_FIELDS = [
     "evidence_id",
