@@ -74,7 +74,7 @@
 
 **默认建议**：A，但补充非对称势垒配置下的验证（见 DEC-005）。
 
-**影响 claim**：XD-P1-CHEM-001。**状态**：开放。
+**影响 claim**：XD-P1-CHEM-001。**状态**：开放。**讨论链接**：[issue #8](https://github.com/KK13760780514/Hypostack-Theory/issues/8)。
 
 ## DEC-005：有效活化能是否为 E 的最佳定义（来源：ISSUE-004）
 

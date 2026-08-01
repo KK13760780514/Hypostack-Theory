@@ -75,7 +75,7 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Default recommendation**: A, with additional validation under asymmetric barrier configurations (see DEC-005).
 
-**Affected claim**: XD-P1-CHEM-001. **Status**: open.
+**Affected claim**: XD-P1-CHEM-001. **Status**: open. **Discussion**: [issue #8](https://github.com/KK13760780514/Hypostack-Theory/issues/8).
 
 ## DEC-005: Is effective activation energy the best definition of E? (source: ISSUE-004)
 
