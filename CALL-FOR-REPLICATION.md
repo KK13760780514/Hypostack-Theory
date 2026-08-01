@@ -31,7 +31,8 @@ Currently, **all** existing results were produced by the proposer's reference im
 1. **Independent replication（独立复核）**：re-implement or independently run the three support experiments and report whether the result reproduces. Claimable issues: [XD-P1-CHEM-001 (#11)](https://github.com/KK13760780514/Hypostack-Theory/issues/11) · [XD-AI-ADAM-001 (#12)](https://github.com/KK13760780514/Hypostack-Theory/issues/12) · [XD-P1-PHASE-001 (#13)](https://github.com/KK13760780514/Hypostack-Theory/issues/13). Full workflow: [Independent Replication section](open-validation/README.en.md) / [独立复核章节](open-validation/README.md).
 2. **Open decisions（开放决策）**：8 unresolved governance/calibration decisions (e.g., whether the Adam task is unfairly constructed, whether CHEM's N=1 is sound, how to handle ECO's insufficient discriminative power). Pick one: [open-decisions.md](open-validation/open-decisions.en.md) / [open-decisions.md](open-validation/open-decisions.md).
 3. **Tasks（任务认领）**：[TASK-001..007](open-validation/tasks/) — new experiments, refutations, and engineering infrastructure.
-4. **Math foundations（数学基础）**：the integral `S = ∫ E dN` lacks a measure-theoretic definition. Lowest-cost entry: numerical convergence checks ([math-foundations.md](open-validation/math-foundations.en.md) Q3).
+4. **Math foundations（数学基础）**：the integral `S = ∫ E dN` lacks a measure-theoretic definition. Lowest-cost entry: numerical convergence checks ([math-foundations.md](open-validation/math-foundations.en.md) Q3) — replication call: [#14](https://github.com/KK13760780514/Hypostack-Theory/issues/14).
+5. **Dimensionality reduction（降维检验）**：operationalized test plan for Presupposition 3 (F/Φ/N strong coupling) — [p3-dimension-reduction.en.md](open-validation/p3-dimension-reduction.en.md) / [p3-dimension-reduction.md](open-validation/p3-dimension-reduction.md).
 
 ## How · 如何参与
 
