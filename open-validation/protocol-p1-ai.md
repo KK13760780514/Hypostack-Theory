@@ -306,4 +306,4 @@
 
 ### 诚实声明
 
-首次结果既不支持也不证伪经济学预言。它证明"比例佣金口径"判别力不足，并暴露无学习模型不收敛的建模问题。修正方向（学习型交易者 / 固定额税 / S 归一化）见 [DEC-008](open-decisions.md)，修正后须按 ISSUE-006 规则重新预注册并默认降级 exploratory。
+首次结果既不支持也不证伪经济学预言。它证明"比例佣金口径"判别力不足，并暴露无学习模型不收敛的建模问题。修正方向（学习型交易者 / 固定额税 / S 归一化）见 [DEC-008](open-decisions.md)，修正后须按 ISSUE-006 规则重新预注册并默认降级 exploratory。社区讨论见 [issue #1](https://github.com/KK13760780514/Hypostack-Theory/issues/1)（DEC-008 议题）与 [issue #2](https://github.com/KK13760780514/Hypostack-Theory/issues/2)（基线提交）。
