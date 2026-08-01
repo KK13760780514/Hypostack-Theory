@@ -143,7 +143,7 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 
 ## ISSUE-005：外部贡献者友好性不足
 
-**状态**：已改善（持续）  
+**状态**：已解决
 **影响 claim**：所有
 
 ### 问题描述
@@ -165,5 +165,5 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 ### 仍需解决
 
 - ~~没有真正的 Git 远程仓库，外部人无法 fork 和 PR。~~ **已解决（2026-07-31）：仓库已推送到 [GitHub](https://github.com/KK13760780514/Hypostack-Theory)。**
-- 没有 CONTRIBUTING.md（贡献指南独立文件）。
-- 没有中文/英文双语支持（当前全部中文）。
+- ~~没有 CONTRIBUTING.md（贡献指南独立文件）。~~ **已解决（2026-07-31）：已创建 [CONTRIBUTING.md](../CONTRIBUTING.md)（中英文双语）。**
+- ~~没有中文/英文双语支持（当前全部中文）。~~ **已解决（2026-07-31）：已创建 [EN-ABSTRACT.md](../EN-ABSTRACT.md) 和 [README.en.md](README.en.md)。**
