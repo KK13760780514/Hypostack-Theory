@@ -61,7 +61,7 @@
 
 **默认建议**：A；独立复核者若复现成功，鼓励用更多种子作为附加证据。
 
-**影响 claim**：XD-AI-ADAM-001、XD-P1-PHASE-001。**状态**：开放。
+**影响 claim**：XD-AI-ADAM-001、XD-P1-PHASE-001。**状态**：开放。**讨论链接**：[issue #7](https://github.com/KK13760780514/Hypostack-Theory/issues/7)。
 
 ## DEC-004：CHEM 的 N=1 是否合理（来源：ISSUE-004）
 

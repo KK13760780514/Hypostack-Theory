@@ -62,7 +62,7 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Default recommendation**: A; independent replicators are encouraged to use more seeds as additional evidence if they reproduce success.
 
-**Affected claims**: XD-AI-ADAM-001, XD-P1-PHASE-001. **Status**: open.
+**Affected claims**: XD-AI-ADAM-001, XD-P1-PHASE-001. **Status**: open. **Discussion**: [issue #7](https://github.com/KK13760780514/Hypostack-Theory/issues/7).
 
 ## DEC-004: Is N=1 reasonable for CHEM? (source: ISSUE-004)
 
