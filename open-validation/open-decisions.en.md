@@ -96,7 +96,7 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Reading**: E_eff and E_maxstep predict identically on all configs (including the purpose-built "comparable-rates" config) — under the steady-state approximation, E_eff ≈ max(Ea_i) for a two-step series (slow step dominates, difference <0.2%). Thus **the current experimental framework cannot distinguish E_eff from rate-determining-step Ea**; the V2 16/16 evidence supports both equally. Distinguishing them requires a ΔG‡ (free-energy barrier, with entropic contributions) experiment. Recommend confirming option A (keep E_eff, physically more rigorous) while noting that "E_eff vs rate-determining-step Ea is underdetermined by current evidence".
 
-**Affected claim**: XD-P1-CHEM-001. **Status**: reference evidence produced, awaiting community confirmation.
+**Affected claim**: XD-P1-CHEM-001. **Status**: reference evidence produced, awaiting community confirmation. **Discussion**: [issue #5](https://github.com/KK13760780514/Hypostack-Theory/issues/5).
 
 ## DEC-006: Calibration-change cooldown and reinstatement threshold (source: ISSUE-006)
 
