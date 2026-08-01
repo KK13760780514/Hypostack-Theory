@@ -1,0 +1,167 @@
+﻿{
+  "submission_id": "ref-xd-e-paradigm-001-v2-20260731",
+  "claim_id": "XD-E-PARADIGM-001",
+  "title": "E-dimension paradigm conversion: calibrated cross-paradigm mapping",
+  "author": {
+    "name": "reference-implementation",
+    "affiliation": "open-validation",
+    "contact": ""
+  },
+  "preregistration": {
+    "hash": "in-script-preregistered-constants-v2",
+    "timestamp_utc": "2026-07-31T00:00:00+00:00",
+    "uri": "protocol-p1-ai.md#8-claim-xd-e-paradigm-001"
+  },
+  "implementation": {
+    "repository": "",
+    "commit": "",
+    "code_hash": "eb9ae64171466391dec93f60453be9cfdb2d1c5535b78774b06fa4b40eccdb38",
+    "data_hash": "",
+    "seed": 0,
+    "environment": {
+      "os": "Windows-10-10.0.19045-SP0",
+      "python_version": "3.13.5",
+      "dependencies": "python-stdlib-only"
+    }
+  },
+  "result": {
+    "S_A": 1.0421786781800066e-19,
+    "S_B": 5.064762537363002e-20,
+    "preferred_path": "B",
+    "selected_counts": {
+      "A": 0,
+      "B": 3
+    },
+    "p_value": null,
+    "summary": "3 calibration points; eta span=2.5 orders; consistent=False; classification=challenge",
+    "raw_output": {
+      "landauer_limit_J_per_bit": 2.9666781812480147e-21,
+      "atp_energy_J": 5.064762537363002e-20,
+      "calibration_points": [
+        {
+          "process": "DNA base pair replication",
+          "N": 1,
+          "physical": {
+            "E": 1.0421786781800066e-19,
+            "source": "Gibbs free energy of base pairing (~15 kcal/mol)"
+          },
+          "biological": {
+            "E": 5.064762537363002e-20,
+            "source": "1 ATP per base (DNA polymerase)"
+          },
+          "cognitive": {
+            "E": 5.9333563624960294e-21,
+            "source": "2 bits per base (4 bases, log2(4)=2)"
+          },
+          "eta_matrix": {
+            "physical->biological": 0.48597833014659014,
+            "physical->cognitive": 0.05693223711751289,
+            "biological->physical": 2.057704918032787,
+            "biological->cognitive": 0.11714974431131506,
+            "cognitive->physical": 17.564741008436336,
+            "cognitive->biological": 8.536083504737224
+          },
+          "S_physical": 1.0421786781800066e-19,
+          "S_biological": 5.064762537363002e-20,
+          "S_cognitive": 5.9333563624960294e-21
+        },
+        {
+          "process": "ATP hydrolysis",
+          "N": 1,
+          "physical": {
+            "E": 5.064762537363002e-20,
+            "source": "Delta G of ATP hydrolysis (~30.5 kJ/mol)"
+          },
+          "biological": {
+            "E": 4.8115244104948516e-20,
+            "source": "Calorimetric measurement in vivo (~95% efficiency)"
+          },
+          "cognitive": {
+            "E": 2.9666781812480147e-21,
+            "source": "1 bit (binary ATP/ADP state)"
+          },
+          "eta_matrix": {
+            "physical->biological": 0.95,
+            "physical->cognitive": 0.05857487215565753,
+            "biological->physical": 1.0526315789473684,
+            "biological->cognitive": 0.06165776016385003,
+            "cognitive->physical": 17.072167009474448,
+            "cognitive->biological": 16.218558659000728
+          },
+          "S_physical": 5.064762537363002e-20,
+          "S_biological": 4.8115244104948516e-20,
+          "S_cognitive": 2.9666781812480147e-21
+        },
+        {
+          "process": "Na+ ion transport",
+          "N": 1,
+          "physical": {
+            "E": 1.1214000000000001e-20,
+            "source": "Electrochemical work (e x 70mV)"
+          },
+          "biological": {
+            "E": 1.6882541791210006e-20,
+            "source": "1/3 ATP per Na+ (Na+/K+ pump stoichiometry)"
+          },
+          "cognitive": {
+            "E": 4.450017271872022e-21,
+            "source": "~1.5 bits (concentration gradient change)"
+          },
+          "eta_matrix": {
+            "physical->biological": 1.505487942858035,
+            "physical->cognitive": 0.3968269370315696,
+            "biological->physical": 0.6642364721311477,
+            "biological->cognitive": 0.26358692470045886,
+            "cognitive->physical": 2.519990219112683,
+            "cognitive->biological": 3.793814890994322
+          },
+          "S_physical": 1.1214000000000001e-20,
+          "S_biological": 1.6882541791210006e-20,
+          "S_cognitive": 4.450017271872022e-21
+        }
+      ],
+      "falsification_analysis": {
+        "eta_span_orders": 2.4892835010330656,
+        "eta_span_exceeds_3": false,
+        "eta_min": 0.05693223711751289,
+        "eta_max": 17.564741008436336,
+        "degenerate_identity": false,
+        "consistency": {
+          "phys->bio": {
+            "values": [
+              0.48597833014659014,
+              0.95,
+              1.505487942858035
+            ],
+            "mean": 0.9804887576682084,
+            "max_relative_error": 0.5354464098480599,
+            "within_20pct": false
+          },
+          "phys->cogn": {
+            "values": [
+              0.05693223711751289,
+              0.05857487215565753,
+              0.3968269370315696
+            ],
+            "mean": 0.17077801543491333,
+            "max_relative_error": 1.3236418108091186,
+            "within_20pct": false
+          },
+          "bio->cogn": {
+            "values": [
+              0.11714974431131506,
+              0.06165776016385003,
+              0.26358692470045886
+            ],
+            "mean": 0.14746480972520798,
+            "max_relative_error": 0.7874564459930313,
+            "within_20pct": false
+          }
+        },
+        "classification": "challenge"
+      }
+    }
+  },
+  "classification": "challenge",
+  "timestamp_utc": "2026-08-01T06:05:16.716421+00:00"
+}
