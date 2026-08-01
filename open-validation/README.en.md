@@ -90,7 +90,7 @@ Paste the output into the `preregistration.hash` field of your submission JSON. 
 
 ## Independent Replication (Reproducing Existing Results)
 
-The 3 support results (XD-P1-CHEM-001, XD-AI-ADAM-001, XD-P1-PHASE-001) were all produced by the proposer's reference implementation, and **no external independent replication exists yet**. Independent replication is a required condition for evidence to advance from `L4_candidate` to `confirmed`. Replication workflow:
+The 3 support results (XD-P1-CHEM-001, XD-AI-ADAM-001, XD-P1-PHASE-001) were all produced by the proposer's reference implementation, and **no external independent replication exists yet**. Independent replication is a required condition for evidence to advance from `L4_candidate` to `confirmed`. Claimable replication tasks: [CHEM (#11)](https://github.com/KK13760780514/Hypostack-Theory/issues/11) · [ADAM (#12)](https://github.com/KK13760780514/Hypostack-Theory/issues/12) · [PHASE (#13)](https://github.com/KK13760780514/Hypostack-Theory/issues/13). Replication workflow:
 
 1. Choose the evidence to replicate: locate the target row in [evidence-ledger.csv](evidence-ledger.csv) and record its `evidence_id` (e.g., `EV-fadf8b4aca7d3ffd`).
 2. Implement it yourself or run the reference scripts (`chemical_path_v2.py`, `adam_dynamics.py`, `phase_transition.py` in `reference-implementation/`); prefer your own implementation or an independent environment — do not blindly trust the reference scripts' output.

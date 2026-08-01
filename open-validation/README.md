@@ -63,9 +63,9 @@ python .\open-validation\reference-implementation\double_auction_learning.py
 - [TASK-001：复现 P1 增强版模拟](tasks/TASK-001-reproduce-p1.md)（历史任务，已被 TASK-005 取代）
 - [TASK-002：压力测试 AI 玩具路径记账口径](tasks/TASK-002-stress-test-ai-toy.md)（历史任务，已被 TASK-004 取代）
 - [TASK-003：提出 E 维度范式转换函数](tasks/TASK-003-e-dimension-paradigm-map.md)（参考实现 [e_paradigm_map.py](reference-implementation/e_paradigm_map.py)）
-- [TASK-004：复现与挑战 Adam 自适应动态验证](tasks/TASK-004-adam-dynamics.md)
-- [TASK-005：化学反应路径竞争验证](tasks/TASK-005-chemical-path.md)
-- [TASK-006：相变路径选择验证](tasks/TASK-006-phase-transition.md)
+- [TASK-004：复现与挑战 Adam 自适应动态验证](tasks/TASK-004-adam-dynamics.md)（复核召集 [#12](https://github.com/KK13760780514/Hypostack-Theory/issues/12)）
+- [TASK-005：化学反应路径竞争验证](tasks/TASK-005-chemical-path.md)（复核召集 [#11](https://github.com/KK13760780514/Hypostack-Theory/issues/11)）
+- [TASK-006：相变路径选择验证](tasks/TASK-006-phase-transition.md)（复核召集 [#13](https://github.com/KK13760780514/Hypostack-Theory/issues/13)）
 - [TASK-007：按过程类型分类标定 η（E 维度范式转换）](tasks/TASK-007-e-paradigm-process-type.md)（由 ISSUE-007 结论立项）
 
 ## 实证评审委员会（招募中）
@@ -93,7 +93,7 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 
 ## 独立复核（复现现有结果）
 
-当前 3 个 support 结果（XD-P1-CHEM-001、XD-AI-ADAM-001、XD-P1-PHASE-001）均由提出者的参考实现产出，**尚未有任何外部独立复核**。独立复核是证据从 `L4_candidate` 升级为 `confirmed` 的必要条件。复核流程：
+当前 3 个 support 结果（XD-P1-CHEM-001、XD-AI-ADAM-001、XD-P1-PHASE-001）均由提出者的参考实现产出，**尚未有任何外部独立复核**。独立复核是证据从 `L4_candidate` 升级为 `confirmed` 的必要条件。可认领的复核任务：[CHEM (#11)](https://github.com/KK13760780514/Hypostack-Theory/issues/11) · [ADAM (#12)](https://github.com/KK13760780514/Hypostack-Theory/issues/12) · [PHASE (#13)](https://github.com/KK13760780514/Hypostack-Theory/issues/13)。复核流程：
 
 1. 认领要复现的证据：在 [evidence-ledger.csv](evidence-ledger.csv) 中找到目标行，记录其 `evidence_id`（如 `EV-fadf8b4aca7d3ffd`）。
 2. 自行实现或运行参考实现脚本（`reference-implementation/` 下的 `chemical_path_v2.py`、`adam_dynamics.py`、`phase_transition.py`），尽量使用你自己的实现或独立环境，不要直接信任参考脚本的输出。
