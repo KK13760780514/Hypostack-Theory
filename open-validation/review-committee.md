@@ -1,5 +1,7 @@
 # HypoStack 实证评审委员会（组建中）
 
+> [English version](review-committee.en.md) | 中文版本
+
 > 目标：让 [ISSUE-006 防"口径购物"规则](known-issues.md) 真正落地。当前委员会未组建，评审由提出者执行，存在利益冲突风险——组建委员会是开放验证从"自证"走向"社区共识"的关键一步。
 > 状态：**招募中**。参见 [CONTRIBUTING.md](../CONTRIBUTING.md) 的参与方式与 [review-checklist.md](review-checklist.md) 的评审标准。招募公告：[issue #10](https://github.com/KK13760780514/Hypostack-Theory/issues/10)。
 
