@@ -7,7 +7,7 @@
 **English:** HypoStack is a falsifiable hypothesis about how differences drive the evolution of all systems. The core claim: systems tend to select paths that minimize the cumulative information action `S = Σ(Eᵢ × ΔNᵢ)`, where `E` is the difference intensity and `N` is the discrete step count. This package lets external researchers run, reproduce, challenge, or falsify specific predictions — without reading the full theory.
 
 目标：让外部研究者、工程师和数据科学家不需要先理解完整《玄叠论》，也能直接运行、复现、挑战或支持第一批可证伪预测。
-当前 MVP 覆盖五个方向：
+当前 MVP 覆盖六个方向（含 2 个已降级）：
 
 1. XD-P1-SIM-001：P1 softmax 模拟（已降级为口径演示，见 [known-issues.md](known-issues.md) ISSUE-004）。
 2. XD-P1-CHEM-001：化学反应路径竞争--用 Arrhenius 动力学替代 softmax 循环，V2 结果为 support（L4_candidate）。
@@ -77,8 +77,8 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 
 见 [known-issues.md](known-issues.md)。当前最重要的开放问题：
 
-- **ISSUE-004**：P1 softmax 选择器存在定义性循环，已用 XD-P1-CHEM-001 替代（首次结果 challenge）。
-- **ISSUE-001**：AI 玩具路径 E 记账口径存在望远镜求和，已用 XD-AI-ADAM-001 替代（首次结果 challenge）。
+- **ISSUE-004**：P1 softmax 选择器存在定义性循环，已用 XD-P1-CHEM-001 替代（V2 结果 support，L4_candidate）。
+- **ISSUE-001**：AI 玩具路径 E 记账口径存在望远镜求和，已用 XD-AI-ADAM-001 替代（V2 结果 support，L4_candidate）。
 
 两个修正后的 claim 已在 V2 产出 support 结果（L4_candidate），确认口径修正有效。剩余开放问题：口径选择（如条件数调整、无对照规则修订）是否引入偏差——欢迎社区讨论。
 

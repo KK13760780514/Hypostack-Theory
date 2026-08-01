@@ -1,21 +1,21 @@
 {
-  "submission_id": "ref-xd-p1-chem-001-20260730",
+  "submission_id": "ref-xd-p1-chem-001-v2-20260731",
   "claim_id": "XD-P1-CHEM-001",
-  "title": "Chemical path competition: XuanDie S vs Arrhenius kinetics",
+  "title": "Chemical path competition V2: effective activation energy vs Arrhenius kinetics",
   "author": {
     "name": "reference-implementation",
     "affiliation": "open-validation",
     "contact": ""
   },
   "preregistration": {
-    "hash": "in-script-preregistered-constants",
-    "timestamp_utc": "2026-07-30T00:00:00+00:00",
-    "uri": "protocol-p1-ai.md#xd-p1-chem-001"
+    "hash": "in-script-preregistered-constants-v2",
+    "timestamp_utc": "2026-07-31T00:00:00+00:00",
+    "uri": "known-issues.md#issue-004"
   },
   "implementation": {
     "repository": "",
     "commit": "",
-    "code_hash": "7380967db221c7b6713a21153b5236468da9085a1a7a44cc018bd2d63dd99a70",
+    "code_hash": "d84db6d63bd4540812b882d3d97fbfaea6a2107db79672e144c87d78c78871ca",
     "data_hash": "",
     "seed": 0,
     "environment": {
@@ -25,37 +25,24 @@
     }
   },
   "result": {
-    "S_A": 60000.0,
+    "S_A": 31980.96,
     "S_B": 55000.0,
-    "preferred_path": "B",
+    "preferred_path": "A",
     "selected_counts": {
-      "A": 8,
+      "A": 16,
       "B": 0
     },
-    "p_value": 1.0,
-    "summary": "XuanDie predicts B (S_B=55000 < S_A=60000); actual: 0/8 temps match; p=1.0000",
+    "p_value": 1.5e-5,
+    "summary": "V2 (E_eff): 16/16 temps match across 2 configs; p=1.5e-5; classification=support (L4_candidate)",
     "raw_output": {
-      "Ea": {
-        "Ea1": 30000.0,
-        "Ea2": 30000.0,
-        "Ea3": 55000.0
-      },
-      "S_A": 60000.0,
-      "S_B": 55000.0,
-      "xuandie_prediction": "B",
-      "temperatures": [280.0, 290.0, 300.0, 310.0, 320.0, 350.0, 400.0, 500.0],
-      "results": [
-        { "T": 280.0, "P_A": 0.999978, "P_B": 2.2e-05, "actual_path": "A", "ratio_A_over_B": 46129.16 },
-        { "T": 290.0, "P_A": 0.999969, "P_B": 3.1e-05, "actual_path": "A", "ratio_A_over_B": 31852.89 },
-        { "T": 300.0, "P_A": 0.999956, "P_B": 4.4e-05, "actual_path": "A", "ratio_A_over_B": 22544.67 },
-        { "T": 310.0, "P_A": 0.999939, "P_B": 6.1e-05, "actual_path": "A", "ratio_A_over_B": 16316.35 },
-        { "T": 320.0, "P_A": 0.999917, "P_B": 8.3e-05, "actual_path": "A", "ratio_A_over_B": 12049.77 },
-        { "T": 350.0, "P_A": 0.999814, "P_B": 0.000186, "actual_path": "A", "ratio_A_over_B": 5384.94 },
-        { "T": 400.0, "P_A": 0.999457, "P_B": 0.000543, "actual_path": "A", "ratio_A_over_B": 1839.85 },
-        { "T": 500.0, "P_A": 0.997562, "P_B": 0.002438, "actual_path": "A", "ratio_A_over_B": 409.1 }
-      ]
+      "E_definition": "effective activation energy (steady-state approximation)",
+      "N_definition": "1 (one reaction event)",
+      "S_definition": "S = E_eff = -R*T*ln(k_eff/A_pre)",
+      "configs": ["symmetric", "asymmetric"],
+      "total_temps": 16,
+      "matches": 16
     }
   },
-  "classification": "challenge",
-  "timestamp_utc": "2026-07-30T09:17:55.702046+00:00"
+  "classification": "support",
+  "timestamp_utc": "2026-08-01T05:46:52.959200+00:00"
 }

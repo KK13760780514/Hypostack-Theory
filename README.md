@@ -47,8 +47,12 @@ Hypostack-Theory/
 
 ```powershell
 python .\open-validation\reference-implementation\chemical_path.py
+python .\open-validation\reference-implementation\chemical_path_v2.py
 python .\open-validation\reference-implementation\adam_dynamics.py
 python .\open-validation\reference-implementation\e_paradigm_map.py
+python .\open-validation\reference-implementation\e_paradigm_map_v2.py
+python .\open-validation\reference-implementation\e_paradigm_map_v3.py
+python .\open-validation\reference-implementation\phase_transition.py
 ```
 
 ### 2. 查看当前证据

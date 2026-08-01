@@ -8,7 +8,7 @@
 
 Goal: Enable external researchers, engineers, and data scientists to directly run, reproduce, challenge, or support the first batch of falsifiable predictions — without first understanding the complete HypoStack Theory.
 
-The current MVP covers five directions:
+The current MVP covers six directions (including 2 degraded):
 
 1. XD-P1-SIM-001: P1 softmax simulation (degraded to a calibration demo, see [known-issues.md](known-issues.md) ISSUE-004).
 2. XD-P1-CHEM-001: Chemical reaction path competition — uses Arrhenius kinetics instead of the softmax loop; V2 result is support (L4_candidate).

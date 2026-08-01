@@ -120,7 +120,7 @@
 - 逐种子判据通过 8/12，未达阈值 11，p = 0.194。
 - 结论分类：**challenge**--方向一致但效应未达预注册判据。此结果已入证据账本。
 
-**V2 修正结果（2026-07-31）**：参数修正（X2_SCALE=20、lr 网格 7 个点、MAX_STEPS=5000、无对照规则修订为 Adam 收敛+SGD 不收敛=Adam 胜）后，12/12 种子通过，p=0.0002。结论修正为 **support**。参考实现已更新。
+**V2 修正结果（2026-08-01）**：参数修正（X2_SCALE=20、lr 网格 7 个点、MAX_STEPS=5000、无对照规则修订为 Adam 收敛+SGD 不收敛=Adam 胜）后，12/12 种子通过，p=2.4e-4。结论修正为 **support**。参考实现已更新。
 
 ### 证伪条件
 
@@ -157,7 +157,7 @@
 - 结论分类：**challenge**--S=ΣEa 定义在路径选择上被挑战。
 - 此结果已入证据账本。
 
-**V2 修正结果（2026-07-31）**：E 重定义为有效活化能（稳态近似，E_eff = -RT×ln(k_eff/A)），N=1。对称+非对称两组势垒配置下 16/16 温度全部匹配，p=0.0000152。结论修正为 **support**。参考实现见 [chemical_path_v2.py](reference-implementation/chemical_path_v2.py)。
+**V2 修正结果（2026-08-01）**：E 重定义为有效活化能（稳态近似，E_eff = -RT×ln(k_eff/A)），N=1。对称+非对称两组势垒配置下 16/16 温度全部匹配，p=1.5e-5。结论修正为 **support**。参考实现见 [chemical_path_v2.py](reference-implementation/chemical_path_v2.py)。
 
 ### 证伪条件
 
@@ -204,9 +204,9 @@
 
 本 claim 是 L2/L3 级翻译确认，不是 L4/L5 级预言验证。参考实现中的 η 为占位值（0.9），需要实验标定。社区贡献方向：标定 η、提出新的范式映射、挑战现有映射的物理合理性。
 
-**首次运行结果（2026-07-31）**：3 个标定点（DNA 复制、ATP 水解、Na+ 转运）的跨范式 η 跨度为 2.5 个数量级（未超 3 个阈值），但转换比率不一致（最大相对误差 132%）。结论 **challenge**。参考实现见 [e_paradigm_map_v2.py](reference-implementation/e_paradigm_map_v2.py)。
+**首次运行结果（2026-08-01）**：3 个标定点（DNA 复制、ATP 水解、Na+ 转运）的跨范式 η 跨度为 2.5 个数量级（未超 3 个阈值），但转换比率不一致（最大相对误差 132%）。结论 **challenge**。参考实现见 [e_paradigm_map_v2.py](reference-implementation/e_paradigm_map_v2.py)。
 
-**V3 修正结果（2026-07-31）**：增加至 5 个标定点（新增蛋白质折叠、光合作用光子吸收），改用对数空间幂律拟合分析。η 跨度收窄至 2.3 个数量级（仍 < 3），但所有范式对的幂律拟合 R² < 0.64（3 点时 R²=0.97 为虚假相关）。结论仍为 **challenge**。关键发现：统一量纲有意义（η 在 3 个数量级内），但跨范式转换函数本质上依赖过程类型，非普适。参考实现见 [e_paradigm_map_v3.py](reference-implementation/e_paradigm_map_v3.py)。
+**V3 修正结果（2026-08-01）**：增加至 5 个标定点（新增蛋白质折叠、光合作用光子吸收），改用对数空间幂律拟合分析。η 跨度收窄至 2.3 个数量级（仍 < 3），但所有范式对的幂律拟合 R² < 0.64（3 点时 R²=0.97 为虚假相关）。结论仍为 **challenge**。关键发现：统一量纲有意义（η 在 3 个数量级内），但跨范式转换函数本质上依赖过程类型，非普适。参考实现见 [e_paradigm_map_v3.py](reference-implementation/e_paradigm_map_v3.py)。
 
 ---
 
@@ -224,7 +224,7 @@
 - 路径 C（淬火）：1 个温度步，4000 次 MC 扫描
 
 对每条路径：
-- E_i = |T_i - T_c| / T_c（归一化驱动力的）
+- E_i = |T_i - T_c| / T_c（归一化驱动力）
 - N_i = 该温度步中被接受的自旋翻转次数
 - S = Σ(E_i × N_i)
 
@@ -239,6 +239,6 @@
 
 12 个随机种子，二项检验。Support: S_A < S_C 在 >= 10/12 种子中成立（p < 0.05）。
 
-### 首次运行结果（2026-07-31）
+### 首次运行结果（2026-08-01）
 
-12/12 种子全部通过（p=0.0002）。平均 S_A=48903, S_B=69433, S_C=237486。慢冷 S 约为淬火的 1/5。结论 **support**（L4_candidate）。参考实现见 [phase_transition.py](reference-implementation/phase_transition.py)。
+12/12 种子全部通过（p=2.4e-4）。平均 S_A=48903, S_B=69433, S_C=237486。慢冷 S 约为淬火的 1/5。结论 **support**（L4_candidate）。参考实现见 [phase_transition.py](reference-implementation/phase_transition.py)。

@@ -1,4 +1,4 @@
-﻿{
+{
   "submission_id": "ref-xd-p1-phase-001-20260731",
   "claim_id": "XD-P1-PHASE-001",
   "title": "Phase transition path selection: S minimization in 2D Ising model",
@@ -38,15 +38,15 @@
     }
   },
   "result": {
-    "S_A": 48759.96658779615,
-    "S_B": 236544.33180812665,
+    "S_A": 48902.69629276245,
+    "S_B": 237486.14371425452,
     "preferred_path": "A",
     "selected_counts": {
       "A": 12,
       "B": 0
     },
     "p_value": 0.000244140625,
-    "summary": "12 seeds; S_A(slow)=48902.7, S_B(med)=69432.8, S_C(quench)=237486.1; ordering A<B<C holds 12/12; A<C holds 12/12 (p=0.0002); classification=support",
+    "summary": "12 seeds; S_A(slow)=48902.7, S_B(med)=69432.8, S_C(quench)=237486.1; ordering A<B<C holds 12/12; A<C holds 12/12 (p=2.4e-4); classification=support",
     "raw_output": {
       "T_c": 2.269185314213022,
       "lattice_size": 20,

@@ -6,7 +6,7 @@
 
 ## 中文
 
-### 我做了一套"可证伪"的演化理论，两个预言已获实验支持——现在开放给任何人复现
+### 我做了一套"可证伪"的演化理论，三个预言已获实验支持——现在开放给任何人复现
 
 **玄叠论（HypoStack Theory）** 是一套可证伪的理论假说，核心公式只有一个：
 
@@ -33,9 +33,7 @@ S = ∫ E dN
 
 **一个必须说清楚的转折：**
 
-这两个 support 结果，首次验证（V1）其实都是 challenge。化学路径 V1 是 8/8 全部选了理论预测的相反路径；AI 动态 V1 只有 8/12 通过，效应未达阈值。
-
-修正口径后（化学路径从 ΣEa 改为基于稳态近似的有效活化能；AI 从比较人为路径改为 Adam 自适应动态），V2 才变为 support。
+其中两个 support 结果（化学路径和 AI 动态），首次验证（V1）其实都是 challenge。化学路径 V1 是 8/8 全部选了理论预测的相反路径；AI 动态 V1 只有 8/12 通过，效应未达阈值。修正口径后（化学路径从 ΣEa 改为基于稳态近似的有效活化能；AI 从比较人为路径改为 Adam 自适应动态），V2 才变为 support。第三个（相变路径选择）在首次运行中即验证为 support。
 
 这不是 p-hacking。所有修正都记录在 `known-issues.md`，包含根因分析和待社区决策的开放问题；预注册后禁止修改 `E`、`N`、`S` 和统计阈值；每次口径变更都有物理依据，不是调参数凑结果。事实上，如果只是想"赢"，我不会把 challenge 结果也写进证据账本。
 
@@ -62,7 +60,7 @@ S = ∫ E dN
 
 ## English
 
-### HypoStack Theory: A falsifiable theory of how differences drive evolution — now with 2 experimentally supported predictions (L4_candidate, awaiting independent replication)
+### HypoStack Theory: A falsifiable theory of how differences drive evolution — now with 3 experimentally supported predictions (L4_candidate, awaiting independent replication)
 
 **HypoStack Theory (玄叠论)** is a falsifiable hypothesis with one signature formula:
 
@@ -89,7 +87,7 @@ Empirical level: **L4_candidate** — three support-level results, awaiting inde
 
 **The twist you should know about:**
 
-Both support results were *challenges* on first run (V1). The chemical path went 8/8 against the prediction; the AI dynamics passed only 8/12 seeds. After correcting the E/S calibration — chemical: switched from summing activation energies to effective activation energy via steady-state approximation; AI: replaced a toy path-comparison with Adam's spontaneous adaptive dynamics — V2 turned both into support.
+Two of the three support results were *challenges* on first run (V1). The chemical path went 8/8 against the prediction; the AI dynamics passed only 8/12 seeds. After correcting the E/S calibration — chemical: switched from summing activation energies to effective activation energy via steady-state approximation; AI: replaced a toy path-comparison with Adam's spontaneous adaptive dynamics — V2 turned both into support. The third (phase-transition path selection) was support from its first run.
 
 This is not p-hacking. Every correction is logged in `known-issues.md` with root-cause analysis and open questions for the community. Pre-registration locks `E`, `N`, `S`, and statistical thresholds — they cannot be changed after the fact. If I just wanted to "win," I would not have published the challenge results in the ledger.
 

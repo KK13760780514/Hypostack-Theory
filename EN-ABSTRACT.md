@@ -44,12 +44,11 @@ Current empirical level: **L4_candidate** (3 support-level experimental results,
 
 Two open-validation claims were revised from **challenge** to **support** after correcting the E/S calibration in validation round V2, and a third claim (PHASE-001) was verified as support in its first run:
 
-- **XD-AI-ADAM-001** — Adaptive optimization dynamics. V1 (2026-07-30): challenge, direction correct but effect below threshold (8/12 seeds, p = 0.194). V2 (2026-08-01): **support**—12/12 seeds passed, p = 0.0002 (binomial). Adam mean S = 188.53 vs. best-SGD mean S = 345.97.
-- **XD-P1-CHEM-001** — Chemical reaction-path competition. V1 (2026-07-30): challenge. V2 (2026-08-01): **support**—16/16 temperature matches, p = 0.0000152. Preferred-path S = 31980.96 vs. alternative S = 55000.0.
+- **XD-AI-ADAM-001** — Adaptive optimization dynamics. V1 (2026-07-30): challenge, direction correct but effect below threshold (8/12 seeds, p = 0.194). V2 (2026-08-01): **support**—12/12 seeds passed, p = 2.4e-4 (binomial). Adam mean S = 188.53 vs. best-SGD mean S = 345.97.
+- **XD-P1-CHEM-001** — Chemical reaction-path competition. V1 (2026-07-30): challenge. V2 (2026-08-01): **support**—16/16 temperature matches, p = 1.5e-5. Preferred-path S = 31980.96 vs. alternative S = 55000.0.
+- **XD-P1-PHASE-001** — Phase-transition path selection. V1 (2026-08-01): **support**—12/12 seeds passed, p = 2.4e-4 (binomial). Slow-cool S ≈ 48,903 vs. quench S ≈ 237,486.
 
-- **XD-P1-PHASE-001** — Phase-transition path selection. V1 (2026-08-01): **support**—12/12 seeds passed, p = 0.00024 (binomial). Slow-cool S ≈ 48,903 vs. quench S ≈ 237,486.
-
-Both results are logged in the public evidence ledger and await community independent replication before advancing beyond L4_candidate.
+All three results are logged in the public evidence ledger and await community independent replication before advancing beyond L4_candidate.
 
 ### 5. How to Verify
 
@@ -64,8 +63,11 @@ The reference implementations use **only the Python standard library (3.9+)**—
 
 ```powershell
 python .\open-validation\reference-implementation\chemical_path.py
+python .\open-validation\reference-implementation\chemical_path_v2.py
 python .\open-validation\reference-implementation\adam_dynamics.py
 python .\open-validation\reference-implementation\e_paradigm_map.py
+python .\open-validation\reference-implementation\e_paradigm_map_v2.py
+python .\open-validation\reference-implementation\e_paradigm_map_v3.py
 python .\open-validation\reference-implementation\phase_transition.py
 ```
 
@@ -126,12 +128,11 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 
 两个开放验证 claim 在 V2 轮次修正 E/S 口径后，从 **challenge** 修正为 **support**，第三个 claim（PHASE-001）在首次运行中即验证为 support：
 
-- **XD-AI-ADAM-001** —— 自适应优化动态。V1（2026-07-30）：challenge，方向正确但效应未达阈值（8/12 种子，p = 0.194）。V2（2026-08-01）：**support**——12/12 种子通过，p = 0.0002（二项检验）。Adam 平均 S = 188.53，最优 SGD 平均 S = 345.97。
-- **XD-P1-CHEM-001** —— 化学反应路径竞争。V1（2026-07-30）：challenge。V2（2026-08-01）：**support**——16/16 温度匹配，p = 0.0000152。优选路径 S = 31980.96，对照路径 S = 55000.0。
+- **XD-AI-ADAM-001** —— 自适应优化动态。V1（2026-07-30）：challenge，方向正确但效应未达阈值（8/12 种子，p = 0.194）。V2（2026-08-01）：**support**——12/12 种子通过，p = 2.4e-4（二项检验）。Adam 平均 S = 188.53，最优 SGD 平均 S = 345.97。
+- **XD-P1-CHEM-001** —— 化学反应路径竞争。V1（2026-07-30）：challenge。V2（2026-08-01）：**support**——16/16 温度匹配，p = 1.5e-5。优选路径 S = 31980.96，对照路径 S = 55000.0。
+- **XD-P1-PHASE-001** —— 相变路径选择。V1（2026-08-01）：**support**——12/12 种子通过，p = 2.4e-4（二项检验）。慢冷 S ≈ 48,903，淬火 S ≈ 237,486。
 
-- **XD-P1-PHASE-001** —— 相变路径选择。V1（2026-08-01）：**support**——12/12 种子通过，p = 0.00024（二项检验）。慢冷 S ≈ 48,903，淬火 S ≈ 237,486。
-
-两项结果均已录入公开证据账本，等待社区独立复核后方可超越 L4_candidate 等级。
+所有结果均已录入公开证据账本，等待社区独立复核后方可超越 L4_candidate 等级。
 
 ### 5. 如何验证
 
@@ -146,8 +147,11 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 
 ```powershell
 python .\open-validation\reference-implementation\chemical_path.py
+python .\open-validation\reference-implementation\chemical_path_v2.py
 python .\open-validation\reference-implementation\adam_dynamics.py
 python .\open-validation\reference-implementation\e_paradigm_map.py
+python .\open-validation\reference-implementation\e_paradigm_map_v2.py
+python .\open-validation\reference-implementation\e_paradigm_map_v3.py
 python .\open-validation\reference-implementation\phase_transition.py
 ```
 
