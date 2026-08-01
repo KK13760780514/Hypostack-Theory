@@ -22,7 +22,22 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Default recommendation**: C (do not change the criterion immediately, but add a sensitivity analysis so the community can weigh discriminative power vs. fairness).
 
-**Affected claim**: XD-AI-ADAM-001. **Status**: open.
+**Decision-support evidence (2026-08-01, proposer-developed, [dec001_cond_scan.py](reference-implementation/dec001_cond_scan.py))**: an 8-point condition-number sweep over X2_SCALE ∈ {5..40} (exact numerical Hessian condition numbers 58→3349; note the nominal "~1e2/~4e2" in the script comments differs slightly — scale=10 is actually 214, scale=20 is 841):
+
+| Numerical cond | ratio S_adam/S_sgd | savings | seeds pass | p | verdict |
+|---|---|---|---|---|---|
+| 58 | 2.59 | -159% | 0/12 | 1.00 | challenge |
+| 123 | 1.55 | -55% | 3/12 | 0.98 | challenge |
+| 214 | 0.88 | 12% | 8/12 | 0.19 | challenge (V1) |
+| 332 | 0.87 | 13% | 9/12 | 0.07 | challenge |
+| 476 | 0.77 | 23% | 10/12 | 0.02 | challenge |
+| 841 | 0.54 | 45% | 12/12 | 2.4e-4 | **support** (V2) |
+| 1886 | 0.65 | 35% | 12/12 | 2.4e-4 | support |
+| 3349 | 0.50 | 50% | 12/12 | 2.4e-4 | support |
+
+**Reading**: the effect grows **smoothly and monotonically** with the condition number (ratio 0.88→0.50), not as a step — supporting option C's sensitivity-curve approach; but the support threshold (≥11/12) is only reached at condition number ≥841, so the V1 challenge at 214 is real and the V2 support genuinely depends on the higher condition number. Also: higher condition numbers mean more no-control seeds (3-4/12 at scale=30/40), raising the weight of the DEC-002 no-control rule.
+
+**Affected claim**: XD-AI-ADAM-001. **Status**: reference evidence produced, awaiting community confirmation.
 
 ## DEC-002: Does the "no-control seed counts as a win" rule introduce bias? (source: ISSUE-001)
 
@@ -73,7 +88,15 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Default recommendation**: A; the community may submit "same experiment, different E definition" comparisons as challenges.
 
-**Affected claim**: XD-P1-CHEM-001. **Status**: open.
+**Decision-support evidence (2026-08-01, proposer-developed, [dec005_ea_definitions.py](reference-implementation/dec005_ea_definitions.py))**: recomputed predictions under three E definitions against actual Arrhenius kinetics across 3 configs (symmetric, asymmetric, plus a new "comparable-rates" config Ea1=25/Ea2=35/Ea3=55) × 8 temperatures = 24 cases:
+
+- **E_eff (steady-state approximation)**: 24/24 matches (V2 as-is)
+- **E_maxstep (rate-determining-step Ea = max(Ea1,Ea2))**: 24/24 matches
+- **E_sum (total barrier ΣEa)**: 0/24 matches (V1 challenge reaffirmed)
+
+**Reading**: E_eff and E_maxstep predict identically on all configs (including the purpose-built "comparable-rates" config) — under the steady-state approximation, E_eff ≈ max(Ea_i) for a two-step series (slow step dominates, difference <0.2%). Thus **the current experimental framework cannot distinguish E_eff from rate-determining-step Ea**; the V2 16/16 evidence supports both equally. Distinguishing them requires a ΔG‡ (free-energy barrier, with entropic contributions) experiment. Recommend confirming option A (keep E_eff, physically more rigorous) while noting that "E_eff vs rate-determining-step Ea is underdetermined by current evidence".
+
+**Affected claim**: XD-P1-CHEM-001. **Status**: reference evidence produced, awaiting community confirmation.
 
 ## DEC-006: Calibration-change cooldown and reinstatement threshold (source: ISSUE-006)
 
@@ -114,7 +137,9 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Development progress (2026-08-01)**: a V2 learning-trader run (Roth-Erev, 12 seeds, 80 rounds) per option A is complete: market convergence is fixed (static 0/12 → learning converges in all seeds), but the speed sub-prediction is NOT supported (conv_A<conv_B in only 5/12 seeds, p=0.774; direction consistent in only 2/6 robustness combos). Statistical outcome: challenge; entered as exploratory (EV-b3fd72635845c370). This questions the "E=commission" operationalization and suggests options B/C for discussion. See [ISSUE-008](known-issues.md).
 
-**Affected claim**: XD-P2-ECO-001. **Status**: open. **Discussion**: [issue #1](https://github.com/KK13760780514/Hypostack-Theory/issues/1) (ECO baseline submission in [issue #2](https://github.com/KK13760780514/Hypostack-Theory/issues/2)).
+**Option B development run (2026-08-01, V3 fixed-tax, [dec008_fixed_tax.py](reference-implementation/dec008_fixed_tax.py))**: TAX_A=0.1 vs TAX_B=2.0 (20× difference, same magnitude as the V1 commission ratio), learning market 12 seeds 80 rounds. Result: speed sub-prediction conv_A<conv_B in only 4/12 seeds (two-sided binomial p=0.388), direction consistent in only 2/6 robustness combos, **statistical-level falsification**, entered as exploratory (EV-5f2196aa6d3a55cf). Key finding: under a fixed tax the high-tax path's behavior barely changes (fills_B/fills_A=0.95, no significant convergence-speed difference, S ratio_dev=0.983 still dominated by the 20× tax factor) — a 0.1%~2% cost magnitude produces no testable market-behavior difference. Combined with V1 (proportional commission): **neither proportional-commission nor fixed-tax operationalization of "E=transaction cost" yields a testable speed-level effect** in this model framework; the discriminative-power problem shifts from a "constructive scale factor" (V1) to "the effect itself is too weak" (V2/V3). Options D (accept the negative conclusion and narrow the claim) and C (normalize S per unit traded value) are now favored, or a new design with a substantially larger cost-magnitude difference.
+
+**Affected claim**: XD-P2-ECO-001. **Status**: option A/B reference evidence produced, awaiting community confirmation. **Discussion**: [issue #1](https://github.com/KK13760780514/Hypostack-Theory/issues/1) (ECO baseline submission in [issue #2](https://github.com/KK13760780514/Hypostack-Theory/issues/2)).
 
 ---
 
@@ -122,11 +147,11 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 | ID | Topic | Status | Default recommendation |
 |----|-------|--------|------------------------|
-| DEC-001 | Condition number bias toward Adam | open | C (sensitivity analysis) |
+| DEC-001 | Condition number bias toward Adam | reference evidence produced (sensitivity curve) | C (keep 4e2, publish curve; note numerical cond is 841) |
 | DEC-002 | No-control win rule | open | A + mandatory share reporting |
 | DEC-003 | Number of seeds | open | keep 12 |
-| DEC-004 | CHEM N=1 reasonableness | open | A |
-| DEC-005 | Best definition of E | open | A |
+| DEC-004 | CHEM N=1 reasonableness | open (asymmetric config already covered in V2) | A |
+| DEC-005 | Best definition of E | reference evidence produced (E_eff and rate-determining-step Ea indistinguishable) | A (keep E_eff, note underdetermination) |
 | DEC-006 | Cooldown / reinstatement threshold | defaults active | 14 days / ≥2/3 |
 | DEC-007 | E-PARADIGM non-universality | open | A + TASK-007 |
-| DEC-008 | ECO first-run weak discriminative power | open ([#1](https://github.com/KK13760780514/Hypostack-Theory/issues/1)) | A (learning traders) |
+| DEC-008 | ECO first-run weak discriminative power | option A/B reference evidence produced (V2/V3 both unsupported) | favor D/C or larger cost magnitude |

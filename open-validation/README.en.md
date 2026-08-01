@@ -16,7 +16,7 @@ The current MVP covers seven directions (including 2 degraded):
 4. XD-AI-ADAM-001: Adaptive optimization dynamics — whether Adam's spontaneous training dynamics yield lower S than optimally tuned fixed-lr SGD (V2 result is support, L4_candidate).
 5. XD-E-PARADIGM-001: E-dimension paradigm mapping — propose computable conversion functions for physical, biological, or cognitive paradigms.
 6. XD-P1-PHASE-001: Phase-transition path selection — 2D Ising model slow-cool vs. quench path comparison (first result is support, L4_candidate).
-7. XD-P2-ECO-001: Market-equilibrium path selection — ZI-C zero-intelligence constrained trader double auction, commission-rate comparison (first result is challenge/exploratory, see [known-issues.md](known-issues.md) ISSUE-008).
+7. XD-P2-ECO-001: Market-equilibrium path selection — ZI-C zero-intelligence constrained trader double auction, commission-rate vs. fixed-tax comparison (V1/V2/V3 all challenge/exploratory — V3 falsification, see [known-issues.md](known-issues.md) ISSUE-008).
 
 ## Quick Start
 
@@ -46,7 +46,7 @@ All submitted experimental results are recorded in [evidence-ledger.csv](evidenc
 | XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (path A) | 55000.0 (path B) | V2: effective activation energy; 16/16 temps consistent |
 | XD-E-PARADIGM-001 | challenge | exploratory | null | 1.04e-19 (physical) | 5.06e-20 (biological) | V3: 5 calibration points; eta span 2.3 orders; power-law R²<0.64 |
 | XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (slow cool) | 237486 (quench) | 12/12 seeds pass; 2D Ising model phase transition |
-| XD-P2-ECO-001 | challenge | exploratory | 4.9e-4 | 13.4 (low commission) | 245.8 (high commission) | V1 12/12 direction-consistent but insufficient discriminative power (ratio_dev=0.970); V2 learning traders speed sub-prediction 5/12 (p=0.774); see ISSUE-008 |
+| XD-P2-ECO-001 | challenge | exploratory | 4.9e-4 (V1) | 13.4 (low commission) | 245.8 (high commission) | V1 12/12 direction-consistent but insufficient discriminative power (ratio_dev=0.970); V2 learning traders speed sub-prediction 5/12 (p=0.774); V3 fixed-tax speed sub-prediction 4/12 (p=0.388, falsification); neither transaction-cost operationalization yields a testable effect; see ISSUE-008 |
 
 Note: all results above were produced by the proposer's reference implementation (reference-implementation); no external independent replication exists yet.
 

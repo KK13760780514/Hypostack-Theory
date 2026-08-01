@@ -15,7 +15,7 @@
 4. XD-AI-ADAM-001：自适应优化动态--Adam 自发训练动态的 S 是否低于最优固定学习率 SGD（V2 结果为 support，L4_candidate）。
 5. XD-E-PARADIGM-001：E 维度范式转换--为物理、生物或认知范式提出可计算的转换函数。
 6. XD-P1-PHASE-001：相变路径选择--2D Ising 模型慢冷 vs 淬火路径比较（首次结果为 support，L4_candidate）。
-7. XD-P2-ECO-001：市场均衡路径选择--ZI-C 零智能约束交易者双向拍卖，佣金率对比（首次结果为 challenge/exploratory，见 [known-issues.md](known-issues.md) ISSUE-008）。
+7. XD-P2-ECO-001：市场均衡路径选择--ZI-C 零智能约束交易者双向拍卖，佣金率 vs 固定税对比（V1/V2/V3 均为 challenge/exploratory——V3 falsification，见 [known-issues.md](known-issues.md) ISSUE-008）。
 
 ## 快速开始
 
