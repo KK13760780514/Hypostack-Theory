@@ -112,7 +112,7 @@
 
 **默认建议**：A。按 ISSUE-006 规则，修正后须重新预注册并默认降级 exploratory。
 
-**影响 claim**：XD-P2-ECO-001。**状态**：开放。
+**影响 claim**：XD-P2-ECO-001。**状态**：开放。**讨论链接**：[issue #1](https://github.com/KK13760780514/Hypostack-Theory/issues/1)（ECO 基线提交见 [issue #2](https://github.com/KK13760780514/Hypostack-Theory/issues/2)）。
 
 ---
 
@@ -127,4 +127,4 @@
 | DEC-005 | E 的最佳定义 | 开放 | A |
 | DEC-006 | 冷却期/恢复门槛 | 默认值生效 | 14 天 / ≥2/3 |
 | DEC-007 | E-PARADIGM 非普适结论 | 开放 | A + TASK-007 |
-| DEC-008 | ECO 首次运行判别力不足 | 开放 | A（学习型交易者） |
+| DEC-008 | ECO 首次运行判别力不足 | 开放（[#1](https://github.com/KK13760780514/Hypostack-Theory/issues/1)） | A（学习型交易者） |

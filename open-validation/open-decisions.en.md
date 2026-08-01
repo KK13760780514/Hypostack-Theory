@@ -112,7 +112,7 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Default recommendation**: A. Per ISSUE-006, a revised calibration must be re-preregistered and defaults to exploratory.
 
-**Affected claim**: XD-P2-ECO-001. **Status**: open.
+**Affected claim**: XD-P2-ECO-001. **Status**: open. **Discussion**: [issue #1](https://github.com/KK13760780514/Hypostack-Theory/issues/1) (ECO baseline submission in [issue #2](https://github.com/KK13760780514/Hypostack-Theory/issues/2)).
 
 ---
 
@@ -127,4 +127,4 @@ This file summarizes all decisions awaiting community input in the open-validati
 | DEC-005 | Best definition of E | open | A |
 | DEC-006 | Cooldown / reinstatement threshold | defaults active | 14 days / ≥2/3 |
 | DEC-007 | E-PARADIGM non-universality | open | A + TASK-007 |
-| DEC-008 | ECO first-run weak discriminative power | open | A (learning traders) |
+| DEC-008 | ECO first-run weak discriminative power | open ([#1](https://github.com/KK13760780514/Hypostack-Theory/issues/1)) | A (learning traders) |
