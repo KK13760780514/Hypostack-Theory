@@ -37,7 +37,7 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Reading**: the effect grows **smoothly and monotonically** with the condition number (ratio 0.88→0.50), not as a step — supporting option C's sensitivity-curve approach; but the support threshold (≥11/12) is only reached at condition number ≥841, so the V1 challenge at 214 is real and the V2 support genuinely depends on the higher condition number. Also: higher condition numbers mean more no-control seeds (3-4/12 at scale=30/40), raising the weight of the DEC-002 no-control rule.
 
-**Affected claim**: XD-AI-ADAM-001. **Status**: reference evidence produced, awaiting community confirmation.
+**Affected claim**: XD-AI-ADAM-001. **Status**: reference evidence produced, awaiting community confirmation. **Discussion**: [issue #4](https://github.com/KK13760780514/Hypostack-Theory/issues/4).
 
 ## DEC-002: Does the "no-control seed counts as a win" rule introduce bias? (source: ISSUE-001)
 
