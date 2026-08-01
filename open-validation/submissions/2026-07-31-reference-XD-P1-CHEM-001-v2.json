@@ -1,0 +1,237 @@
+﻿{
+  "submission_id": "ref-xd-p1-chem-001-v2-20260731",
+  "claim_id": "XD-P1-CHEM-001",
+  "title": "Chemical path competition V2: effective activation energy vs Arrhenius kinetics",
+  "author": {
+    "name": "reference-implementation",
+    "affiliation": "open-validation",
+    "contact": ""
+  },
+  "preregistration": {
+    "hash": "in-script-preregistered-constants-v2",
+    "timestamp_utc": "2026-07-31T00:00:00+00:00",
+    "uri": "known-issues.md#issue-004"
+  },
+  "implementation": {
+    "repository": "",
+    "commit": "",
+    "code_hash": "d84db6d63bd4540812b882d3d97fbfaea6a2107db79672e144c87d78c78871ca",
+    "data_hash": "",
+    "seed": 0,
+    "environment": {
+      "os": "Windows-10-10.0.19045-SP0",
+      "python_version": "3.13.5",
+      "dependencies": "python-stdlib-only"
+    }
+  },
+  "result": {
+    "S_A": 31980.9625,
+    "S_B": 55000.0,
+    "preferred_path": "A",
+    "selected_counts": {
+      "A": 16,
+      "B": 0
+    },
+    "p_value": 1.52587890625e-05,
+    "summary": "V2 (E_eff): 16/16 temps match across 2 configs; p=0.0000; alpha=0.01",
+    "raw_output": {
+      "E_definition": "effective activation energy (steady-state)",
+      "configs": [
+        {
+          "config": "symmetric",
+          "Ea": {
+            "Ea1": 30000.0,
+            "Ea2": 30000.0,
+            "Ea3": 55000.0
+          },
+          "E_definition": "effective activation energy (steady-state approximation)",
+          "N_definition": "1 (one reaction event)",
+          "S_definition": "S = E_eff = -R*T*ln(k_eff/A_pre)",
+          "xuandie_correct": 8,
+          "n": 8,
+          "p_value": 0.00390625,
+          "per_temp": [
+            {
+              "T": 280.0,
+              "S_A": 31613.6,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.999499,
+              "P_B": 2.2e-05,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 290.0,
+              "S_A": 31671.2,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.999489,
+              "P_B": 3.1e-05,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 300.0,
+              "S_A": 31728.8,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.999477,
+              "P_B": 4.4e-05,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 310.0,
+              "S_A": 31786.5,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.99946,
+              "P_B": 6.1e-05,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 320.0,
+              "S_A": 31844.1,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.999438,
+              "P_B": 8.3e-05,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 350.0,
+              "S_A": 32017.0,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.999336,
+              "P_B": 0.000186,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 400.0,
+              "S_A": 32305.1,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.998979,
+              "P_B": 0.000543,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 500.0,
+              "S_A": 32881.4,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.997089,
+              "P_B": 0.002438,
+              "actual_path": "A",
+              "match": true
+            }
+          ]
+        },
+        {
+          "config": "asymmetric",
+          "Ea": {
+            "Ea1": 20000.0,
+            "Ea2": 40000.0,
+            "Ea3": 55000.0
+          },
+          "E_definition": "effective activation energy (steady-state approximation)",
+          "N_definition": "1 (one reaction event)",
+          "S_definition": "S = E_eff = -R*T*ln(k_eff/A_pre)",
+          "xuandie_correct": 8,
+          "n": 8,
+          "p_value": 0.00390625,
+          "per_temp": [
+            {
+              "T": 280.0,
+              "S_A": 40000.4,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.00167,
+              "P_B": 0.0,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 290.0,
+              "S_A": 40000.6,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.002245,
+              "P_B": 0.0,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 300.0,
+              "S_A": 40000.8,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.002959,
+              "P_B": 1e-06,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 310.0,
+              "S_A": 40001.1,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.003831,
+              "P_B": 1e-06,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 320.0,
+              "S_A": 40001.4,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.00488,
+              "P_B": 2e-06,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 350.0,
+              "S_A": 40003.0,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.009274,
+              "P_B": 6e-06,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 400.0,
+              "S_A": 40008.1,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.021756,
+              "P_B": 2.7e-05,
+              "actual_path": "A",
+              "match": true
+            },
+            {
+              "T": 500.0,
+              "S_A": 40033.7,
+              "S_B": 55000.0,
+              "xuandie_pred": "A",
+              "P_A": 0.070586,
+              "P_B": 0.00022,
+              "actual_path": "A",
+              "match": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "classification": "support",
+  "timestamp_utc": "2026-08-01T05:46:52.959200+00:00"
+}
