@@ -292,6 +292,13 @@
 - 统计结论：**challenge**；按 ISSUE-006 新口径入账 **exploratory**（EV-b3fd72635845c370）。
 - 科学意义：高佣金对称地拉宽有效价差，未产生显著收敛速度差异——"E=佣金"作为"路径成本"的操作化受到质疑，DEC-008 选项 B（固定额税）/ C（S 归一化）值得讨论。预注册见 [prereg-reference-xd-p2-eco-001-v2-learning-20260801.yaml](submissions/prereg-reference-xd-p2-eco-001-v2-learning-20260801.yaml)，提交见 [2026-08-01-reference-xd-p2-eco-001-v2-learning.json](submissions/2026-08-01-reference-xd-p2-eco-001-v2-learning.json)。
 
+### V3 开发运行：固定额税（2026-08-01，DEC-008 方案 B）
+
+- 模型：Roth-Erev 学习型交易者（λ=1.0、φ=0.05，12 种子，80 轮），路径 A 固定税 `TAX_A = 0.1`、路径 B `TAX_B = 2.0`（20 倍差，同 V1 佣金比量级）；有效买价 = bid - TAX、有效卖价 = ask + TAX；`S = TAX × 成交笔数`（E 为固定额，不再含价格比例因子）。学习规则不含任何 S/税额偏好项。
+- 结果：速度子预测 conv_A<conv_B 仅 4/12 种子（双侧二项 p=0.388）；稳健性扫描方向一致仅 2/6；高税路径行为几乎不变（fills_B/fills_A=0.95），S_A=74.7 < S_B=1420.8 但 ratio_dev=0.983（仍被 20 倍税比主导）。
+- 统计结论：**falsification**；按 ISSUE-006 新口径入账 **exploratory**（EV-5f2196aa6d3a55cf）。
+- 科学意义：固定税消除了 V1 的构造性价格比例因子（判别力从"构造"转为"真实行为差异"），但 0.1%~2% 成本量级不产生可检验的市场行为差异。合并 V1（比例佣金）看，**"E=交易成本"的两种操作化（比例佣金、固定税）均未产出可检验的速度层面效应**。后续方向：DEC-008 选项 D（接受负面结论、调整 claim 范围）/ C（S 按单位成交额归一化）/ 放大成本差异量级。参考实现 [dec008_fixed_tax.py](reference-implementation/dec008_fixed_tax.py)，预注册见 [prereg-reference-xd-p2-eco-001-v3-fixed-tax-20260801.yaml](submissions/prereg-reference-xd-p2-eco-001-v3-fixed-tax-20260801.yaml)，提交见 [2026-08-01-reference-xd-p2-eco-001-v3-fixed-tax.json](submissions/2026-08-01-reference-xd-p2-eco-001-v3-fixed-tax.json)。
+
 ### 证伪条件
 
 - 在多数种子上 `S_B < S_A`（高佣金路径更省力）→ 证伪本具体预测；

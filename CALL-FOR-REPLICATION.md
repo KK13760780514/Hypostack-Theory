@@ -22,7 +22,7 @@ Currently, **all** existing results were produced by the proposer's reference im
 | XD-AI-ADAM-001 | Adam vs best fixed-lr SGD, 12/12 seeds | 2.4e-4 | support, L4_candidate |
 | XD-P1-PHASE-001 | 2D Ising phase transition, 12/12 seeds | 2.4e-4 | support, L4_candidate |
 | XD-E-PARADIGM-001 | Cross-paradigm E conversion | — | challenge, exploratory |
-| XD-P2-ECO-001 | ZI-C 12/12 direction-consistent (V1); learning traders speed 5/12 (V2) | 4.9e-4 | challenge, exploratory (V1 ratio_dev=0.970; V2 EV-b3fd72635845c370) |
+| XD-P2-ECO-001 | ZI-C 12/12 direction-consistent (V1); learning traders speed 5/12 (V2); fixed-tax speed 4/12 (V3) | 4.9e-4 (V1) | challenge/exploratory (V1 ratio_dev=0.970; V2 EV-b3fd72635845c370; V3 EV-5f2196aa6d3a55cf) |
 
 （全部记录见 [evidence-ledger.csv](open-validation/evidence-ledger.csv)）
 

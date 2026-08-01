@@ -1,0 +1,88 @@
+{
+  "submission_id": "ref-xd-p2-eco-001-v3-fixed-tax-20260801",
+  "claim_id": "XD-P2-ECO-001",
+  "title": "Market equilibrium path selection V3: do learning traders converge faster on the lower fixed-tax path? (DEC-008 option B)",
+  "author": {
+    "name": "reference-implementation",
+    "affiliation": "open-validation",
+    "contact": ""
+  },
+  "preregistration": {
+    "hash": "ea9e615e1213132cd388e07f4ceb922af3ecfd5a750ce48d6525d73c8b1f15fe",
+    "timestamp_utc": "2026-08-01T12:45:00+00:00",
+    "uri": "submissions/prereg-reference-xd-p2-eco-001-v3-fixed-tax-20260801.yaml"
+  },
+  "implementation": {
+    "repository": "https://github.com/KK13760780514/Hypostack-Theory",
+    "commit": "",
+    "code_hash": "cb916f707906a5305430e54c782610f7f5889409fea09b376b95b11918aace6f",
+    "data_hash": "",
+    "seed": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "environment": {
+      "os": "Windows-10-10.0.19045-SP0",
+      "python_version": "3.13.5",
+      "dependencies": "python-stdlib-only"
+    }
+  },
+  "result": {
+    "S_A": 74.71666666666663,
+    "S_B": 1420.8333333333333,
+    "preferred_path": "A",
+    "selected_counts": {"A": 4, "B": 8},
+    "p_value": 0.3876953125,
+    "summary": "V3 fixed-tax run (DEC-008 option B; Roth-Erev with forgetting, lambda=1.0, phi=0.05, 12 seeds, 80 rounds; TAX_A=0.1, TAX_B=2.0). PRIMARY criterion 'low-tax path converges first' (conv_round_A < conv_round_B) holds in only 4/12 seeds (two-sided binomial p=0.388, ns); mean conv_A=44.75 vs conv_B=47.50 (A marginally earlier on average, but not per-seed consistent). Activity guard OK (fills_B/fills_A=0.95). Robustness scan (lambda in {1,2} x phi in {0,0.05,0.1}): direction holds in only 2/6 combos; under exploitative learning (lambda=2) both treatments converge fast (rounds ~12-13). SECONDARY (S contrast): S_A=74.7 < S_B=1420.8 but ratio_dev=0.983>0.85 -- fills difference is small (fills_B/fills_A=0.95), so the S ratio is still dominated by the 20x tax factor. KEY FINDING: a fixed per-trade tax of 0.1% vs 2.0% of the ~100 price unit produces NO significant market-behaviour difference (fills, convergence speed) -- 'E = transaction cost' operationalization is not supported at this cost magnitude. Statistical outcome: falsification (speed_A<speed_B in 4/12). Ledger classification: exploratory per ISSUE-006 (new caliber). This neither supports nor refutes the economics prediction by itself; combined with V1/V2 it suggests transaction-cost operationalizations (proportional commission AND fixed tax) fail to produce a testable behavioural effect in this model framework.",
+    "raw_output": {
+      "model": "Roth-Erev learning double auction with fixed per-trade tax (V3, DEC-008 option B)",
+      "buyers": 25, "sellers": 25, "rounds": 80,
+      "value_cost_range": [50.0, 150.0],
+      "tax_A": 0.1, "tax_B": 2.0,
+      "equilibrium_price_reference": 100.0,
+      "convergence_definition": "first round t>=10 with trailing-10-round mean-price std <= 1.0 and >= 3 fills in window; else rounds=80",
+      "learning": {
+        "choice_rule": "P(action a) ∝ q(a)^lambda",
+        "update_rule": "q <- (1-phi)*q, then q[chosen] += realized_profit (floored at 0)",
+        "integrity_guard": "no S/tax/frugality term in the trader model",
+        "lambda_ref": 1.0, "phi_ref": 0.05
+      },
+      "learning_reference": {
+        "lambda": 1.0, "phi": 0.05,
+        "speed_holds": 4, "p_value": 0.3876953125,
+        "mean_conv_A": 44.75, "mean_conv_B": 47.5,
+        "mean_SA": 74.71666666666663, "mean_SB": 1420.8333333333333,
+        "ratio_dev": 0.9831638417728727,
+        "mean_fills_A": 747.1666666666666, "mean_fills_B": 710.4166666666666,
+        "mean_price_dev_A": 4.3900959421014125, "mean_price_dev_B": 4.3104972306014,
+        "per_seed": [
+          {"seed": 0, "conv_A": 53, "conv_B": 53, "S_A": 80.1, "S_B": 1530.0, "fills_A": 801, "fills_B": 765, "price_dev_A": 4.91, "price_dev_B": 4.85},
+          {"seed": 1, "conv_A": 48, "conv_B": 31, "S_A": 74.6, "S_B": 1436.0, "fills_A": 746, "fills_B": 718, "price_dev_A": 1.89, "price_dev_B": 1.96},
+          {"seed": 2, "conv_A": 32, "conv_B": 80, "S_A": 64.4, "S_B": 1188.0, "fills_A": 644, "fills_B": 594, "price_dev_A": 7.60, "price_dev_B": 6.23},
+          {"seed": 3, "conv_A": 44, "conv_B": 46, "S_A": 73.9, "S_B": 1382.0, "fills_A": 739, "fills_B": 691, "price_dev_A": 3.03, "price_dev_B": 3.31},
+          {"seed": 4, "conv_A": 80, "conv_B": 80, "S_A": 72.4, "S_B": 1368.0, "fills_A": 724, "fills_B": 684, "price_dev_A": 2.60, "price_dev_B": 2.51},
+          {"seed": 5, "conv_A": 44, "conv_B": 44, "S_A": 93.4, "S_B": 1816.0, "fills_A": 934, "fills_B": 908, "price_dev_A": 2.45, "price_dev_B": 2.65},
+          {"seed": 6, "conv_A": 31, "conv_B": 35, "S_A": 76.6, "S_B": 1470.0, "fills_A": 766, "fills_B": 735, "price_dev_A": 5.93, "price_dev_B": 5.75},
+          {"seed": 7, "conv_A": 40, "conv_B": 40, "S_A": 64.6, "S_B": 1220.0, "fills_A": 646, "fills_B": 610, "price_dev_A": 6.30, "price_dev_B": 6.24},
+          {"seed": 8, "conv_A": 80, "conv_B": 76, "S_A": 52.8, "S_B": 1016.0, "fills_A": 528, "fills_B": 508, "price_dev_A": 3.45, "price_dev_B": 3.41},
+          {"seed": 9, "conv_A": 23, "conv_B": 29, "S_A": 88.2, "S_B": 1680.0, "fills_A": 882, "fills_B": 840, "price_dev_A": 7.87, "price_dev_B": 8.25},
+          {"seed": 10, "conv_A": 31, "conv_B": 25, "S_A": 86.2, "S_B": 1640.0, "fills_A": 862, "fills_B": 820, "price_dev_A": 2.58, "price_dev_B": 2.56},
+          {"seed": 11, "conv_A": 31, "conv_B": 31, "S_A": 69.4, "S_B": 1304.0, "fills_A": 694, "fills_B": 652, "price_dev_A": 4.08, "price_dev_B": 4.00}
+        ]
+      },
+      "robustness_scan": [
+        {"lambda": 1.0, "phi": 0.0, "speed_holds": 4, "p_value": 0.3877, "mean_conv_A": 53.67, "mean_conv_B": 56.42, "mean_SA": 71.01, "mean_SB": 1347.67, "ratio_dev": 0.9825, "mean_fills_A": 710.08, "mean_fills_B": 673.83},
+        {"lambda": 1.0, "phi": 0.05, "speed_holds": 4, "p_value": 0.3877, "mean_conv_A": 44.75, "mean_conv_B": 47.5, "mean_SA": 74.72, "mean_SB": 1420.83, "ratio_dev": 0.9832, "mean_fills_A": 747.17, "mean_fills_B": 710.42},
+        {"lambda": 1.0, "phi": 0.1, "speed_holds": 3, "p_value": 0.1460, "mean_conv_A": 40.5, "mean_conv_B": 40.17, "mean_SA": 77.15, "mean_SB": 1475.5, "ratio_dev": 0.9851, "mean_fills_A": 771.5, "mean_fills_B": 737.75},
+        {"lambda": 2.0, "phi": 0.0, "speed_holds": 1, "p_value": 0.0063, "mean_conv_A": 13.0, "mean_conv_B": 12.25, "mean_SA": 84.31, "mean_SB": 1622.67, "ratio_dev": 0.9872, "mean_fills_A": 843.08, "mean_fills_B": 811.33},
+        {"lambda": 2.0, "phi": 0.05, "speed_holds": 2, "p_value": 0.0386, "mean_conv_A": 12.58, "mean_conv_B": 12.42, "mean_SA": 84.51, "mean_SB": 1623.17, "ratio_dev": 0.9865, "mean_fills_A": 845.08, "mean_fills_B": 811.58},
+        {"lambda": 2.0, "phi": 0.1, "speed_holds": 1, "p_value": 0.0063, "mean_conv_A": 12.5, "mean_conv_B": 12.33, "mean_SA": 84.47, "mean_SB": 1624.83, "ratio_dev": 0.9870, "mean_fills_A": 844.75, "mean_fills_B": 812.42}
+      ],
+      "v1_contrast": {
+        "requirement": "ISSUE-006 rule 3 (V1-caliber comparison on the same data)",
+        "v1_result": {"S_A": 13.4, "S_B": 245.8, "ratio_dev": 0.970, "classification": "challenge/exploratory"},
+        "v2_same_caliber": {"S_A": 74.93, "S_B": 1415.27, "ratio_dev": 0.981, "note": "commission-rate factor dominated S (V2)"},
+        "v3_fixed_tax": {"S_A": 74.72, "S_B": 1420.83, "ratio_dev": 0.983, "note": "fills_B/fills_A=0.95: tax barely changes behaviour; S ratio still tax-factor dominated"}
+      }
+    }
+  },
+  "classification": "exploratory",
+  "timestamp_utc": "2026-08-01T13:12:00+00:00"
+}

@@ -45,7 +45,7 @@ python .\open-validation\reference-implementation\double_auction_learning.py
 | XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (路径 A) | 55000.0 (路径 B) | V2: 有效活化能；16/16 温度一致 |
 | XD-E-PARADIGM-001 | challenge | exploratory | 无 | 1.04e-19 (物理) | 5.06e-20 (生物) | V3: 5 标定点；η 跨度 2.3 级；幂律 R²<0.64 |
 | XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (慢冷) | 237486 (淬火) | 12/12 种子通过；2D Ising 相变 |
-| XD-P2-ECO-001 | challenge | exploratory | 4.9e-4 | 13.4 (低佣金) | 245.8 (高佣金) | V1 12/12 方向符合但判别力不足（ratio_dev=0.970）；V2 学习型交易者速度子预测 5/12（p=0.774）；见 ISSUE-008 |
+| XD-P2-ECO-001 | challenge | exploratory | 4.9e-4 (V1) | 13.4 (低佣金) | 245.8 (高佣金) | V1 12/12 方向符合但判别力不足（ratio_dev=0.970）；V2 学习型交易者速度子预测 5/12（p=0.774）；V3 固定税速度子预测 4/12（p=0.388，falsification）；两种交易成本操作化均未产出可检验效应，见 ISSUE-008 |
 
 注意：以上结果全部由提出者的参考实现（reference-implementation）产出，尚无外部独立复核结果。
 
@@ -110,7 +110,7 @@ python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml
 
 两个修正后的 claim 已在 V2 产出 support 结果（L4_candidate），确认口径修正有效。剩余开放问题：口径选择（如条件数调整、无对照规则修订）是否引入偏差——欢迎社区讨论。
 
-**最新进展**：XD-P1-CHEM-001 与 XD-AI-ADAM-001 的 V2 已修正为 support（L4_candidate），XD-P1-PHASE-001 首次运行即 support（L4_candidate），三者等待独立复核。同日新增经济学首个 claim XD-P2-ECO-001（V1 challenge/exploratory，EV-22c7db69115c4ffc）；V2 学习型交易者开发运行完成（challenge，EV-b3fd72635845c370）：市场可收敛性修复，但速度子预测未获支持（5/12，p=0.774），见 ISSUE-008。
+**最新进展**：XD-P1-CHEM-001 与 XD-AI-ADAM-001 的 V2 已修正为 support（L4_candidate），XD-P1-PHASE-001 首次运行即 support（L4_candidate），三者等待独立复核。同日新增经济学首个 claim XD-P2-ECO-001（V1 challenge/exploratory，EV-22c7db69115c4ffc）；V2 学习型交易者开发运行完成（challenge，EV-b3fd72635845c370）：市场可收敛性修复，但速度子预测未获支持（5/12，p=0.774）；V3 固定额税开发运行完成（falsification，EV-5f2196aa6d3a55cf）：速度子预测 4/12（p=0.388），两种交易成本操作化均未产出可检验效应，见 ISSUE-008。
 
 ## 评审与 issue 模板
 
