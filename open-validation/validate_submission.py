@@ -11,6 +11,7 @@ import argparse
 import csv
 import hashlib
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -18,6 +19,9 @@ from typing import Any
 
 DEFAULT_SCHEMA = Path(__file__).with_name("submission-schema.json")
 DEFAULT_LEDGER = Path(__file__).with_name("evidence-ledger.csv")
+
+HEX64_RE = re.compile(r"^[0-9a-fA-F]{64}$")
+PLACEHOLDER_HASHES = {"in-script-preregistered-constants", "in-script-preregistered-constants-v2"}
 
 LEDGER_FIELDS = [
     "evidence_id",
@@ -235,6 +239,40 @@ def append_ledger(submission: dict[str, Any], errors: list[str], ledger_path: Pa
     return row
 
 
+def preregistration_checks(submission: dict[str, Any], warnings: list[str]) -> None:
+    """Advisory pre-registration compliance checks (non-fatal).
+
+    A placeholder hash or a missing timestamp is reported as a warning so
+    reviewers are aware, without rejecting historically valid submissions.
+    """
+    prereg = submission.get("preregistration") or {}
+    hash_val = str(prereg.get("hash", "")).strip()
+    if not hash_val:
+        warnings.append("preregistration.hash: empty")
+    elif not HEX64_RE.match(hash_val):
+        if hash_val in PLACEHOLDER_HASHES:
+            warnings.append(
+                f"preregistration.hash: placeholder {hash_val!r} (requires manual review)"
+            )
+        else:
+            warnings.append(
+                f"preregistration.hash: not a 64-char hex SHA-256 ({hash_val!r})"
+            )
+
+    pre_ts = prereg.get("timestamp_utc")
+    post_ts = submission.get("timestamp_utc")
+    if pre_ts and post_ts:
+        try:
+            t0 = datetime.fromisoformat(str(pre_ts).replace("Z", "+00:00"))
+            t1 = datetime.fromisoformat(str(post_ts).replace("Z", "+00:00"))
+            if t0 > t1:
+                warnings.append(
+                    "preregistration.timestamp_utc is later than submission timestamp_utc"
+                )
+        except ValueError:
+            warnings.append("preregistration.timestamp_utc: invalid date-time")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Validate a XuanDie submission JSON file.")
     parser.add_argument("submission", type=Path, help="Path to submission JSON.")
@@ -246,13 +284,16 @@ def main() -> int:
     submission = load_json(args.submission)
     schema = load_json(args.schema)
     errors: list[str] = []
+    warnings: list[str] = []
     validate(submission, schema, "$", errors)
+    preregistration_checks(submission, warnings)
 
     report: dict[str, Any] = {
         "submission": str(args.submission),
         "schema": str(args.schema),
         "valid": not errors,
         "errors": errors,
+        "warnings": warnings,
     }
 
     if not args.no_ledger:

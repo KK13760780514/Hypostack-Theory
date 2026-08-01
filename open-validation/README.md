@@ -43,6 +43,8 @@ python .\open-validation\reference-implementation\phase_transition.py
 | XD-E-PARADIGM-001 | challenge | exploratory | 无 | 1.04e-19 (物理) | 5.06e-20 (生物) | V3: 5 标定点；η 跨度 2.3 级；幂律 R²<0.64 |
 | XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (慢冷) | 237486 (淬火) | 12/12 种子通过；2D Ising 相变 |
 
+注意：以上结果全部由提出者的参考实现（reference-implementation）产出，尚无外部独立复核结果。
+
 ### 提交你的第一个实验（新贡献者路径）
 
 1. **选任务**：推荐从 [TASK-005：化学反应路径竞争](tasks/TASK-005-chemical-path.md) 开始，它有完整的参考实现和明确的预测冲突。
@@ -78,7 +80,7 @@ python .\open-validation\reference-implementation\phase_transition.py
 python -c "import hashlib; print(hashlib.sha256(open('你的预注册文件.yaml','rb').read()).hexdigest())"
 ```
 
-把输出粘贴到提交 JSON 的 `preregistration.hash` 字段。这个哈希用于证明预注册内容在实验后未被修改。
+把输出粘贴到提交 JSON 的 `preregistration.hash` 字段。`validate_submission.py` 会对该字段做格式与时间顺序检查（非 64 位 hex 或占位符会输出 warnings），但哈希是否与预注册文件一致属于评审环节的人工核查项——请妥善保存预注册 YAML 文件以便复核。
 
 ## 已知问题
 

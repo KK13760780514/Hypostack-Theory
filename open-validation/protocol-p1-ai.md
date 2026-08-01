@@ -10,6 +10,8 @@
 
 它不等同于证明整套玄叠论，只用于产生第一批可被独立复核的 L4/L5 候选证据。
 
+任何口径（E/N/S 定义或统计阈值）变更须遵循 [known-issues.md](known-issues.md) 末尾《口径变更管理规则》：变更后新提交默认降级 exploratory 并设冷却期，V2+ 修正须附 V1 口径对比报告。
+
 ## 2. Claim XD-P1-SIM-001：P1 增强版计算机模拟（已降级）
 
 > **⚠ 已降级**：本 claim 存在定义性循环（softmax 必然偏好低 S），已被 [XD-P1-CHEM-001](#7-claim-xd-p1-chem-001化学反应路径竞争) 替代。详见 [known-issues.md](known-issues.md) ISSUE-004。以下规范保留作历史参考，不要对此 claim 提交新结果。

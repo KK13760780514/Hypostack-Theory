@@ -71,7 +71,7 @@ python .\open-validation\reference-implementation\e_paradigm_map_v3.py
 python .\open-validation\reference-implementation\phase_transition.py
 ```
 
-Submission workflow: claim a task → fill the [preregistration template](open-validation/preregistration-template.yaml) → run the experiment → generate a submission JSON per [submission-schema.json](open-validation/submission-schema.json) → validate with `validate_submission.py` → results are appended to [evidence-ledger.csv](open-validation/evidence-ledger.csv). All submissions pass formal checks, pre-registration compliance, and independent review.
+Submission workflow: claim a task → fill the [preregistration template](open-validation/preregistration-template.yaml) → run the experiment → generate a submission JSON per [submission-schema.json](open-validation/submission-schema.json) → validate with `validate_submission.py` → results are appended to [evidence-ledger.csv](open-validation/evidence-ledger.csv). All submissions pass formal checks, pre-registration compliance, and review (an independent review committee is not yet formed; the proposer currently performs reviews, see the validation protocol).
 
 ### 6. Honesty Boundaries
 
@@ -155,7 +155,7 @@ python .\open-validation\reference-implementation\e_paradigm_map_v3.py
 python .\open-validation\reference-implementation\phase_transition.py
 ```
 
-提交流程：认领任务 → 填写[预注册模板](open-validation/preregistration-template.yaml) → 运行实验 → 按 [submission-schema.json](open-validation/submission-schema.json) 生成提交 JSON → 运行 `validate_submission.py` 校验 → 结果自动追加到 [evidence-ledger.csv](open-validation/evidence-ledger.csv)。所有提交经过形式检查、预注册合规检查和独立评审。
+提交流程：认领任务 → 填写[预注册模板](open-validation/preregistration-template.yaml) → 运行实验 → 按 [submission-schema.json](open-validation/submission-schema.json) 生成提交 JSON → 运行 `validate_submission.py` 校验 → 结果自动追加到 [evidence-ledger.csv](open-validation/evidence-ledger.csv)。所有提交经过形式检查、预注册合规检查和评审（独立评审委员会尚未组建，当前由提出者执行，见开放验证协议）。
 
 ### 6. 诚实边界
 

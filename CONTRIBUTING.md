@@ -189,7 +189,7 @@ You can use the `--no-ledger` flag to validate without appending to the ledger, 
 
 玄叠论的核心公式 `S = ∫ E dN` 中，`E`、`N`、`S` 的具体测量方式有多种合法定义。如果不预先固定，研究者可以在看到结果后选择对自己有利的口径，导致确认偏误。预注册的作用是：在实验执行前公开声明「我将如何测量、如何判断」，使结果无论支持还是反对预测，都具有可比性和可信度。
 
-预注册通过 [open-validation/preregistration-template.yaml](open-validation/preregistration-template.yaml) 完成。提交 JSON 中的 `preregistration.hash` 字段记录预注册文件的 SHA-256 哈希，用于证明预注册内容在实验后未被篡改。
+预注册通过 [open-validation/preregistration-template.yaml](open-validation/preregistration-template.yaml) 完成。提交 JSON 中的 `preregistration.hash` 字段记录预注册文件的 SHA-256 哈希，供评审时与预注册文件对照核验。`validate_submission.py` 仅做格式与时间顺序检查（非 64 位 hex 或占位符会输出 warnings）；哈希与预注册文件的一致性属于评审环节的人工核查项，请妥善保存预注册文件。
 
 **四项不可更改声明**
 
@@ -210,7 +210,7 @@ You can use the `--no-ledger` flag to validate without appending to the ledger, 
 
 In the core formula `S = ∫ E dN`, the concrete measurement of `E`, `N`, and `S` has multiple legitimate definitions. Without fixing them in advance, a researcher could choose a favorable caliber after seeing the results, leading to confirmation bias. Preregistration serves to publicly declare "how I will measure and how I will judge" before the experiment runs, so that results—whether supportive or opposing—are comparable and credible.
 
-Preregistration is done via [open-validation/preregistration-template.yaml](open-validation/preregistration-template.yaml). The `preregistration.hash` field in the submission JSON records the SHA-256 hash of the preregistration file, proving it was not tampered with after the experiment.
+Preregistration is done via [open-validation/preregistration-template.yaml](open-validation/preregistration-template.yaml). The `preregistration.hash` field in the submission JSON records the SHA-256 hash of the preregistration file so reviewers can cross-check it. `validate_submission.py` only performs a format and timestamp check (non-64-hex hashes or placeholders produce warnings); verifying the hash actually matches the preregistration file is a manual review step, so keep the preregistration file for verification.
 
 **The four immovable declarations**
 
