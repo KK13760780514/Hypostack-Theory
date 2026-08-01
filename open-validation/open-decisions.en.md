@@ -50,7 +50,7 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 **Default recommendation**: A, but per ISSUE-006 rule 4, the number and share of no-control seeds must be reported explicitly (>25% requires community review).
 
-**Affected claim**: XD-AI-ADAM-001. **Status**: open.
+**Affected claim**: XD-AI-ADAM-001. **Status**: open. **Discussion**: [issue #6](https://github.com/KK13760780514/Hypostack-Theory/issues/6).
 
 ## DEC-003: Should the number of seeds be increased? (source: ISSUE-001)
 

@@ -49,7 +49,7 @@
 
 **默认建议**：A，但按 ISSUE-006 规则 4 强制报告无对照种子数量与占比（>25% 需社区评审）。
 
-**影响 claim**：XD-AI-ADAM-001。**状态**：开放。
+**影响 claim**：XD-AI-ADAM-001。**状态**：开放。**讨论链接**：[issue #6](https://github.com/KK13760780514/Hypostack-Theory/issues/6)。
 
 ## DEC-003：种子数是否增加（来源：ISSUE-001）
 
