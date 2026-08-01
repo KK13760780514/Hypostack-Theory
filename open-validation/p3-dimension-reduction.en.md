@@ -48,6 +48,7 @@ Once data is ready, test whether the reduction branch of Presupposition 3 holds,
 - **Method**: a community member proposes a candidate "tenth irreducible property" and attempts to reconstruct it as a function `f(F,S,E,N,R,Φ,K,Ξ,λ)` of the nine.
 - **Criterion**: if a feasible reconstruction exists, the property is not irreducible; if repeated attempts fail, Presupposition 3 needs revision.
 - **Status**: this operationalizes the built-in falsification condition of Presupposition 3, complementing R1–R3.
+- **Claimable**: [issue #15](https://github.com/KK13760780514/Hypostack-Theory/issues/15).
 
 ## 4. Data Requirements
 
