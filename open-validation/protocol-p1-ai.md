@@ -316,3 +316,35 @@
 ### 诚实声明
 
 首次结果既不支持也不证伪经济学预言。它证明"比例佣金口径"判别力不足，并暴露无学习模型不收敛的建模问题。修正方向（学习型交易者 / 固定额税 / S 归一化）见 [DEC-008](open-decisions.md)，修正后须按 ISSUE-006 规则重新预注册并默认降级 exploratory。社区讨论见 [issue #1](https://github.com/KK13760780514/Hypostack-Theory/issues/1)（DEC-008 议题）与 [issue #2](https://github.com/KK13760780514/Hypostack-Theory/issues/2)（基线提交）。
+
+---
+
+## 11. P-ECO-002：市场"自动转向"切换实验（11.4 第二子预测，选择/切换检验）
+
+### 背景
+
+11.4 预测含两个子预测：① 低交易成本路径被优先选择（排序检验，XD-P2-ECO-001 V1-V3 已执行）；② **"如果政策干预提高了某条路径的交易成本，市场会自动转向另一条总消耗更小的路径"**（切换/选择检验）。子预测 ② 是理论"选择"断言的最直接操作化。设计草案见 [predictions-operationalization.md](predictions-operationalization.md) P-ECO-002。
+
+### 预测陈述
+
+当市场存在两条交易路径且政策干预中途互换两条路径的成本（低变高、高变低），市场应自动转向新的低成本低消耗路径。
+
+### 操作定义（参考实现开发运行，2026-08-02）
+
+- 模型：两个并行 ZI-C 双向拍卖市场（A 和 B），各 25 买者 + 25 卖者；Roth-Erev 2-armed bandit 选择市场（λ=1.0、φ=0.05，学习规则不含 S/税偏好项）。
+- 固定税：TAX_LOW=0.1、TAX_HIGH=2.0（20 倍差，同 V3）；有效买价=bid-TAX、有效卖价=ask+TAX。
+- 阶段 1（1-40 轮）：市场 A 低税、市场 B 高税；阶段 2（41-80 轮）：税率互换。
+- 切换指标：p_low = 低税市场成交量 / 总成交量；阶段 1 低税=A，阶段 2 低税=B。
+- 预测：p_low(阶段 2 最后 10 轮) > p_low(阶段 1 最后 10 轮) + 0.15。
+
+### 首次运行结果（2026-08-02，开发运行）
+
+- p_low 上升 ≥0.15 仅 **3/12 种子**（p=0.146）；均值 p_low 从 0.544 到 0.525（shift=-0.019）。
+- 统计结论：**falsification**（按 ISSUE-006 新口径入账 exploratory）。
+- 参考实现见 [market_switching.py](reference-implementation/market_switching.py)。
+
+### 科学含义
+
+市场在税率互换后**没有自动转向低税路径**。这是理论"选择/切换"断言的**首次直接检验**，结果为证伪。交易者的 Roth-Erev 学习存在"粘性"（阶段 1 的 Q 值在 40 轮后仅衰减至 13%），适应新成本结构过慢。
+
+可能的原因与后续方向见 [predictions-operationalization.md](predictions-operationalization.md) P-ECO-002 节。本结果为开发运行，需社区讨论是否立项为正式 claim。
