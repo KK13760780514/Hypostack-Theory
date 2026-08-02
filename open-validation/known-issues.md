@@ -221,7 +221,7 @@ V1 challenge → 修正 E/N/S 口径 → V2 support 的两次修正（ISSUE-001/
 
 ## ISSUE-008：ECO 首次运行判别力不足（XD-P2-ECO-001）
 
-**状态**：V1 已入账（challenge/exploratory，EV-22c7db69115c4ffc）；V2 学习型交易者开发运行已完成（challenge，exploratory，EV-b3fd72635845c370），修正方向仍待社区决策  
+**状态**：V1 已入账（challenge/exploratory，EV-22c7db69115c4ffc）；V2 学习型交易者开发运行已完成（challenge，exploratory，EV-b3fd72635845c370）；V3 固定额税开发运行已完成（falsification，exploratory，EV-5f2196aa6d3a55cf），修正方向仍待社区决策  
 **影响 claim**：`XD-P2-ECO-001`（11.4 经济学预言的首次计算验证）  
 **发现时间**：2026-08-01  
 **讨论链接**：[DEC-008 议题](https://github.com/KK13760780514/Hypostack-Theory/issues/1)、[ECO 基线提交](https://github.com/KK13760780514/Hypostack-Theory/issues/2)

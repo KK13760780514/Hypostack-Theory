@@ -24,7 +24,7 @@ This formula is the theory's signature—much as E = mc² is to relativity. It r
 
 ### 3. Key Predictions
 
-The theory issues six cross-disciplinary predictions (Section 11 of the rulebook), each with a designed falsification path; pre-registered falsification protocols exist for those with reference implementations (11.1 physics, 11.6 AI), while the others remain qualitative case frameworks awaiting operationalization:
+The theory issues six cross-disciplinary predictions (Section 11 of the rulebook), each with a designed falsification path; pre-registered falsification protocols exist for those with reference implementations (11.1 physics, 11.4 economics, 11.6 AI), while the others remain qualitative case frameworks awaiting operationalization:
 
 1. **Physics — Phase-transition path selection.** When a system transitions between phases, it selects the path minimizing S. In supersaturated-solution crystallization, the path with lower total consumption is preferred. This is a specific application of the least-action principle; if verified, S = ∫ E dN is an equivalent expression of it.
 
@@ -36,7 +36,7 @@ The theory issues six cross-disciplinary predictions (Section 11 of the rulebook
 
 5. **Social science — Institutional-change path dependence.** Societies undergoing institutional transformation select the path minimizing S. When gradual reform (lower per-step E, more steps) and radical revolution (higher per-step E, fewer steps) lead to the same endpoint, the lower-S path is preferred. Path dependence is the cumulative effect of S = ∫ E dN on a historical scale.
 
-6. **AI — Adaptive optimization dynamics.** The cumulative consumption S of an Adam-style adaptive optimizer eliminating a given difference is systematically lower than that of the best fixed-learning-rate SGD. In a pathological linear-regression setting (12 seeds, per-seed criterion S_adam ≤ 1.1 × S_best_sgd, ≥ 11/12 pass, one-sided binomial p < 0.01), Adam's spontaneous step-size adjustment is predicted to be more frugal.
+6. **AI — Adaptive optimization dynamics.** The cumulative consumption S of an Adam-style adaptive optimizer eliminating a given difference is systematically lower than that of the best fixed-learning-rate SGD. In a pathological linear-regression setting (12 seeds, per-seed criterion S_adam ≤ 1.1 × S_best_sgd, ≥ 11/12 pass, one-sided binomial p < 0.01 — V1 calibration; V2 revised to two-sided p = 4.9e-4 at 12/12), Adam's spontaneous step-size adjustment is predicted to be more frugal.
 
 ### 4. Current Evidence
 

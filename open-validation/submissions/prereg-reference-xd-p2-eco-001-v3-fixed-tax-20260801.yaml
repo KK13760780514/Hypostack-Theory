@@ -3,7 +3,7 @@
 # 说明：固定额交易税口径（修正 B）。E/N/S/统计阈值与学习超参数在运行前已在
 #       dec008_fixed_tax.py 中固定（seed 在运行前固定）。
 
-submission_id: "reference-xd-p2-eco-001-v3-fixed-tax-20260801"
+submission_id: "ref-xd-p2-eco-001-v3-fixed-tax-20260801"
 title: "市场均衡路径选择 V3：固定额交易税（非比例佣金）下低税路径是否更快收敛（DEC-008 方案 B）"
 author:
   name: "reference-implementation"

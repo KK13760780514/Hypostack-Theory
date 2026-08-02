@@ -11,6 +11,9 @@ Used to review validation submissions in `submissions/`. The review goal is to d
 - `L4_candidate`: completed per preregistration and results support the specific prediction; awaiting independent replication.
 - `L5_candidate`: completed per preregistration and results significantly falsify the specific prediction.
 - `exploratory`: calibration exploration, task draft, or non-decisive result.
+- `needs_review`: failed validation; requires manual review before re-grading (often triggered by re-validation after a schema update).
+- `degraded`: the claim has been degraded due to a calibration defect; its historical results are kept but no new submissions are accepted.
+- `confirmed`: result confirmed by external independent replication (upgraded from L4_candidate).
 
 ## 1. Formal Check
 

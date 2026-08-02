@@ -41,6 +41,10 @@ statistical_threshold:
   alpha: 0.01               # 显著性水平
   one_sided: true           # 是否单侧检验
 
+# 主判据与支持条件 -- 实验前必须固定（可选但强烈建议，见 ECO V2/V3 预注册示例）
+primary_criterion: ""       # 判定"预测成立"的主要观测指标，如 "收敛轮数：低税路径是否更早收敛"
+support_condition: ""       # 判定 support 的完整条件，如 "speed_A < speed_B ≥ 10/12 种子（p<0.05）且稳健性扫描 ≥4/6 方向一致"
+
 falsification_condition: "" # 什么结果会证伪预测？如 "多数温度下系统选路径 A 而非 B"
 
 # 数据集（如适用）

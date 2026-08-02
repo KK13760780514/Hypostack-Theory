@@ -91,7 +91,7 @@ python .\open-validation\reference-implementation\phase_transition.py
 - [传播文案 PROMOTION.md](PROMOTION.md) — 面向社区的分发文案（中英双语，含证据表）
 - [贡献指南 CONTRIBUTING.md](CONTRIBUTING.md) — 贡献者须知
 - [开放验证 README](open-validation/README.md) - 验证流程与贡献指南
-- [已知问题](open-validation/known-issues.md) — ISSUE-001 / ISSUE-004 等开放讨论
+- [已知问题与开放决策](open-validation/known-issues.md) — ISSUE-001~008 与 DEC-001~008 开放讨论
 - [证据账本](open-validation/evidence-ledger.csv) — 所有实验结果记录
 - [评审清单](open-validation/review-checklist.md) — 提交评审标准
 

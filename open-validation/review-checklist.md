@@ -9,6 +9,9 @@
 - `L4_candidate`：按预注册完成且结果支持该具体预测，等待独立复核。
 - `L5_candidate`：按预注册完成且结果显著证伪该具体预测。
 - `exploratory`：口径探索、任务草案或非决定性结果。
+- `needs_review`：校验未通过，需人工复核后再定级（常由 schema 更新后重校验触发）。
+- `degraded`：claim 因口径缺陷被降级，其历史结果保留但不接受新提交。
+- `confirmed`：结果获外部独立复核确认（由 L4_candidate 升级）。
 
 ## 1. 形式检查
 

@@ -84,14 +84,19 @@
       "properties": {
         "S_A": { "type": "number" },
         "S_B": { "type": "number" },
-        "preferred_path": { "type": "string", "enum": ["A", "B", "tie"] },
+        "preferred_path": {
+          "type": "string",
+          "enum": ["A", "B", "tie"],
+          "description": "The path the theory prediction favors, per the claim's operational definition. For path-competition claims (CHEM/PHASE/ECO), this is the prediction's preferred side (must agree with the claim's prediction statement, NOT necessarily the smaller-S side). For non-path-competition claims (e.g., E-PARADIGM mapping), use 'tie' or the side consistent with the claim's own definition, and explain in summary/notes."
+        },
         "selected_counts": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
             "A": { "type": "integer", "minimum": 0 },
             "B": { "type": "integer", "minimum": 0 }
-          }
+          },
+          "description": "Optional: counts of seeds/temps/points selecting path A vs B, when the claim defines a selection event."
         },
         "p_value": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
         "summary": { "type": "string", "minLength": 1 },

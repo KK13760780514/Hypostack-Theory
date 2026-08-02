@@ -21,8 +21,9 @@ Prediction (preregistered):
 - Per seed, S_adam <= 1.1 * min(S_sgd over the fixed-lr grid).
   If Adam converges but no SGD converges, count as Adam wins (strongest evidence).
 - n = 12 seeds; success threshold >= 11 seeds satisfying the inequality;
-  one-sided binomial test against p0 = 0.5, alpha = 0.01
-  (P(X >= 11 | n=12, p0=0.5) ~= 0.0032).
+  two-sided binomial test against p0 = 0.5, alpha = 0.01
+  (P(X >= 11) + P(X <= 1) | n=12, p0=0.5) = 2 * 0.5^12 * (1 + 12) ~= 0.0063;
+  for the V2 support run all 12 seeds pass -> p = 2 * 0.5^12 = 4.88e-4).
 """
 
 from __future__ import annotations
