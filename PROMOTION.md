@@ -25,8 +25,8 @@ S = ∫ E dN
 | 预言 | 方向 | 当前结果 | 等级 |
 |------|------|---------|------|
 | 化学路径竞争（XD-P1-CHEM-001） | support | 16/16 温度匹配，p=1.5e-5 | L4_candidate |
-| AI 优化动态（XD-AI-ADAM-001） | support | 12/12 种子通过，p=2.4e-4 | L4_candidate |
-| 相变路径选择（XD-P1-PHASE-001） | support | 12/12 种子通过，p=2.4e-4 | L4_candidate |
+| AI 优化动态（XD-AI-ADAM-001） | support | 12/12 种子通过，p=4.9e-4 | L4_candidate |
+| 相变路径选择（XD-P1-PHASE-001） | support | 12/12 种子通过，p=4.9e-4 | L4_candidate |
 | E 维度范式转换（XD-E-PARADIGM-001） | challenge | 5 个标定点，无普适转换函数 | exploratory |
 | 市场均衡路径选择（XD-P2-ECO-001） | challenge | V1 12/12 方向符合但判别力不足（ratio_dev=0.970）；V2 学习型交易者速度子预测 5/12（p=0.774）；V3 固定税速度子预测 4/12（p=0.388，falsification）；两种交易成本操作化均未产出可检验效应 | exploratory |
 
@@ -80,8 +80,8 @@ It is not philosophy. It is a falsifiable theory with explicit predictions, runn
 | Prediction | Direction | Result | Level |
 |------------|-----------|--------|-------|
 | Chemical path competition (XD-P1-CHEM-001) | support | 16/16 temperature matches, p=1.5e-5 | L4_candidate |
-| AI adaptive dynamics (XD-AI-ADAM-001) | support | 12/12 seeds, p=2.4e-4 | L4_candidate |
-| Phase-transition path (XD-P1-PHASE-001) | support | 12/12 seeds, p=2.4e-4 | L4_candidate |
+| AI adaptive dynamics (XD-AI-ADAM-001) | support | 12/12 seeds, p=4.9e-4 | L4_candidate |
+| Phase-transition path (XD-P1-PHASE-001) | support | 12/12 seeds, p=4.9e-4 | L4_candidate |
 | E-dimension paradigm map (XD-E-PARADIGM-001) | challenge | 5 calibration points, no universal transform | exploratory |
 | Market-equilibrium path (XD-P2-ECO-001) | challenge | V1 12/12 direction-consistent but insufficient discriminative power (ratio_dev=0.970); V2 learning traders speed sub-prediction 5/12 (p=0.774); V3 fixed-tax speed sub-prediction 4/12 (p=0.388, falsification); neither transaction-cost operationalization yields a testable effect | exploratory |
 

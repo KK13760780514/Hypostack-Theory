@@ -46,7 +46,7 @@
 
 > 理论的可检验部分由操作定义支撑：对每个预言，E/N/S 的定义与统计阈值须预注册（见 [open-validation/protocol-p1-ai.md](open-validation/protocol-p1-ai.md)）。当前证据状态：
 >
-> - 5 个活跃 claim，其中 3 个为 support（L4_candidate：XD-P1-CHEM-001 16/16，p=1.5e-5；XD-AI-ADAM-001 12/12，p=2.4e-4；XD-P1-PHASE-001 12/12，p=2.4e-4），2 个为 challenge（XD-E-PARADIGM-001、XD-P2-ECO-001，均 exploratory）。
+> - 5 个活跃 claim，其中 3 个为 support（L4_candidate：XD-P1-CHEM-001 16/16，p=1.5e-5；XD-AI-ADAM-001 12/12，p=4.9e-4；XD-P1-PHASE-001 12/12，p=4.9e-4），2 个为 challenge（XD-E-PARADIGM-001、XD-P2-ECO-001，均 exploratory）。
 > - 以上结果全部由提出者的参考实现产出，尚无外部独立复核；在复核完成前不宣称任何"确认"。
 > - 2 个 claim（XD-P1-SIM-001、XD-AI-TOY-001）因口径缺陷已降级。
 > - 可证伪条目：任一活跃 claim 的预注册判据被证伪，即对应预测失效（不自动等于整体理论失效）。

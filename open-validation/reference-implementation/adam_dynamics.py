@@ -128,7 +128,10 @@ def run_adam(data: list[tuple[float, float, float]]) -> dict[str, float | int | 
 
 
 def binom_sf(k: int, n: int, p0: float) -> float:
-    return sum(math.comb(n, x) * p0**x * (1 - p0) ** (n - x) for x in range(k, n + 1))
+    """Two-sided binomial p-value: P(X >= k) + P(X <= n - k) (both tails include the observed value)."""
+    upper = sum(math.comb(n, x) * p0**x * (1 - p0) ** (n - x) for x in range(k, n + 1))
+    lower = sum(math.comb(n, x) * p0**x * (1 - p0) ** (n - x) for x in range(0, n - k + 1))
+    return min(upper + lower, 1.0)
 
 
 def source_hash() -> str:

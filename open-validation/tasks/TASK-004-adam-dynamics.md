@@ -17,7 +17,7 @@ ISSUE-001 证明"比较两条人为路径"不成立（SGD 不选择路径，学�
 
 ## V2 修正结果（2026-08-01）
 
-修正参数（条件数提升至 ~4e2、lr 网格 7 个点、MAX_STEPS=5000、无对照规则修订为"Adam 收敛+SGD 不收敛=Adam 胜"）后，**12/12 种子通过，p=2.4e-4，结论修正为 support（L4_candidate）**。Adam 平均 S=188.53，最优 SGD 平均 S=345.97（省力约 50%）。当前参考实现 [adam_dynamics.py](../reference-implementation/adam_dynamics.py) 已更新为 V2 参数。
+修正参数（条件数提升，标称 ~4e2、实测数值条件数 841；lr 网格 7 个点、MAX_STEPS=5000、无对照规则修订为"Adam 收敛+SGD 不收敛=Adam 胜"）后，**12/12 种子通过，p=4.9e-4，结论修正为 support（L4_candidate）**。Adam 平均 S=188.53，最优 SGD 平均 S=345.97（省力约 50%）。当前参考实现 [adam_dynamics.py](../reference-implementation/adam_dynamics.py) 已更新为 V2 参数。
 
 ## 操作定义（V1 口径，已预注册于参考实现）
 
@@ -29,7 +29,7 @@ ISSUE-001 证明"比较两条人为路径"不成立（SGD 不选择路径，学�
 
 ## 可认领方向
 
-1. **复现**：独立复现 V2 的 support 结论（12/12, p=2.4e-4），或用不同种子集合检验其稳健性。复核召集见 [issue #12](https://github.com/KK13760780514/Hypostack-Theory/issues/12)。
+1. **复现**：独立复现 V2 的 support 结论（12/12, p=4.9e-4），或用不同种子集合检验其稳健性。复核召集见 [issue #12](https://github.com/KK13760780514/Hypostack-Theory/issues/12)。
 2. **判据挑战**：`1.1` 容差与 `≥11/12` 阈值是否过严？提出替代判据并预注册。
 3. **任务升级**：换病态更强的任务（条件数 1e3-1e4 + 更长 MAX_STEPS），检验 Adam 优势是否随病态程度增强。
 4. **优化器扩展**：加入 RMSProp、Adagrad、line-search SGD，检验结论是否对自适应方法普遍成立。

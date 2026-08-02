@@ -31,9 +31,9 @@ This file summarizes all decisions awaiting community input in the open-validati
 | 214 | 0.88 | 12% | 8/12 | 0.19 | challenge (V1) |
 | 332 | 0.87 | 13% | 9/12 | 0.07 | challenge |
 | 476 | 0.77 | 23% | 10/12 | 0.02 | challenge |
-| 841 | 0.54 | 45% | 12/12 | 2.4e-4 | **support** (V2) |
-| 1886 | 0.65 | 35% | 12/12 | 2.4e-4 | support |
-| 3349 | 0.50 | 50% | 12/12 | 2.4e-4 | support |
+| 841 | 0.54 | 45% | 12/12 | 4.9e-4 | **support** (V2) |
+| 1886 | 0.65 | 35% | 12/12 | 4.9e-4 | support |
+| 3349 | 0.50 | 50% | 12/12 | 4.9e-4 | support |
 
 **Reading**: the effect grows **smoothly and monotonically** with the condition number (ratio 0.88→0.50), not as a step — supporting option C's sensitivity-curve approach; but the support threshold (≥11/12) is only reached at condition number ≥841, so the V1 challenge at 214 is real and the V2 support genuinely depends on the higher condition number. Also: higher condition numbers mean more no-control seeds (3-4/12 at scale=30/40), raising the weight of the DEC-002 no-control rule.
 
@@ -54,7 +54,7 @@ This file summarizes all decisions awaiting community input in the open-validati
 
 ## DEC-003: Should the number of seeds be increased? (source: ISSUE-001)
 
-**Background**: Currently 12 seeds, p=2.4e-4 (the binomial test can only resolve p at this level for 12 seeds when all pass).
+**Background**: Currently 12 seeds, p=4.9e-4 (two-sided binomial; the smallest resolvable p when all 12 seeds pass).
 
 **Options**:
 - A. Keep 12 (current default; sufficient statistical power)

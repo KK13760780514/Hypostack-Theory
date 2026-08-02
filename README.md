@@ -64,9 +64,9 @@ python .\open-validation\reference-implementation\phase_transition.py
 | Claim | 方向 | 结果历史 | 状态 |
 |-------|------|---------|------|
 | XD-P1-CHEM-001 | 化学反应路径竞争 | V1 challenge → **V2 support** (16/16, p=1.5e-5) | L4_candidate |
-| XD-AI-ADAM-001 | 自适应优化动态 | V1 challenge → **V2 support** (12/12, p=2.4e-4) | L4_candidate |
+| XD-AI-ADAM-001 | 自适应优化动态 | V1 challenge → **V2 support** (12/12, p=4.9e-4) | L4_candidate |
 | XD-E-PARADIGM-001 | E 维度范式转换 | challenge（首次运行 3 标定点 → 扩展至 5 标定点，η 跨度 2.3 级，幂律 R²<0.64） | exploratory |
-| XD-P1-PHASE-001 | 相变路径选择 | 首次运行即 **support** (12/12, p=2.4e-4) | L4_candidate |
+| XD-P1-PHASE-001 | 相变路径选择 | 首次运行即 **support** (12/12, p=4.9e-4) | L4_candidate |
 | XD-P2-ECO-001 | 市场均衡路径选择 | V1 12/12 方向符合但判别力不足（ratio_dev=0.970）；V2 学习型交易者速度子预测 5/12（p=0.774）；V3 固定税速度子预测 4/12（p=0.388，falsification）；两种交易成本操作化均未产出可检验效应 | exploratory |
 
 ### 3. 提交你的第一个实验

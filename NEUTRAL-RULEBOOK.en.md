@@ -46,7 +46,7 @@ Three principles:
 
 > The testable part of the theory is supported by operational definitions: for each prediction, the definitions of E/N/S and the statistical threshold must be preregistered (see [open-validation/protocol-p1-ai.md](open-validation/protocol-p1-ai.md)). Current evidence status:
 >
-> - 5 active claims, of which 3 are support (L4_candidate: XD-P1-CHEM-001 16/16, p=1.5e-5; XD-AI-ADAM-001 12/12, p=2.4e-4; XD-P1-PHASE-001 12/12, p=2.4e-4) and 2 are challenges (XD-E-PARADIGM-001 and XD-P2-ECO-001, both exploratory).
+> - 5 active claims, of which 3 are support (L4_candidate: XD-P1-CHEM-001 16/16, p=1.5e-5; XD-AI-ADAM-001 12/12, p=4.9e-4; XD-P1-PHASE-001 12/12, p=4.9e-4) and 2 are challenges (XD-E-PARADIGM-001 and XD-P2-ECO-001, both exploratory).
 > - All results above were produced by the proposer's reference implementation; there is no external independent replication yet; no "confirmation" is claimed before replication completes.
 > - 2 claims (XD-P1-SIM-001, XD-AI-TOY-001) were degraded due to calibration defects.
 > - Falsifiable items: if any active claim's preregistered criterion is falsified, the corresponding prediction fails (which does not automatically equal failure of the whole theory).

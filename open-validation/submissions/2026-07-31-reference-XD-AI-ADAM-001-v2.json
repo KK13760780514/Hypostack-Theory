@@ -45,8 +45,8 @@
       "A": 12,
       "B": 0
     },
-    "p_value": 0.000244140625,
-    "summary": "E_i = loss level (AUC); successes 12/12 (threshold 11); p=2.4e-4; alpha=0.01",
+    "p_value": 0.00048828125,
+    "summary": "E_i = loss level (AUC); successes 12/12 (threshold 11); two-sided binomial p=4.9e-4; alpha=0.01",
     "raw_output": {
       "per_seed": [
         {

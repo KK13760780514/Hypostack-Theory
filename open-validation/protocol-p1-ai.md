@@ -129,7 +129,7 @@
 - 逐种子判据通过 8/12，未达阈值 11，p = 0.194。
 - 结论分类：**challenge**--方向一致但效应未达预注册判据。此结果已入证据账本。
 
-**V2 修正结果（2026-08-01）**：参数修正（X2_SCALE=20、lr 网格 7 个点、MAX_STEPS=5000、无对照规则修订为 Adam 收敛+SGD 不收敛=Adam 胜）后，12/12 种子通过，p=2.4e-4。结论修正为 **support**。参考实现已更新。
+**V2 修正结果（2026-08-01）**：参数修正（X2_SCALE=20、lr 网格 7 个点、MAX_STEPS=5000、无对照规则修订为 Adam 收敛+SGD 不收敛=Adam 胜）后，12/12 种子通过，双侧二项 p=4.9e-4。结论修正为 **support**。参考实现已更新。
 
 ### 证伪条件
 
@@ -257,7 +257,7 @@
 
 ### 首次运行结果（2026-08-01）
 
-12/12 种子全部通过（p=2.4e-4）。平均 S_A=48903, S_B=69433, S_C=237486。慢冷 S 约为淬火的 1/5。结论 **support**（L4_candidate）。参考实现见 [phase_transition.py](reference-implementation/phase_transition.py)。注：证据账本与提交 JSON 的 S_B 列存的是淬火路径 C（237486），中冷路径 B（69433）见提交 raw_output 的 mean_S_B。
+12/12 种子全部通过（双侧二项 p=4.9e-4）。平均 S_A=48903, S_B=69433, S_C=237486。慢冷 S 约为淬火的 1/5。结论 **support**（L4_candidate）。参考实现见 [phase_transition.py](reference-implementation/phase_transition.py)。注：证据账本与提交 JSON 的 S_B 列存的是淬火路径 C（237486），中冷路径 B（69433）见提交 raw_output 的 mean_S_B。
 
 ---
 

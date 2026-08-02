@@ -42,10 +42,10 @@ All submitted experimental results are recorded in [evidence-ledger.csv](evidenc
 
 | claim_id | Classification | Evidence Level | p-value | S (selected) | S (alternative) | Notes |
 |---|---|---|---|---|---|---|
-| XD-AI-ADAM-001 | support | L4_candidate | 2.4e-4 | 188.5 (Adam) | 346.0 (best SGD) | V2: 12/12 seeds pass; expanded lr grid + no-baseline rule |
+| XD-AI-ADAM-001 | support | L4_candidate | 4.9e-4 | 188.5 (Adam) | 346.0 (best SGD) | V2: 12/12 seeds pass; expanded lr grid + no-baseline rule |
 | XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (path A) | 55000.0 (path B) | V2: effective activation energy; 16/16 temps consistent |
 | XD-E-PARADIGM-001 | challenge | exploratory | null | 1.04e-19 (physical) | 5.06e-20 (biological) | V3: 5 calibration points; eta span 2.3 orders; power-law R²<0.64 |
-| XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (slow cool) | 237486 (quench) | 12/12 seeds pass; 2D Ising model phase transition |
+| XD-P1-PHASE-001 | support | L4_candidate | 4.9e-4 | 48903 (slow cool) | 237486 (quench) | 12/12 seeds pass; 2D Ising model phase transition |
 | XD-P2-ECO-001 | challenge | exploratory | 4.9e-4 (V1) | 13.4 (low commission) | 245.8 (high commission) | V1 12/12 direction-consistent but insufficient discriminative power (ratio_dev=0.970); V2 learning traders speed sub-prediction 5/12 (p=0.774); V3 fixed-tax speed sub-prediction 4/12 (p=0.388, falsification); neither transaction-cost operationalization yields a testable effect; see [ISSUE-008](known-issues.md), discussion in [issue #1](https://github.com/KK13760780514/Hypostack-Theory/issues/1) |
 
 Note: all results above were produced by the proposer's reference implementation (reference-implementation); no external independent replication exists yet.
@@ -68,6 +68,19 @@ Note: all results above were produced by the proposer's reference implementation
 - [TASK-005: Chemical Reaction Path Competition Validation](tasks/TASK-005-chemical-path.md) (V2 result: support, L4_candidate; open for independent replication and calibration challenges)
 - [TASK-006: Phase-Transition Path Selection Validation](tasks/TASK-006-phase-transition.md) (V1 result: support, L4_candidate; open for independent replication)
 - [TASK-007: Calibrate η by Process Type (E-Dimension Paradigm Conversion)](tasks/TASK-007-e-paradigm-process-type.en.md) (spawned from ISSUE-007 conclusion)
+
+## Empirical Review Committee (Recruiting)
+
+[review-committee.md](review-committee.md) defines the committee's responsibilities (calibration-restoration votes, escalation review, decision advice), membership requirements, and the ≥2/3 voting rule. The committee is not yet formed; reviews are performed by the proposer — **developers who have submitted evidence of any classification (support/challenge/falsification) or who have a relevant academic background are welcome to join**, so the anti-"calibration shopping" rules can truly take effect. Recruitment announcement: [issue #10](https://github.com/KK13760780514/Hypostack-Theory/issues/10).
+
+## Core Documents
+
+- [Protocol protocol-p1-ai.md](protocol-p1-ai.md): E/N/S calibrations, preregistered values, and validation results for all 7 claims.
+- [Math foundations open problems math-foundations.md](math-foundations.md): measure-theoretic definition and continuum limit of the core formula `S = ∫ E dN` (Q1–Q5). Q3 numerical replication call: [#14](https://github.com/KK13760780514/Hypostack-Theory/issues/14).
+- [Nine-dimensional reduction test plan p3-dimension-reduction.md](p3-dimension-reduction.md): four test routes for Presupposition 3 (F/Φ/N strong coupling) — PCA / correlation / nonlinear reconstruction / the tenth-dimension challenge. Tenth-dimension challenge: [#15](https://github.com/KK13760780514/Hypostack-Theory/issues/15).
+- [Open decisions open-decisions.md](open-decisions.md): DEC-001~008, governance/calibration issues awaiting community votes.
+- [Prediction operationalization designs predictions-operationalization.md](predictions-operationalization.md): drafts for not-yet-computable claims (P-BIO-001, P-ECO-002 switching experiment, etc.).
+- [Manual publishing guide publishing-guide.md](publishing-guide.md): publishing workflow for DEC topics and submission issues.
 
 ## Contribution Workflow
 

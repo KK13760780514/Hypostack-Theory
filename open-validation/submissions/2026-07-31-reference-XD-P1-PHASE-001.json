@@ -45,8 +45,8 @@
       "A": 12,
       "B": 0
     },
-    "p_value": 0.000244140625,
-    "summary": "12 seeds; S_A(slow)=48902.7, S_B(med)=69432.8, S_C(quench)=237486.1; ordering A<B<C holds 12/12; A<C holds 12/12 (p=2.4e-4); classification=support",
+    "p_value": 0.00048828125,
+    "summary": "12 seeds; S_A(slow)=48902.7, S_B(med)=69432.8, S_C(quench)=237486.1; ordering A<B<C holds 12/12; A<C holds 12/12 (two-sided binomial p=4.9e-4); classification=support",
     "raw_output": {
       "T_c": 2.269185314213022,
       "lattice_size": 20,
@@ -134,7 +134,7 @@
         "AB_holds": 12,
         "BC_holds": 12,
         "AC_holds": 12,
-        "p_value": 0.000244140625
+        "p_value": 0.00048828125
       }
     }
   },

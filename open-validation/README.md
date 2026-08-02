@@ -41,10 +41,10 @@ python .\open-validation\reference-implementation\double_auction_learning.py
 
 | claim_id | 分类 | 证据等级 | p 值 | S（选中路径） | S（对照路径） | 备注 |
 |---|---|---|---|---|---|---|
-| XD-AI-ADAM-001 | support | L4_candidate | 2.4e-4 | 188.5 (Adam) | 346.0 (最优 SGD) | V2: 12/12 种子通过；扩 lr 网格 + 无对照规则修订 |
+| XD-AI-ADAM-001 | support | L4_candidate | 4.9e-4 | 188.5 (Adam) | 346.0 (最优 SGD) | V2: 12/12 种子通过；扩 lr 网格 + 无对照规则修订 |
 | XD-P1-CHEM-001 | support | L4_candidate | 1.5e-5 | 31981.0 (路径 A) | 55000.0 (路径 B) | V2: 有效活化能；16/16 温度一致 |
 | XD-E-PARADIGM-001 | challenge | exploratory | 无 | 1.04e-19 (物理) | 5.06e-20 (生物) | V3: 5 标定点；η 跨度 2.3 级；幂律 R²<0.64 |
-| XD-P1-PHASE-001 | support | L4_candidate | 2.4e-4 | 48903 (慢冷) | 237486 (淬火) | 12/12 种子通过；2D Ising 相变 |
+| XD-P1-PHASE-001 | support | L4_candidate | 4.9e-4 | 48903 (慢冷) | 237486 (淬火) | 12/12 种子通过；2D Ising 相变 |
 | XD-P2-ECO-001 | challenge | exploratory | 4.9e-4 (V1) | 13.4 (低佣金) | 245.8 (高佣金) | V1 12/12 方向符合但判别力不足（ratio_dev=0.970）；V2 学习型交易者速度子预测 5/12（p=0.774）；V3 固定税速度子预测 4/12（p=0.388，falsification）；两种交易成本操作化均未产出可检验效应，见 [ISSUE-008](known-issues.md)，讨论见 [issue #1](https://github.com/KK13760780514/Hypostack-Theory/issues/1) |
 
 注意：以上结果全部由提出者的参考实现（reference-implementation）产出，尚无外部独立复核结果。
@@ -70,7 +70,16 @@ python .\open-validation\reference-implementation\double_auction_learning.py
 
 ## 实证评审委员会（招募中）
 
-[review-committee.md](review-committee.md) 定义委员会职责（口径恢复投票、升级评审、开放决策建议）、成员资格与 ≥2/3 投票规则。当前委员会未组建，评审由提出者执行——**欢迎提交过任意分类证据（support/challenge/falsification）或具备相关学科背景的开发者加入**，让防"口径购物"规则真正落地。
+[review-committee.md](review-committee.md) 定义委员会职责（口径恢复投票、升级评审、开放决策建议）、成员资格与 ≥2/3 投票规则。当前委员会未组建，评审由提出者执行——**欢迎提交过任意分类证据（support/challenge/falsification）或具备相关学科背景的开发者加入**，让防"口径购物"规则真正落地。招募公告：[issue #10](https://github.com/KK13760780514/Hypostack-Theory/issues/10)。
+
+## 核心文档
+
+- [实验协议 protocol-p1-ai.md](protocol-p1-ai.md)：全部 7 个 claim 的 E/N/S 口径、预注册值与验证结果。
+- [数学基础开放课题 math-foundations.md](math-foundations.md)：核心公式 `S = ∫ E dN` 的测度论定义与连续极限（Q1-Q5）。Q3 数值复核召集：[#14](https://github.com/KK13760780514/Hypostack-Theory/issues/14)。
+- [九维降维检验方案 p3-dimension-reduction.md](p3-dimension-reduction.md)：预设三（F/Φ/N 强耦合）的 PCA/相关性/非线性重构/第十维挑战四条检验路线。第十维挑战认领：[#15](https://github.com/KK13760780514/Hypostack-Theory/issues/15)。
+- [开放决策清单 open-decisions.md](open-decisions.md)：DEC-001~008 待社区投票的治理/口径问题。
+- [预测操作化设计 predictions-operationalization.md](predictions-operationalization.md)：生物学/经济学等尚未可计算 claim 的操作化草案（P-BIO-001、P-ECO-002 切换实验等）。
+- [手动发布操作指南 publishing-guide.md](publishing-guide.md)：DEC 议题与提交 issue 的发布流程。
 
 ## 贡献流程
 

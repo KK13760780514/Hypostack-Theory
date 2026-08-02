@@ -44,9 +44,9 @@ Current empirical level: **L4_candidate** (3 support-level + 2 challenge-level e
 
 Two open-validation claims were revised from **challenge** to **support** after correcting the E/S calibration in validation round V2, and a third claim (PHASE-001) was verified as support in its first run:
 
-- **XD-AI-ADAM-001** — Adaptive optimization dynamics. V1 (2026-07-30): challenge, direction correct but effect below threshold (8/12 seeds, p = 0.194). V2 (2026-08-01): **support**—12/12 seeds passed, p = 2.4e-4 (binomial). Adam mean S = 188.53 vs. best-SGD mean S = 345.97.
+- **XD-AI-ADAM-001** — Adaptive optimization dynamics. V1 (2026-07-30): challenge, direction correct but effect below threshold (8/12 seeds, p = 0.194). V2 (2026-08-01): **support**—12/12 seeds passed, p = 4.9e-4 (two-sided binomial). Adam mean S = 188.53 vs. best-SGD mean S = 345.97.
 - **XD-P1-CHEM-001** — Chemical reaction-path competition. V1 (2026-07-30): challenge. V2 (2026-08-01): **support**—16/16 temperature matches, p = 1.5e-5. Preferred-path S = 31980.96 vs. alternative S = 55000.0.
-- **XD-P1-PHASE-001** — Phase-transition path selection. V1 (2026-08-01): **support**—12/12 seeds passed, p = 2.4e-4 (binomial). Slow-cool S ≈ 48,903 vs. quench S ≈ 237,486.
+- **XD-P1-PHASE-001** — Phase-transition path selection. V1 (2026-08-01): **support**—12/12 seeds passed, p = 4.9e-4 (two-sided binomial). Slow-cool S ≈ 48,903 vs. quench S ≈ 237,486.
 - **XD-E-PARADIGM-001** — E-dimension paradigm transformation. V2 (2026-08-01): challenge (3 calibration points, η span 2.5 orders). V3 (2026-08-01): challenge (5 calibration points, η span 2.3 orders, power-law fits R² < 0.64; no universal conversion function). exploratory.
 - **XD-P2-ECO-001** — Market-equilibrium path selection. V1 (2026-08-01): challenge (exploratory)—12/12 seeds direction-consistent but insufficient discriminative power (ratio_dev = 0.970; commission-rate scale factor dominates); see [ISSUE-008](open-validation/known-issues.md). V2 (2026-08-01): learning traders (Roth-Erev) fix convergence, but the "converges faster" sub-prediction is not supported (5/12 seeds, p = 0.774); challenge, exploratory (EV-b3fd72635845c370). V3 (2026-08-01): fixed per-trade tax removes the price-ratio artifact, but the high-tax path's behavior barely changes (speed sub-prediction 4/12 seeds, p = 0.388, falsification); neither proportional commission nor fixed-tax operationalization yields a testable speed-level effect; exploratory (EV-5f2196aa6d3a55cf).
 
@@ -131,9 +131,9 @@ The theory explicitly declares its own limitations (Section 1.4 of the rulebook)
 
 两个开放验证 claim 在 V2 轮次修正 E/S 口径后，从 **challenge** 修正为 **support**，第三个 claim（PHASE-001）在首次运行中即验证为 support：
 
-- **XD-AI-ADAM-001** —— 自适应优化动态。V1（2026-07-30）：challenge，方向正确但效应未达阈值（8/12 种子，p = 0.194）。V2（2026-08-01）：**support**——12/12 种子通过，p = 2.4e-4（二项检验）。Adam 平均 S = 188.53，最优 SGD 平均 S = 345.97。
+- **XD-AI-ADAM-001** —— 自适应优化动态。V1（2026-07-30）：challenge，方向正确但效应未达阈值（8/12 种子，p = 0.194）。V2（2026-08-01）：**support**——12/12 种子通过，p = 4.9e-4（双侧二项检验）。Adam 平均 S = 188.53，最优 SGD 平均 S = 345.97。
 - **XD-P1-CHEM-001** —— 化学反应路径竞争。V1（2026-07-30）：challenge。V2（2026-08-01）：**support**——16/16 温度匹配，p = 1.5e-5。优选路径 S = 31980.96，对照路径 S = 55000.0。
-- **XD-P1-PHASE-001** —— 相变路径选择。V1（2026-08-01）：**support**——12/12 种子通过，p = 2.4e-4（二项检验）。慢冷 S ≈ 48,903，淬火 S ≈ 237,486。
+- **XD-P1-PHASE-001** —— 相变路径选择。V1（2026-08-01）：**support**——12/12 种子通过，p = 4.9e-4（双侧二项检验）。慢冷 S ≈ 48,903，淬火 S ≈ 237,486。
 - **XD-E-PARADIGM-001** —— E 维度范式转换。V2（2026-08-01）：challenge（3 标定点，η 跨度 2.5 个数量级）。V3（2026-08-01）：challenge（5 标定点，η 跨度 2.3 个数量级，幂律拟合 R² < 0.64，无普适转换函数）。exploratory。
 - **XD-P2-ECO-001** —— 市场均衡路径选择。V1（2026-08-01）：challenge（exploratory）——12/12 种子方向符合但判别力不足（ratio_dev = 0.970，佣金率比例因子占主导）；见 [ISSUE-008](open-validation/known-issues.md)。V2（2026-08-01）：学习型交易者（Roth-Erev）修复市场收敛性，但"更快收敛"子预测未获支持（5/12 种子，p = 0.774）；challenge，exploratory（EV-b3fd72635845c370）。V3（2026-08-01）：固定额税消除了价格比例因子，但高税路径行为几乎不变（速度子预测 4/12 种子，p = 0.388，falsification）；比例佣金与固定税两种交易成本操作化均未产出可检验的速度层面效应；exploratory（EV-5f2196aa6d3a55cf）。
 

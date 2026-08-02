@@ -125,7 +125,7 @@ def compute_S(lattice: list[list[int]], protocol: tuple[int, int], seed: int) ->
 
 
 def binomial_test(n_success: int, n_total: int, p: float = 0.5) -> float:
-    """Two-sided binomial test p-value."""
+    """Two-sided binomial test p-value (both tails include the observed value)."""
     # P(X >= n_success) + P(X <= n_total - n_success)
     from math import comb
 
@@ -137,7 +137,7 @@ def binomial_test(n_success: int, n_total: int, p: float = 0.5) -> float:
         k_low = n_success
 
     p_val = sum(comb(n_total, k) * (p ** k) * ((1 - p) ** (n_total - k))
-                for k in range(k_high + 1, n_total + 1))
+                for k in range(k_high, n_total + 1))
     p_val += sum(comb(n_total, k) * (p ** k) * ((1 - p) ** (n_total - k))
                  for k in range(0, k_low + 1))
 

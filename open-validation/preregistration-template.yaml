@@ -14,6 +14,7 @@ author:
 #   XD-AI-ADAM-001    -- Adam 自适应优化动态
 #   XD-E-PARADIGM-001 -- E 维度范式转换
 #   XD-P1-PHASE-001    -- 相变路径选择
+#   XD-P2-ECO-001     -- 市场均衡路径选择（ZI-C 双向拍卖；注意 ISSUE-008：佣金率/固定税两种操作化均未产出可检验效应）
 claim_id: ""
 
 prediction_statement: ""    # 玄叠论预测什么？一句话。如："系统选择 S 更小的路径 B"
