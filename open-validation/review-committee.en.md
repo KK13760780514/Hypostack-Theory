@@ -1,3 +1,5 @@
+> [中文版本](review-committee.md) | English version
+
 # HypoStack Empirical Review Committee (being formed)
 
 > Goal: make the [ISSUE-006 anti-"calibration shopping" rules](known-issues.md) actually effective. The committee is not formed yet — reviews are currently performed by the proposer, creating a conflict-of-interest risk; forming the committee is the key step from "self-validation" toward "community consensus" in open validation.

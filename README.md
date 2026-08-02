@@ -86,6 +86,7 @@ python .\open-validation\reference-implementation\phase_transition.py
 ## 关键文档 / Key Documents
 
 - [玄叠论.md](玄叠论.md) - 完整理论规则书
+- [玄叠论.en.md](玄叠论.en.md) - Complete theory rulebook (English)
 - [EN-ABSTRACT.md](EN-ABSTRACT.md) - 理论英文摘要
 - [独立复核召集书](CALL-FOR-REPLICATION.md) — 面向外部研究者的复现邀请（中英双语）
 - [传播文案 PROMOTION.md](PROMOTION.md) — 面向社区的分发文案（中英双语，含证据表）
