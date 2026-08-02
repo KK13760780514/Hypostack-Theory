@@ -265,3 +265,21 @@ V1 challenge → 修正 E/N/S 口径 → V2 support 的两次修正（ISSUE-001/
 - **结果**：速度子预测 conv_A<conv_B 仅 4/12（p=0.388），稳健性扫描方向一致仅 2/6，**统计层面 falsification**，入账 exploratory（EV-5f2196aa6d3a55cf）。高税路径行为几乎不变（fills_B/fills_A=0.95，收敛速度无显著差异），S ratio_dev=0.983 仍被 20 倍税比主导。
 - **科学含义**：固定税消除了 V1 的"价格比例因子"构造缺陷（判别力从"构造"转为"真实行为差异"），但 0.1%~2% 成本量级不产生可检验的市场行为差异。合并 V1（比例佣金）看，**"E=交易成本"的两种操作化均未产出可检验的速度层面效应**。
 - 后续方向：DEC-008 选项 D（接受负面结论、调整 claim 范围）/ C（S 按单位成交额归一化）/ 放大成本差异量级的新设计。详见 [DEC-008](open-decisions.md)。
+
+## 判别力验证（Adversarial Validation，2026-08-02）
+
+**目的**：3 个 support claim 全部为提出者自证。为排除"口径必然赢"嫌疑，对每个 support claim 构造"应失败或应无偏好"的对抗性场景，验证检验确实能输出 challenge。
+
+**脚本**：[adversarial_validation.py](reference-implementation/adversarial_validation.py)
+
+| Claim | 对抗场景 | 预期 | 实际 | 判定 |
+|-------|---------|------|------|------|
+| XD-P1-CHEM-001 | E_eff 交叉配置（Ea3=32k，E_eff_A 在 T≈350K 穿越 E_eff_B） | 匹配率应下降 | 5/8（p=0.36，challenge） | PASS |
+| XD-AI-ADAM-001 | 低条件数（cond=58/214，Adam 无优势） | 应输出 challenge | 0/12、8/12（challenge） | PASS |
+| XD-P1-PHASE-001 | 相同协议零检验（两条完全相同的慢冷路径） | S 排序应≈50/50 | 8/12（p=1.85，无偏） | PASS |
+
+**结论**：三项全部 PASS--检验具有判别力，不是"口径必然赢"。
+
+**CHEM 交叉配置的额外发现**：高温区（T≥350K）E_eff_A > E_eff_B 时玄叠论预测路径 B，但模拟实际路径仍为 A。根因：产物分支比 P_A/P_B = k1/k3（由第一步速率常数决定），而非 k_eff/k3。这说明 E_eff 作为 S 在 E_eff 值接近时有预测边界，但不影响 V2 support 结论（原始配置 E_eff 差异显著，16/16 匹配）。
+
+**ADAM 条件数扫描**的完整数据见 [dec001_cond_scan.py](reference-implementation/dec001_cond_scan.py) 与 [DEC-001](open-decisions.md)。

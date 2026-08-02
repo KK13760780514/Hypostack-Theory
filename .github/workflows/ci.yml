@@ -74,7 +74,8 @@ jobs:
             open-validation/reference-implementation/dec008_fixed_tax.py \
             open-validation/reference-implementation/dec001_cond_scan.py \
             open-validation/reference-implementation/dec005_ea_definitions.py \
-            open-validation/reference-implementation/phase_convergence.py; do
+            open-validation/reference-implementation/phase_convergence.py \
+            open-validation/reference-implementation/adversarial_validation.py; do
             echo "::group::Running $f"
             python "$f"
             echo "::endgroup::"
