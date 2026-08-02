@@ -88,6 +88,8 @@ python .\open-validation\reference-implementation\phase_transition.py
 - [玄叠论.md](玄叠论.md) - 完整理论规则书
 - [EN-ABSTRACT.md](EN-ABSTRACT.md) - 理论英文摘要
 - [独立复核召集书](CALL-FOR-REPLICATION.md) — 面向外部研究者的复现邀请（中英双语）
+- [传播文案 PROMOTION.md](PROMOTION.md) — 面向社区的分发文案（中英双语，含证据表）
+- [贡献指南 CONTRIBUTING.md](CONTRIBUTING.md) — 贡献者须知
 - [开放验证 README](open-validation/README.md) - 验证流程与贡献指南
 - [已知问题](open-validation/known-issues.md) — ISSUE-001 / ISSUE-004 等开放讨论
 - [证据账本](open-validation/evidence-ledger.csv) — 所有实验结果记录

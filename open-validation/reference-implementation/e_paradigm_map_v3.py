@@ -236,7 +236,10 @@ def check_falsification(calibrations: list[dict]) -> dict:
     elif len(consistent_pairs) == len(pairs):
         classification = "support"
     elif len(consistent_pairs) > 0:
-        classification = "partial_support"
+        # Partial consistency (some pairs consistent) is not full support.
+        # submission-schema.json enum allows only support/challenge/falsification/exploratory,
+        # so map "partial_support" -> "challenge" (further analysis needed).
+        classification = "challenge"
     else:
         classification = "challenge"
 
